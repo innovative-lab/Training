@@ -1,0 +1,28 @@
+(function(){
+	  
+	angular
+	  .module("app")
+	  .controller("logincontroller",function($scope,$rootScope,loginservice){
+	  	
+	  	 // $rootScope.u_mid=mid1
+	  	 // alert($root.u_mid);
+    	$scope.data={
+    		mid:$scope.mid1,
+    		pass:$scope.password
+    	}
+	  	 
+	  	 
+	  	$scope.callToAddToDetails = function(currObj){
+        	loginservice.add_details(currObj);
+    	};
+    	
+    	$scope.callToAddToDetails(data);
+    	
+    
+    
+    
+	  	 //alert($rootScope.mid1)
+	  	
+	  	   // $rootScope.lmid=mid1;
+	  })
+}())

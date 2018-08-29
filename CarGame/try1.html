@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                	 padding-left: 0;
+                     padding-right: 0;
+                     margin-left: auto;
+                     margin-right: auto;
+                     display: block;
+                     border: 1px solid red;
+                }
+                   #left{
+                	width:300px;
+                	margin-left:375px;
+                	
+                	display:inline-block;
+                }
+                #right{
+                	width:300px;
+                	margin-left:0px;
+                	
+                	display:inline-block;
+                }
+                .container{
+                	border:5px solid gray;
+                	margin:0px auto;
+                	height:900px;
+                }
+               
+                h1{
+                	float:right;
+                }
+        </style>
+	<script>
+		var can=null;
+		var ctx=null;
+		var num=-500;
+		var i=275;
+		var flag=10;
+		var j=325;
+		var life=0;
+		var flagLeft=0;
+		var lL=Math.round(Math.random()*num);
+		var lR=Math.round(Math.random()*(-500));
+		var lR2=-0;
+		var lL2=0;
+		var f=0;
+
+	
+		setInterval(window.onload=function(){
+			
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			
+			var speed1=(Math.random()*5);
+			var speed2=(Math.random()*5);
+			var speed3=(Math.random()*5);
+			var speed4=(Math.random()*5);
+	//===================================================================================================//
+	/*
+	 * Road Builder
+	 */	
+			
+			ctx.beginPath();
+			ctx.lineWidth=100;
+			ctx.strokeStyle="black";
+			ctx.moveTo(300,0);
+			ctx.lineTo(300,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=40;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(275,0);
+			ctx.lineTo(275,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=40;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(325,0);
+			ctx.lineTo(325,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=10;
+			ctx.strokeStyle="white";
+			ctx.moveTo(300,0);
+			ctx.lineTo(300,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="black";
+			ctx.moveTo(i,500);
+			ctx.lineTo(i,550);
+			ctx.closePath();			
+			ctx.stroke();
+			
+	//======================================================================================================//
+	/*
+       Left Path Car
+	 */		
+			
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="red";
+			ctx.moveTo(275,lL+0);
+			ctx.lineTo(275,lL+50);
+			ctx.closePath();			
+			ctx.stroke();
+			lL=lL+speed1;
+			
+			flagLeft++;
+			
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="yellow";
+			ctx.moveTo(275,lL2+0);
+			ctx.lineTo(275,lL2+50);
+			ctx.closePath();			
+			ctx.stroke();
+			lL2=lL2+speed2;
+			if(lL2>=600)
+			{
+				lL2=Math.round(Math.random()*num);
+			}
+			if(lL>=600)
+		{
+			
+			lL=Math.round(Math.random()*num);
+			
+			
+		}
+	//========================================================================================================//
+	/*
+	 * Right Path Car
+	 */		
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="green";
+			ctx.moveTo(325,lR+0);
+			ctx.lineTo(325,lR+50);
+			ctx.closePath();			
+			ctx.stroke();
+			lR=lR+speed3;
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="orange";
+			ctx.moveTo(325,lR2+0);
+			ctx.lineTo(325,lR2+50);
+			ctx.closePath();			
+			ctx.stroke();
+			lR2=lR2+speed4;
+			
+			if((lR2+50)>=500 && i==325 && f==0)
+			{
+				life=life+250;
+				f=1;
+			}
+			
+			if(lR2>=600)
+			{
+				lR2=-1000;
+				f=0;	
+			}
+			
+			if(lR>=600)
+		    {
+		    	lR=Math.round(Math.random()*num);	
+		    }
+			
+	//========================================================================================================//
+	/*
+	 * Collision Detection
+	 */
+			
+			
+			if((lL+50)>=500  && i==275 && lL<550  )
+			{
+				if(life<=0)
+				{
+				lL=Math.round(Math.random()*num);
+				flagLeft=0;
+				
+				// alert("game over!!");
+				}else
+				{life=life-5;}
+			}
+			else if((lR+50)>=500 && i==325 && lR<550)
+			{
+				if(life<=0)
+				{
+				flagLeft=0;
+				lR=Math.round(Math.random()*num);
+				// alert("game over");
+			   }else
+			   {
+			   	life=life-5;
+			   }
+			   
+			}
+			else if((lL2+50)>=500 && i==275 && lL2<550 )
+			{
+				if(life<=0){
+				flagLeft=0;
+				lL2=Math.round(Math.random()*num);
+				// alert("game over");
+				}else{
+					life=life-5;
+				}
+			}
+			
+			
+			
+			
+			
+			
+			document.getElementById("frame").innerHTML=flagLeft;
+			document.getElementById("gem").innerHTML=life;
+			
+		
+						
+		},flag);
+		
+		function turnRight()
+		{
+			i=325;
+		}
+		function turnLeft()
+		{
+			
+			i=275;
+		}
+		
+		window.addEventListener("keypress",turnRight,false);
+        window.addEventListener("keypress",turnLeft,false);
+				
+			
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div id="score">
+		<h1>Your Score : <span id="frame"></span></h1>
+		<br />
+		<h1>Gem Collected : <span id="gem"></span></h1>
+        </div>
+	    <canvas id="can" width="600" height="600" margin:auto></canvas>
+	
+	    <hr>
+	
+	
+	    <button id="left" onclick="turnLeft()" >Left</button>
+	    <button id="right" onclick="turnRight()" >Right</button>
+	</div>
+</body>
+</html>

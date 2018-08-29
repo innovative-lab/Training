@@ -1,0 +1,11 @@
+(function(){
+	
+angular
+     	.module("app")
+     	.controller("createEventcontroller",createHandler)
+     	
+     	
+     	createHandler=function($scope,loginservice){
+     		$scope.logindb=loginservice.getLoginData();
+     	}
+}())

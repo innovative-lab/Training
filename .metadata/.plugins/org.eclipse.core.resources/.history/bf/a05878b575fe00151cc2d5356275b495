@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			document.getElementsByTagName("div").innerHTML="<h1>Hello</h1>"
+		}
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>

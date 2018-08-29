@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            .boxer {
+                width: 200px;
+                height: 350px;
+                background-color: #333;
+                padding: 5px;
+                box-sizing: border-box;
+                float: left;
+                margin: 10px;
+            }
+            .boxer h1 {
+                background-color: #E9EACC;
+                color: #333;
+                margin: 0px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                vertical-align: middle;
+                font-family: Arial;
+            }
+            .boxer h2 {
+                background-color: #575934;
+                color: #E9EACC;
+                margin: 0px;
+                height: 30px;
+                font-size: 16px;
+                text-align: center;
+                line-height: 30px;
+                vertical-align: middle;
+                font-family: Arial;
+            }
+            .boxer img {
+                display: block;
+                max-width: 100%;
+            }
+            fieldset {
+                width: 200px;
+            }
+            fieldset label, fieldset button, fieldset input, fieldset textarea {
+                width: 100%;
+                display: block;
+            }
+            textarea {
+                margin-bottom: 10px;
+            }
+        </style>
+        <script type="synechron/template" id="temp">
+            <div class='boxer'>
+            <h1> <%= title  %></h1>
+            <h2><span><%= fName %></span> <span><%= lName %></span></h2>
+            <img src='<%= photo %>' />
+            <h2>Call : <span><%= phone %></span></h2>
+            <div class='data'> <%= details %></div>
+            </div>
+        </script>
+        <script src="lib/jquery-1.12.1 (1).js"></script>
+        <script src="lib/underscore.js"></script>
+        <script src="lib/backbone.js"></script>
+        <script>
+            var Hero = Backbone.Model.extend({
+            });
+            var Heros = Backbone.Collection.extend({
+                model : Hero,
+                url : "/heros"
+            });
+            var heros = new Heros();
+            var hero = null;
+            var count = 1;
+            var HeroView = Backbone.View.extend({
+                render : function() {
+                    this.$el.html(this.template(this.model.toJSON()));
+                    console.log("view rendered");
+                    return this;
+                },
+                initialize : function() {
+                    console.log("view initialized");
+                },
+                template : _.template($("#temp").html()),
+                events : {
+                    click : "clickHandler"
+                },
+                clickHandler : function() {
+                    // console.log('handleClick was triggered');
+                    this.remove();
+                }
+            });
+            //==================================
+
+            $(function() {
+                $("#addBtn").on("click", function() {
+                    hero = {
+                        id : count,
+                        title : $("#ti1").val(),
+                        fName : $("#ti2").val(),
+                        lName : $("#ti3").val(),
+                        phone : $("#ti4").val(),
+                        photo : $("#ti5").val(),
+                        details : $("#ti6").val(),
+                    };
+                    heros.add(hero);
+                    heros.get(count).save();
+                    count++;
+                });
+                //===================================
+                $("#saveBtn").on("click", function() {
+                    // heros.get(1).save();
+                });
+                //===================================
+                $("#getBtn").on("click", function() {
+                    heros.fetch().done(function() {
+                        console.log(heros.length);
+                        count = heros.length + 1;
+                    });
+                });
+                //===================================
+                $("#renderBtn").on("click", function() {
+                    heros.fetch().done(function(r, s, x) {
+                        $("#box").empty();
+                        for (var i = 1; i < r.length + 1; i++) {
+                            //    $("body").append(new HeroView({model : heros.get(1)}).render().el);
+                            $("#box").append(new HeroView({
+                                model : heros.get(i)
+                            }).render().el);
+                        }
+                    })
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>
+                Add Hero
+            </legend>
+            <label for="ti1"> Title :
+                <input type="text" id="ti1" name="ti1" />
+            </label>
+            <br/>
+            <label for="ti2"> First Name :
+                <input type="text" id="ti2" name="ti2" />
+            </label>
+            <br/>
+            <label for="ti3"> Last Name :
+                <input type="text" id="ti3" name="ti3" />
+            </label>
+            <br/>
+            <label for="ti4"> Phone :
+                <input type="text" id="ti4" name="ti4" />
+            </label>
+            <br/>
+            <label for="ti5"> Photo :
+                <input type="text" id="ti5" name="ti5" />
+            </label>
+            <br/>
+            <label for="ti6"> Details :                 <textarea type="text" id="ti6" name="ti6"></textarea></label>
+            <button id="addBtn">
+                Add Hero
+            </button>
+        </fieldset>
+        <hr/>
+        <button id="getBtn">
+            Get Heros
+        </button>
+        <button id="renderBtn">
+            Render Hero
+        </button>
+        <div id="box"></div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

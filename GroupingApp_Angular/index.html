@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+			.module("app",[])
+			.controller("mycon",function($scope,$http){
+				$scope.fname="";
+				$scope.lname="";
+				$scope.addfun=function(){
+				var data={
+						fname:$scope.fn,
+						lname:$scope.ln,
+					}
+					$http.post("/addme",data);
+					
+				}
+			})
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	
+	<label for="">fName :<input type="text" ng-model="fn"/></label>
+	<label for="">lName :<input type="text" ng-model="ln"/></label>
+	<br />
+	<button ng-click="addfun()">click me to add</button>
+	
+</body>
+</html>

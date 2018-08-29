@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DaysLeft8_NodeJs/data.xtx&apos; to &apos;data.txt&apos;" description="Rename resource &apos;data.xtx&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="data.xtx" name="data.txt" stamp="1459586767208" updateReferences="true"/>
+</session>

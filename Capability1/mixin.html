@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Mixin Pattern</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		var Hero={
+			fname:function(){
+				return "soumya";
+			}
+			
+		}
+		var Noob=function(){
+			lname=function(){
+				return "phusku"
+			}
+		}
+		var noob=new Noob();
+		$.extend(Noob.prototype,Hero);
+	
+		
+		console.log(noob.fname());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>GEo PRAct</title>
+	<script>
+		window.onload=function(){
+			if(navigator.geolocation)
+			{
+				console.log("yes")
+				navigator.geolocation.getCurrentPosition(successFun,failFun)
+			}
+			function successFun(position){
+				document.getElementById("lat").textContent=position.coords.latitude;
+				document.getElementById("lon").textContent=position.coords.longitude;
+				pos=position;
+			}
+			function failFun(position){
+				document.getElementById("lat").textContent=position.coords.latitude;
+			}
+			
+		}
+		function rendermap(elm){
+				document.getElementById("mapbox").src="https://maps.googleapis.com/maps/api/staticmap?center="+pos.coords.latitude+","+pos.coords.longitude+"&zoom="+elm.value+"&size=400x400"
+			}
+	</script>
+</head>
+<body>
+	<h1>latitude :<span id="lat"></span></h1>
+	<h1>longitude :<span id="lon"></span></h1>
+	<input type="range" onchange="rendermap(this)" value="10" min="1" max="20" step="1" />
+	<hr />
+	<img id="mapbox" />
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str="hi";			               //string
+		var st="zoozoo";
+		var whole=str.concat(st);	               //concat method
+		console.log(whole);
+		
+		str=new Array("one","two");
+		var newStr=str.join();		               //join method
+		console.log(newStr);
+		
+		var newArray=new Array();	               //push method
+		newArray.push("i");
+		newArray.push("am");
+		newArray.push("the");
+		newArray.push("groot");
+		console.log(newArray);
+		
+		var arr=newArray.pop();			           //pop method
+		console.log(arr);
+		
+		var arr = new Array("one", "two", "three");
+		while (arr.length > 0)					   //while assignment
+    	{
+    	var a = arr.shift();				       //shift method
+    	console.log(a);
+    	}
+    	arr.unshift("one");
+    	arr.unshift("two");
+    	arr.unshift("three");				     //unshift method
+    	console.log(arr);				
+    	console.log(arr.slice(0,1));		      //slice method
+    	
+    	arr.unshift("four");
+    	arr.push("five");
+    	console.log(arr);
+    	console.log(arr.splice(0,2));		      //splice method
+    	
+    	var nArray=arr.reverse();		          //reverse method
+    	console.log(nArray);
+    	nArray.unshift("eight");
+    	console.log(nArray.sort());
+    	
+    	var numArray=[1,2,3,4,5];
+    	var strVar=numArray.toString();
+    	console.log(strVar);
+	</script>
+</body>
+</html>

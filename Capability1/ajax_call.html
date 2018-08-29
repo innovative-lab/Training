@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		 #box{
+            width: 1200px;
+            height: 800px;
+            background-color: #333;
+            margin: auto;
+            overflow: auto;
+        }
+	</style>
+	<script>
+	var xhttp=null;
+	window.onload=function(){
+	    xhttp= new XMLHttpRequest();
+		xhttp.open("get","data/heroes.xml",true);
+		xhttp.send();
+		xhttp.onreadystatechange=ajaxHandler;
+	};
+		
+		
+		function ajaxHandler(){
+			var data=xhttp.responseXML
+			if(xhttp.status==200 && xhttp.readystate==4){
+			    for(var i=1;i<data.getElementsByTagName("hTitle").length;i++){
+				var ht=data.getElementsByTagName("hTitle")[i].innerHTML;
+				
+				document.getElementById("box").innerHTML+="<h1>"+ht+"</h1>"
+		        console.log(ht);
+			    }
+			
+		    }
+		}
+		
+	</script>
+</head>
+<body>
+	<div id="box"> </div>
+</body>
+</html>

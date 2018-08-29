@@ -1,0 +1,13 @@
+html(lang='en')
+	head
+		title="title"
+	body
+		h1 #{msg}
+		h1=msg
+		ul
+			for hero in hlist
+				li #{hero}
+		hr
+		form(action="#" method="post")
+			input(type="text" name="heroName")
+			button="add me"

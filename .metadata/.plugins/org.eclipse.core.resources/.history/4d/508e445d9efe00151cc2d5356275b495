@@ -1,0 +1,20 @@
+var fs = require("fs");
+var http = require("http");
+
+fs.readFileSync("./server.config",function(error,data){
+	
+	var data= JSON.parse(data+"")
+	
+	var port=data.port;
+	var host=data.host;
+	
+	var server=http.createServer(function(req,res){
+		req.writeHead(200,{"Content-type":"text/plane"})
+		req.write(req.url);
+		req.end();
+	})
+	
+	server.listen(post,host,function(){
+		console.log("server running on"+host+post)
+	}}
+})

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		 input:required{
+                border: 2px solid aqua;
+            }
+             input:invalid{
+                border: 2px solid orangered;
+            }
+            input:valid:not([type='submit']){
+                border: 2px solid greenyellow;
+            }
+            div.container {
+		    background-color: #eee;
+		    border: 1px solid red;
+		    margin: 5px;
+		    padding: 5px;
+	        }
+	        div.container ol li {
+	       	list-style-type: disc;
+	     	margin-left: 20px;
+	        }
+	        div.container {
+	     	display: none
+	        }
+
+
+	</style>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/jquery.form.js"></script>
+	<script src="lib/jquery.validate.js"></script>
+	<script>
+	   
+
+	$().ready(function() {
+		$("#form1").validate({
+			errorLabelContainer: $("#form1 div.error")
+		});
+
+		var container = $('div.container');
+		
+		var validator = $("#form2").validate({
+			errorContainer: container,
+			errorLabelContainer: $("ol", container),
+			wrapper: 'li'
+		});
+
+		$(".cancel").click(function() {
+			validator.resetForm();
+		});
+	});
+
+	      
+                
+                
+             
+                
+         
+		
+	</script>
+</head>
+<body>
+	<form class="cmxform" id="form2" method="get">
+		<label for=""><pre>user name   :</pre><input id="name" name="name" type="text" minlength="5" maxlength="10" required/></label><br />
+		<label for=""><pre>user email  :</pre><input id="email" name="email" type="email"  required/></label><br />
+		<label for=""><pre>user phone  :</pre><input id="phone" name="phone" type="phone"  maxlength="10" minlength="10" required/></label><br />
+		<label for=""><pre>user dob    :</pre><input id="ud" name="dob" type="date" dateISO="2011-06-30" required /></label><br />
+		<input type="submit" value="login"/>
+		<input class="cancel" type="submit" value="cancel">
+
+	</form>
+	<div class="container">
+			<h4>There are serious errors in your form submission, please see below for details.</h4>
+			<ol>
+				<li>
+					<label for="email" class="error">Please enter your email address</label>
+				</li>
+				<li>
+					<label for="phone" class="error">Please enter your phone <b>number</b> (between 2 and 8 characters)</label>
+				</li>
+				<li>
+					<label for="address" class="error">Please enter your address (at least 3 characters)</label>
+				</li>
+				<li>
+					<label for="avatar" class="error">Please select an image (png, jpg, jpeg, gif)</label>
+				</li>
+				<li>
+					<label for="cv" class="error">Please select a document (doc, docx, txt, pdf)</label>
+				</li>
+			</ol>
+		</div>
+
+</body>
+</html>

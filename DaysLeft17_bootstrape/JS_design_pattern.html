@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Prototype Pattren</title>
+    <script>
+        var Person = function(arg1, arg2){
+            this.fname = arg1; // Public
+            this.lname = arg2; // Public
+            this.movies = [];  // Public
+            var secret = "My Secret"; // Private
+        }
+        Person.prototype.fullname = function(){
+                return "Hello "+this.fname+" "+this.lname;
+        };
+        Person.prototype.addmovie = function(moviename){
+                this.movies.push(moviename);
+        };
+        Person.prototype.movieCount = function(){
+                return this.movies.length;
+        };
+        
+        var Hero = function(city, fn, ln){
+            this.city = city;
+            this.fname = fn;
+            this.lname = ln;
+        }
+        Hero.prototype = new Person();
+        // Hero.constructor = Hero;
+        
+        var hero = new Hero("Gotham","Bruce","Wayne");
+        //var hero1=new Hero("Gotham","Bruce","Wayne");
+       // console.log(hero.prototype===hero1.prototype);
+       //console.log(Hero.prototype.fname);
+            console.log(hero.fname);
+            console.log(hero.lname);
+            console.log(hero.city);
+            console.log(hero.fullname());
+            hero.addmovie("Batman Begins");
+            console.log(hero.movieCount());
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

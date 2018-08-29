@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			document
+			.getElementById("fi")
+			.addEventListener("change",changeHandler)
+		}
+		function changeHandler(evt){
+			console.log(evt.target.files[0]);
+			var vals="<h4>"+evt.target.files[0].lastModified+"</h4>"
+			    vals+="<h4>"+evt.target.files[0].lastModifiedDate+"</h4>"
+			    vals+="<h4>"+evt.target.files[0].name+"</h4>"
+			    vals+="<h4>"+evt.target.files[0].size+"</h4>"
+			    vals+="<h4>"+evt.target.files[0].type+"</h4>"
+			document
+			.getElementById("log").innerHTML+=vals;
+         }
+	</script>
+</head>
+<body>
+	<input type="file" id="fi" />
+	<hr />
+	<div id="log"></div>
+</body>
+</html>

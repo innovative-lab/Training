@@ -1,0 +1,8 @@
+var Hero=function(){
+	
+	
+}
+
+Hero.prototype.age=function(){
+	return 20;
+}

@@ -1,0 +1,96 @@
+var express = require("express");
+var bp = require("body-parser");
+var mongo = require("mongojs");
+var db = mongo("gapp",["eventdb","userdb"]);
+
+var app = express();
+    app.listen(1111);
+    app.use(express.static(__dirname))
+    app.use(bp.json());
+    
+app.get("/",function(req,res){
+	res.send();
+})
+    
+app.get("/emplist",function(req,res){
+	db.eventdb.find(function(error,documents){
+		res.json(documents);
+		console.log(documents)
+	})
+})
+
+app.post("/emplist",function(req,res){
+	console.log(req.body);
+	db.eventdb.insert(req.body,function(err,doc){
+		console.log(doc);
+		res.json(doc);
+	})
+	
+})
+app.post("/emplist1",function(req,res){
+	console.log(req.body.id);
+	 db.eventdb.findOne({_id:mongo.ObjectId(req.body.id)},function(err,doc){
+		 console.log(doc);
+		 res.json(doc);
+	 })
+	
+})
+app.delete("/emplist/:id",function(req,res){
+	var eid=req.params.id;
+	db.eventdb.remove({_id:mongo.ObjectId(eid)},function(err,doc){
+		res.json(doc)
+	})
+})
+
+app.get("/emplist/:id",function(req,res){
+	var eid= req.params.id;
+	db.eventdb.findOne({_id:mongo.ObjectId(eid)},function(error,documents){
+		res.json(documents);
+		console.log(documents)
+	})
+})
+
+app.put("/emplist/:id",function(req,res){
+	var eid=req.params.id;
+	console.log("Updating . . .");
+	db.eventdb.findAndModify({
+		query : {_id:mongo.ObjectId(eid)},
+		update : { $set:{
+			Joined:req.body.arr,
+		}},
+		new : true
+		},
+		 function(error,doc){
+		 	console.log(req.body.arr);
+			res.send(doc);
+	});
+	
+});
+
+
+
+
+
+
+
+/*
+ * login validation
+ * 
+ */
+app.post("/user",function(req,res){
+     console.log(req.body);  
+     //var mid=req.body.uname;
+     db.userdb.findOne({uname:req.body.uname,password:req.body.pswrd},function(error,documents){
+     if(!documents){
+          console.log("Invalid Password");
+         res.json(error);
+     }else{
+          res.json(documents);
+          console.log("Password is valid");
+     }
+     console.log("=====================================================");
+     });
+});
+
+
+console.log("your serve is running on 1111")

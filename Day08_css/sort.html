@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+        var arr = [
+                {userName : "soumya", day : 27},
+                {userName : "sourav", day : 3},
+                {userName : "jyotsna", day : 21},
+                {userName : "sudhakar", day : 29},
+                {userName : "saurabh", day : 28},
+                {userName : "naresh", day : 25},
+                {userName : "nagbabu", day : 26},
+                {userName : "rajat", day : 18},
+                {userName : "vignesh", day : 14},
+                {userName : "pooja", day : 7}
+                    ];
+        window.addEventListener("load", init);
+        
+        function sortFun(obj1, obj2){
+            // 1     // decending sort
+            // -1     // ascending sort
+            // 0     // no sort
+           return obj2.day-obj1.day;
+        };
+        function init(){
+            console.log(arr.sort(sortFun));
+        }
+    </script>
+</head>
+<body>
+    <h1 id="log"></h1>
+</body>
+</html>

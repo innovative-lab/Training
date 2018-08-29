@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>Backbone Model</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script>
+		var MyModel=Backbone.Model.extend({
+			defaults:{
+				fname:"soumya"
+			},
+			validate:function(arg){
+				if(arg.power>10 || arg.power<5){
+					return "retard "; 
+				}
+			}
+		});
+		var mymod=new MyModel({
+			power:5
+		});
+		mymod.set("power",33,{
+			validate:true
+		});
+		console.log(mymod.get("power"));
+		console.log(mymod.validationError);
+		con
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

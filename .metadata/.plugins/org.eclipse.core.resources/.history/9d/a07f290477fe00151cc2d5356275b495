@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		#inner{
+			height: 100px;
+			width:100px;
+			background-color: orange
+		}
+	</style>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		window.onload=function(){
+			$("button").on("click",function(){
+				
+				
+				$("div").html="<div id='inner'></div>";
+			
+			
+			
+			
+			})
+		}
+	</script>
+</head>
+<body>
+	<button id="box">click me</button>
+	<div></div>
+</body>
+</html>

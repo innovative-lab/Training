@@ -1,0 +1,37 @@
+<heroes>
+    <hero>
+        <title>Batman</title>
+        <fName>Bruce</fName>
+        <lName>Wayne</lName>
+        <city>Gotham</city>
+        <movies>3</movies>
+    </hero>
+    <hero>
+        <title>Superman</title>
+        <fName>Clark</fName>
+        <lName>Kent</lName>
+        <city>Metropolis</city>
+        <movies>3</movies>
+    </hero>
+    <hero>
+        <title>Ironman</title>
+        <fName>Tony</fName>
+        <lName>Stark</lName>
+        <city>New York</city>
+        <movies>3</movies>
+    </hero>
+    <hero>
+        <title>Phantom</title>
+        <fName>Kit</fName>
+        <lName>Walker</lName>
+        <city>Bhangala</city>
+        <movies>1</movies>
+    </hero>
+    <hero>
+        <title>Captain America</title>
+        <fName>Steve</fName>
+        <lName>Rogers</lName>
+        <city>New York</city>
+        <movies>2</movies>
+    </hero>
+</heroes>

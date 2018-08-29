@@ -1,0 +1,20 @@
+var Hero=function(){
+	
+	
+}
+
+Hero.prototype.age=function(){
+	return 22;
+}
+
+Hero.prototype.msg=function(){
+	return "Bhook lagi hai";
+}
+
+Hero.prototype.talk=function(){
+	return false;
+}
+
+Hero.prototype.walk=function(gen){
+	return gen+10;
+}

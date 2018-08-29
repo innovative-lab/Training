@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Prototype pat</title>
+	<script>
+		var Hero=function(){
+			this.fname="soumya",
+			this.lname="pratik"
+		}
+		
+		var person=function(){
+			this.sirname="senapaty"
+		}
+		person.prototype=new Hero();
+		var Per=new person();
+		
+		console.log(Per.sirname);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

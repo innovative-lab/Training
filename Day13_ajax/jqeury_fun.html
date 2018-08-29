@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script>
+    // DOMContentLoaded
+        $(function(){
+            // alert("hello world");
+             $("ul")[0].style = "border: 2px solid red";
+            // $("li")[0].style = "border: 2px solid red";
+            
+            // $("li").css("border","2px solid red");
+            // $("#list").css("border","2px solid red");
+            // $(".para").css("border","2px solid red");
+            // $(".para, .item4").css("border","2px solid red");
+            // $(".x").css("border","2px solid red");
+            // $(".x").css("border","2px solid red");
+            // $(".a.x").css("border","2px solid red");
+            // $(".a,.x").css("border","2px solid red");
+        });
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li class="item1"> List Item 1</li>
+        <li class="item2 x a b c"> List Item 2</li>
+        <li class="item3"> List Item 3</li>
+        <li class="item4 a"> List Item 4</li>
+        <li class="item5 x"> List Item 5</li>
+    </ul>
+    <p class="para x">Paragraph 1</p>
+    <p class="para">Paragraph 2</p>
+    <p class="para">Paragraph 3</p>
+    <p class="para">Paragraph 4</p>
+    <p class="para">Paragraph 5</p>
+</body>
+</html>

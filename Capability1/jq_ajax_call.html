@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>JQ AJAX</title>
+</head>
+   <script src="lib/jquery-1.12.1 (1).js"></script>
+   <script>
+   window.onload=function(){
+   	$.getJSON("data/heroes.json",changeHandler)
+   	
+   }
+   function changeHandler(r,s,xhr){
+   	$("#box").html(r.hero[0].hTitle);
+   }
+   </script>
+<body>
+	<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		 input:required{
+                border: 2px solid aqua;
+            }
+             input:invalid{
+                border: 2px solid orangered;
+            }
+            input:valid:not([type='submit']){
+                border: 2px solid greenyellow;
+            }
+	</style>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/jquery.form.js"></script>
+	<script>
+	
+                
+                
+                    
+                /*
+                 * 
+                   if(val > 10){
+                       evt.target.setCustomValidity("user name shld be less then 10 char")
+                   }else if(val < 5){
+                        evt.target.setCustomValidity("user name shld be greater then 5 char")
+                   }else{
+                       evt.target.setCustomValidity("")
+                   }
+                 */
+                
+         
+		
+	</script>
+</head>
+<body>
+	<form action="">
+		<label for=""><pre>user name   :</pre><input id="ua" name="user name" type="text" pattern="\w{5,10}" required/></label><br />
+		<label for=""><pre>user email  :</pre><input id="ue" name="user email" type="text" pattern="(\w+@[a-zA-Z]{3,10}[.]{1}[a-zA-Z]{3,6})" required/></label><br />
+		<label for=""><pre>user phone  :</pre><input id="up" name="user phone" type="text" pattern="\d{3}-\d{4}-\d{4}" title="###-####-####" required/></label><br />
+		<label for=""><pre>user dob    :</pre><input id="ud" name="user dob" type="text" required /></label><br />
+		<input type="submit" value="login"/>
+	</form>
+</body>
+</html>

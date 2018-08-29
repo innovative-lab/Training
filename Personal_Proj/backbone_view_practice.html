@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script>
+	    var HeroModel=Backbone.Model.extend({})
+		var HeroView=Backbone.View.extend({
+			tagName:"section",
+			render:function(){
+				var hp=this.model.get("power");
+			    temp:"<div><h1><b>"+hp+"</b></h1></div>"
+				this.el.innerHTML=temp;
+				return this
+			},
+		})
+		var hm=new HeroModel({
+			power:7
+		})
+		var hv=new HeroView({
+			model:hm
+		})
+		
+		window.onload=function(){
+			$("#btn").on("click",function(){
+				hv.render().$el.appendTo("body");
+			})
+		}
+		
+	</script>
+</head>
+<body>
+	<button id="btn">click me</button>
+</body>
+</html>

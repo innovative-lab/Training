@@ -1,0 +1,74 @@
+<div class="row">
+       <div class="header col-xs-12 col-sm-12">
+		<div class="setting col-xs-1 col-xs-offset-11">
+			<button id="menu_glyph">
+				<span class="glyphicon glyphicon-option-vertical"></span>
+			</button>
+			
+		</div>
+             <div class="form-group col-xs-7 col-xs-offset-2">
+             	 <input type="text" class="form-control " id="usr" placeholder="Search" ng-model="search">
+            </div>
+            <button class="btn col-xs-1" ><span class="glyphicon glyphicon-search " ></span></button>
+       </div>
+       <div class="content col-xs-12">
+       	<button type="button" class="btn col-xs-offset-3 col-xs-6" id="ce"><a href="#/createevent" class="login"><b>Create Event</b></a></button>
+       	<button type="button" class="btn col-xs-offset-3 col-xs-6" id="ce"><a href="#/currentevent" class="login"><b>Current Event</b></a></button>
+       	
+       	<div class="jumbotron col-xs-offset-0 col-xs-12">
+       		<div class="button col-xs-12" id="btnlinediv">
+       		<button type="button" class="btn btnlive  col-xs-offset-3 col-xs-6" style="background-color: white;border:2px solid #607D8B">Live Events</button>
+       		</div>
+       		<hr />
+       		<div class="events row col-xs-12" data-spy="scroll">
+       		
+       		
+       		<div class="event col-xs-offset-1 col-xs-10"  ng-repeat="user in usersdb | filter : search" >
+       			<div class="left col-xs-4">
+       			<img src="images/joker.jpg" class="col-xs-12 img-circle"  />
+       			
+       			<button type="button" class="btn col-xs-12"><b>Join</b></button>
+       			</div>
+       			<div class="info col-xs-8">
+       			<table class="table table-striped">
+       		<!--{_id:"evt1",
+       			 mid:"M1035885",
+       			 name:"Vignesh N",
+       			 evtname:"Movie", 
+       			 evt_type:"Private", 
+       			 date:"06-04-2016", 
+       			 stime:"18:30", 
+       			 etime:"21:30", 
+       			 location:"INOX-Bhavani Mall", 
+       			 details:"Batman vs Superman"},-->
+       				
+       					<tr id="odd" >
+       						<th><b>Event</b></th>
+       						<td>{{ user.evtname }}</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Name</b></th>
+       						<td>{{ user.name }} </td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Timing</b></th>
+       						<td>{{ user.stime }}</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Location</b></th>
+       						<td>{{ user.location }}</td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Description</b></th>
+       						<td>{{ user.details }}</td>
+       					</tr>
+       					
+       				</table></div>
+       		</div>
+       		</div>
+       	</div>
+       	
+       </div>
+		
+		
+	</div>

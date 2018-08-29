@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Before Web Workers</title>
+    <script>
+        window.onload = function(){
+            for(var i = 0; i < 10000000; i++){
+                document.getElementsByTagName("h1")[0].innerHTML = i;
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var img=null;
+		var boxL=0;
+		var ctx=null;
+		window.onload=function(){
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			img=new Image();
+			img.src="images/horse.jpg";
+			img.onload=function(){
+				setInterval(anim,50)
+			};
+		};
+		function anim()
+		{
+			ctx.drawImage(img,boxL,0);
+			boxL-=200;
+			if(boxL<-1800)
+			{
+				boxL=0;
+			}
+		}
+			
+		
+		
+		
+	</script>>
+</head>
+<body>
+		<canvas id="can" width="200" height="140"></canvas>
+</body>
+</html>

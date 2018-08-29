@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Data_Jam_Wireframe/Wireframe&apos; to &apos;Wireframe.html&apos;" description="Rename resource &apos;Wireframe&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Wireframe" name="Wireframe.html" stamp="1457581088290" updateReferences="true"/>
+</session>

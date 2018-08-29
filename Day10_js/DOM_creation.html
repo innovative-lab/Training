@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		#box{
+			height:500px;
+			background-color: #333;
+			
+		}
+		/*
+		 * 
+		#b{
+			height:100px;
+			width:100px;
+		}
+		 */
+	</style>
+	<script>
+	//window.onload=boxgen;
+	// document.getElementById("but").addEventListener("click",boxgen);
+	addEventListener("load",function(){
+		document.getElementsByTagName("button")[0].addEventListener("click",boxgen);
+	});
+	function boxgen(){
+		var elm=document.createElement("div");
+		var r=Math.round(Math.random()*255);
+		var g=Math.round(Math.random()*255);
+		var b=Math.round(Math.random()*255);
+		elm.setAttribute("style","height:100px;width:100px;background-color:orange;margin:5px;float:left");
+		document.getElementById("box").appendChild(elm);
+							
+	};
+	
+	</script>
+</head>
+<body>
+	<button id="but">Create a box</button>
+	<div  id="box"></div> 
+	 
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+		   .module("app",[])
+		   .controller("mycon",function($scope){
+		   	$scope.data=function(){
+		   	    var name  = {
+		   	    	name1:$scope.fn
+		   	    }
+		   	console.log(name);
+		   	}
+		   })
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	<input type="text" ng-model="fn" />
+	<button ng-click="data()">click</button>
+	<h1>{{ fn }}</h1>
+</body>
+</html>

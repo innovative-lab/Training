@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+                button{
+                	width:550px;
+                }
+        </style>
+	<script>
+		var can=null;
+		var ctx=null;
+		var i=475;
+		var flag=0;
+		var j=525;
+		var flag1=0;
+		var l=0,l2=0;
+		setInterval(window.onload=function(){
+			
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			ctx.beginPath();
+		
+			
+			ctx.beginPath();
+			ctx.lineWidth=100;
+			ctx.strokeStyle="black";
+			ctx.moveTo(500,0);
+			ctx.lineTo(500,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=40;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(475,0);
+			ctx.lineTo(475,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=40;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(525,0);
+			ctx.lineTo(525,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=10;
+			ctx.strokeStyle="white";
+			ctx.moveTo(500,0);
+			ctx.lineTo(500,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="black";
+			ctx.moveTo(i,500);
+			ctx.lineTo(i,550);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			
+			
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="red";
+			ctx.moveTo(475,l+0);
+			ctx.lineTo(475,l+50);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			l=l+1;
+			
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="green";
+			ctx.moveTo(525,l2-100);
+			ctx.lineTo(525,l2-50);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			l2=l2+1;
+			
+			
+			if((l+50)==500&& i==475)
+			{
+				alert("game over!!");
+			}
+			else if((l2+50)==500 && i==525)
+			{
+				alert("game over!!");
+			}
+		
+			
+			
+			
+		},10);
+		
+		function turnRight()
+		{
+			i=475;
+		}
+		function turnLeft()
+		{
+			i=525;
+		}
+			
+				
+			
+	</script>
+</head>
+<body>
+
+	<canvas id="can" width="1000" height="600"></canvas>
+	<hr>
+	<button id="right" onclick="turnRight()" >Right</button>
+	<button id="left" onclick="turnLeft()">Left</button>
+</body>
+</html>

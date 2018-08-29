@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var boxX=-50;
+		var boxY=100;
+		var ctx=null;
+		window.onload=function(){
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			ctx.lineWidth=10;
+			ctx.fillStyle="yellow";
+			ctx.strokeStyle="purple";
+			ctx.moveTo(can.width/2,can.height/2);
+			ctx.arc(can.width/2,can.height/2,100,(Math.PI/180)*0,(Math.PI/180)*60);
+			ctx.closePath();
+			ctx.stroke();
+			ctx.fill();
+		};
+		
+		
+	</script>>
+</head>
+<body>
+		<canvas id="can" width="400" height="400"></canvas>
+</body>
+</html>

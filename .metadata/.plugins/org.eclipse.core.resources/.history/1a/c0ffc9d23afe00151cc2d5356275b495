@@ -1,0 +1,11 @@
+// (function(){
+// }())
+
+define(function(){
+	
+	 angular.module("anotherapp",[])
+ 	
+	 .controller("anothercontroller",function($scope){
+		 $scope.greet="hello world!!"
+	 })
+})

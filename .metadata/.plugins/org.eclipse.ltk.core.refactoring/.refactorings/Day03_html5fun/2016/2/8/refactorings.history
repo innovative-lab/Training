@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Day03_html5fun/template.haml&apos; to &apos;noneed.haml&apos;" description="Rename resource &apos;template.haml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="template.haml" name="noneed.haml" stamp="1455683091666" updateReferences="true"/>
+</session>

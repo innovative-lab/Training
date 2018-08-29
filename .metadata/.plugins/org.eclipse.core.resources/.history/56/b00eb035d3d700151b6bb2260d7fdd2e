@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var can=null;
+		var ctx=null;
+		var i=50;
+		var flag=0;
+		var j=300;
+		var flag1=0;
+		setInterval(window.onload=function(){
+			
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			ctx.beginPath();
+		
+			if ((i+30) == (j-30) )
+			{
+				alert("bang! game over");
+			}
+			
+			
+			ctx.lineWidth=50;
+			ctx.strokeStyle="black";
+			ctx.moveTo(500,0);
+			ctx.lineTo(1100,0);
+			ctx.closePath();			
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth=45;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(50,50);
+			ctx.lineTo(300,300);
+			ctx.closePath();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(50,50);
+			ctx.lineTo(100,100);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(120,120);
+			ctx.lineTo(170,170);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(190,190);
+			ctx.lineTo(240,240);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(260,260);
+			ctx.lineTo(300,300);
+		    ctx.closePath();		
+			ctx.stroke();
+			//======================================================================================================//
+			
+			ctx.lineWidth=50;
+			ctx.strokeStyle="black";
+			ctx.moveTo(100,100);
+			ctx.lineTo(350,350);
+			ctx.closePath();			
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth=45;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(100,100);
+			ctx.lineTo(350,350);
+			ctx.closePath();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(100,100);
+			ctx.lineTo(150,150);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(120,120);
+			ctx.lineTo(170,170);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(190,190);
+			ctx.lineTo(240,240);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(260,260);
+			ctx.lineTo(300,300);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			
+			//======================================================================================================//
+			if(i<270&&flag==0)
+			{
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="red";
+			ctx.moveTo(i,i);
+			ctx.lineTo(i+30,i+30);
+			ctx.closePath();
+			ctx.stroke();
+			i+=1;
+			}
+			if(j>80 && flag1==0)
+			{
+			ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="yellow";
+			ctx.moveTo(j,j);
+			ctx.lineTo(j-30,j-30);
+			ctx.closePath();
+			ctx.stroke();
+			j-=1;
+			}
+			
+			if(i==270)
+			{
+			flag=1;
+			
+		    ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="red";
+			ctx.moveTo(i+30,i+30);
+			ctx.lineTo(i,i);
+			ctx.closePath();
+			ctx.stroke();
+			if(i>50)
+			{
+			i-=1;
+			if(i==50)
+			{flag=0;}
+			}
+		
+			}
+			
+			
+			
+			if(j==80)
+			{
+			flag1=1;
+			
+		    ctx.beginPath();
+			ctx.lineWidth=20;
+			ctx.strokeStyle="yellow";
+			ctx.moveTo(j-30,j-30);
+			ctx.lineTo(j,j);
+			ctx.closePath();
+			ctx.stroke();
+			if(j>50)
+			{
+			j+=1;
+			if(j==300)
+			{flag1=0;}
+			}
+			
+			
+			}
+		},10);
+	</script>
+</head>
+<body>
+
+	<canvas id="can" width="1000" height="600"></canvas>
+</body>
+</html>

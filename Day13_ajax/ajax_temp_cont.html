@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Heros list</title>
+    <style>
+        .box{
+            width: 1200px;
+            height: 800px;
+            background-color: #333;
+            margin: auto;d
+            overflow: auto;
+        }
+        .prod{
+            width: 200px;
+            padding: 5px;
+            background-color: silver;
+            float: left;cc
+            margin: 5px;
+        }
+        .prod img{
+            max-width : 100%;
+            background-color: silver;
+        }
+        .prod h1,h2{
+            margin: 0px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+        .prod div{
+            width: 200px;
+            height: 100px;
+            overflow: auto;
+            font-family: Arial;
+            padding: 5px;
+            box-sizing:border-box;
+            background-color: white;
+            color: #333;
+            text-align: justify;
+        }
+    </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", changeHandler);
+            xhr.open("get","data/heroes.json", true);
+            xhr.send();
+        var data = null;
+        function changeHandler(){
+            console.log(xhr.readyState);
+            if(xhr.status == 200 && xhr.readyState == 4){
+                data = xhr.responseXML;
+                for(var i = 0 ; i < data.getElementsByTagName("hTitle").length; i++){
+                    var ht = data.getElementsByTagName("hTitle")[i].innerHTML;
+                    var hi = data.getElementsByTagName("photo")[i].innerHTML;
+                    var hp = data.getElementsByTagName("phone")[i].innerHTML;
+                    var hd = data.getElementsByTagName("hDetails")[i].innerHTML;
+                    document.getElementsByClassName("box")[0].innerHTML += document.getElementById("temp")
+                                                                           .innerHTML
+                                                                           .replace("{ht}",ht)
+                                                                           .replace("{hi}",hi)
+                                                                           .replace("{hp}",hp)
+                                                                           .replace("{hd}",hd);
+                                                     
+                };
+            };
+        };
+    </script>
+    <script type="mindtree/template" id="temp">
+    	<div class='prod '>
+    	  <h1>{ht}</h1>
+    	  <img src="{hi}" alt="" />
+    	  <h2>Call : <span>{hp}</span></h2>
+    	  <div>{hd}</div>
+    	</div>
+    </script>
+    
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.box{
+			height:300px;
+			width:300px;
+			margin:0px auto;
+			background-color: red;
+		}
+		#log{
+			margin:0px auto;
+			display:block;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var box=document.getElementsByClassName("box")[0];
+			if(document.addEventListener)
+			{			
+			box.addEventListener("mouseover",clickLog);
+			box.addEventListener("mouseout",clickLog);
+			box.addEventListener("mousedown",clickLog);
+			box.addEventListener("mouseup",clickLog);
+			box.addEventListener("click",clickLog);
+			}
+			else{
+			box.attachEvent("onmouseover",clickLogIE);
+			box.attachEvent("onmouseout",clickLogIE);
+			box.attachEvent("onmousedown",clickLogIE);
+			box.attachEvent("onmouseup",clickLogIE);
+			box.attachEvent("onclick",clickLogIE);
+			}
+		};
+		function clickLog(evt){
+			var ieEvent=window.event;
+			document.getElementById("log").innerHTML+=event.target.className+"\n";
+		}
+		function clickLogIE(){
+			document.getElementById("log").innerHTML+=ieEvent.srcEvent.className+"\n";
+		}
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+	<hr />
+	<textarea  id="log" cols="50" rows="6"></textarea>
+</body>
+</html>

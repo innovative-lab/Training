@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular.module("app",[])
+		.controller("mycon",function($scope){
+			$scope.title="batman";
+			
+			setTimeO=out(function(){
+				$scope.title="joker";
+				$scope.apply();
+			},3000);
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

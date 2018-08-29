@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.box{
+			width:300px;
+			height:200px;
+			background-color:orange;
+			}
+			
+	</style>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+	var elm=null;
+	$(function(){
+		/*
+		 * 
+		//$("li").wrap("<div/>");
+		///$("li").wrap(".box");
+		$("li").wrapAll("<div/>");
+		$("li").wrapAll(".box");
+		$("ul").wrapInner("<div/>");
+		$("li").unwrap();
+		$("li").empty();
+		$("li").remove
+		 */
+		$("ul").on("click",function(){
+			alert("you clicked a ul tag");
+		});
+	})
+	  function removeBack(){
+	  	elm-$("ul").detach();
+	  }
+	  function addBack(){
+	  	$("body").append(elm);
+	  }
+		
+	</script>
+</head>
+<body>
+	<button onclick="removeBack()">remove element</button>
+	<button onclick="addBack()">add element</button>
+	<div class="box"></div>
+	<ul>
+		<li>list 1</li>
+		<li>list 2</li>
+		<li>list 3</li>
+		<li>list 4</li>
+		<li>list 5</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Create Event</title>
+        <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css"/>
+        <!-- <script src="lib/jquery-1.12.1.js"></script>
+        <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script> -->
+        
+        <script src="lib/angular.js"></script>
+        <script>
+          angular.module("event",[])
+          .controller("myevent",function($scope,$http){
+              $scope.evtlist = null;
+              
+              $scope.evt = "";
+              $scope.name = "";
+              $scope.mid = "";
+              $scope.loc = "";
+              $scope.date = "";
+              $scope.stime = "";
+              $scope.etime = "";
+              $scope.photo = "";
+              $scope.desc = "";
+                             
+              var refresh = function(){
+                   $http.get("/evtlist")
+                   .success(successHandler)
+                   .error(errorHandler);
+              };
+              refresh();
+              function successHandler(r,s,x){
+                   $scope.evtlist = r;
+              }
+              
+              function errorHandler(e,s,x){
+                   alert("Error! Occured");
+              }
+              
+              $scope.addFun = function(){
+                   var data = {
+                        
+                        eventname : $scope.evt,
+                        ename : $scope.name,
+                        emid : $scope.mid,
+                        eloc : $scope.loc,
+                        edate : $scope.date,
+                        estime : $scope.stime,
+                        eetime : $scope.etime,
+                        ephoto : $scope.photo,
+                        edesc : $scope.desc
+                        
+                   };
+                   
+                   $http.post("/evtlist" , data)
+                   .success(function(r,s,x){
+                        console.log("data updated on the server");
+                        refresh();
+                   })
+                   .error(errorHandler);
+              }
+              
+          });
+        
+          
+        </script>
+        
+        
+          <style>
+          
+          .bodySyed{
+              background-color : #f5e3e3;
+              padding: 0px;
+          }
+          .headerSyed{
+              height:60px;
+              background-color: #AE3A3A;
+          }
+          .formSyed{
+              margin-top: 5px;
+          }
+          .privateCollapseSyed{
+              height: 200px;
+              overflow: auto;
+          }
+          .eventHeaderSyed{
+              font-size: 24px;
+              font-weight: bolder;
+          }
+          
+              
+        </style>
+     
+     <!---------------------------- Starting Body ----------------------------------->        
+    <body class="bodySyed" data-ng-app="event">
+    <div class="container">
+          <div class="row">
+              
+              <!-------------- Start of Header ------------------->
+              <div class="header col-xs-12 col-sm-12 headerSyed">
+                        <div class="setting col-xs-1 col-xs-offset-11">
+                                                     
+                            <!-- <button>
+                                  <span class="glyphicon glyphicon-menu-left"></span>
+                            </button>  -->
+                        </div>                    
+                  </div>
+                  <!-------------- Event of Header ------------------->
+                  
+
+                  
+          <!-------------------Start of Form ---------------------------->
+          <form class="form-horizontal col-xs-10 col-xs-offset-1 formSyed">
+              
+               <div class="form-group ">
+                  <label class="eventHeaderSyed">Create an event</label>               
+                </div>
+              
+                   
+                <div class="form-group ">
+                  <label>Event</label>
+                  <input type="text" class="form-control" data-ng-model="evt" placeholder="Event Name">
+                </div>
+                <div class="form-group">
+                  <label>MID</label>
+                  <input type="text" class="form-control" data-ng-model="mid" pattern="[mM0-9]{8}" placeholder="M10XXXXX">
+                </div>
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" class="form-control" data-ng-model="name" placeholder="Admin Name">
+                </div>
+                <div class="form-group">
+                  <label>Location</label>
+                  <input type="text" class="form-control" data-ng-model="loc" placeholder="Event Location">
+                </div>
+                <div class="form-group">
+                  <label>Date</label>
+                  <input type="date" class="form-control" data-ng-model="date">
+                </div>
+                <div class="form-group">
+                   
+                  <label>Start Time</label>
+                  <input type="time" class="form-control"  data-ng-model="stime">
+                </div>
+                <div class="form-group">
+                  <label>End Time</label>
+                  <input type="time" class="form-control"  data-ng-model="etime">
+                </div>
+                
+                <!-- <div class="form-group">
+                  <label>Photo</label>
+                  <input type="file" class="form-control" accept="image/*">
+                </div> -->
+                
+                <div class="form-group">
+                  <label>Photo</label>
+                  <input type="text" class="form-control" data-ng-model="photo">
+                </div>
+                
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea class="form-control" rows="3" data-ng-model="desc"></textarea>
+                </div>
+                
+                                                  
+                <button type="submit" class="btn btn-success active buttonSyed">Create</button>
+              </form>
+              <!---------------- End of Form ---------------------->
+              </div>
+              </div>
+          </div>
+    </body>
+</html>

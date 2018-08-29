@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DaysLeft13_Backbone/doubt.html&apos; to &apos;Backbone_router.html&apos;" description="Rename resource &apos;doubt.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="doubt.html" name="Backbone_router.html" stamp="1459139390618" updateReferences="true"/>
+</session>

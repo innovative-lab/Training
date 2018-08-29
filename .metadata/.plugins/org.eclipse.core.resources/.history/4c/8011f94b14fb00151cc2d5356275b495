@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+		   .module("app",[])
+		   .controller("mycon",function($scope){
+		   	  $scope.title="superman"
+		   })
+		   .directive("myDir",function(){
+		   	return {
+		   		template:"<div><h1>Hello {{ secret }}</h1><input type='text' ng-model='secret'/></div>",
+		   		replace:true,
+		   		restrict:"MECA",
+		   		scope:true,
+		   		secret:"="
+		   	}
+		   })
+		   
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	<my-Dir></my-Dir>
+	<div my-Dir secret="{{ title }}"></div>
+	<div class="my-dir"> </div>
+	
+</body>
+</html>

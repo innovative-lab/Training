@@ -1,0 +1,63 @@
+	<div class="vaishb">
+	<header id="vaish1">
+		<div class="rohini_heading">
+		   <a href="html1.html"><div class="glyphicon glyphicon-th-list rohini_menuicon "></div></a>
+           <div class="rohini_title">Title</div>
+           <a href=""><div class="glyphicon glyphicon-menu-left rohini_searchicon"></div></a>
+           <a href=""><div class="glyphicon glyphicon-user rohini_usericon"></div></a>
+       </div>
+	</header>
+	<div id="vaishsp2" ng-repeat="event in emplist" >                                                     <!-- ng-repeat="event in eventdb" -->
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Created By</b></div>
+			<div id="vaishdiv5">{{ event.name }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>MID</b></div>
+			<div id="vaishdiv5">{{ event.mid }} </div>
+		</div>
+		<!-- <div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Type</b></div>
+			<div id="vaishdiv5">{{ event. }}</div>
+		</div> -->
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Venue</b></div>
+			<div id="vaishdiv5">{{ event.location }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Date</b></div>
+			<div id="vaishdiv5">{{ event.date | date :'dd/MM/yyyy'}}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Start time</b></div>
+			<div id="vaishdiv5">{{ event.starttime | date :'HH:mm:ss'}}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>End time</b></div>
+			<div id="vaishdiv5">{{ event.endtime | date :'HH:mm:ss'}}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Details</b></div>
+			<div id="vaishdt">{{ event.Details }}<div>
+		</div>
+	</div>
+	<h1 id="vaish2">{{ event.Joined.length +1 }} people are in this group </h1>
+	<!--  <div id="vaishsp">
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img   id="vaishimg1"/></div>                           ng-src="{{ event. }}"
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img   id="vaishimg1"/></div>                               ng-src="{{ event. }}"
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img   id="vaishimg1"/></div>                          ng-src="{{ event. }}"
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img   id="vaishimg1"/></div>                              ng-src="{{ event. }}"
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	</div> -->
+	</div>

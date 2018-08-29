@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Backbone Routing Ex</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 300px;
+            background-color: #333;
+            padding: 5px;
+            box-sizing: border-box;
+            float: left;
+            margin: 10px;
+        }
+        .box h1{
+            background-color: #E9EACC;
+            color: #333;
+            margin: 0px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            vertical-align: middle;
+            font-family: Arial;
+        }
+        .box h2{
+            background-color: #575934;
+            color: #E9EACC;
+            margin: 0px;
+            height: 30px;
+            font-size : 16px;
+            text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+            font-family: Arial;
+        }
+        .box img{
+            display: block;
+            max-width: 100%;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script type="template" id="temp">
+        <div class='box'>
+            <h1><%= title %></h1>
+            <img src='<%=  photo %>' width='200' />
+            <h2><span><%= fname %> <%= lname %></span></h2>
+            <input type='range' value='<%= power %>'/>
+            <button class='delbtn'>delete</button>
+        </div>
+    </script>
+    <script>
+        var HeroModel = Backbone.Model.extend({});
+        var HeroView = Backbone.View.extend({
+            initialize : function(){
+                console.log("an instance was created");
+                this.render();
+            },
+            render : function(){
+                this.$el.html(this.template(this.model.toJSON()));
+                return this;
+            },
+            events : {
+                "click .delbtn" : function(){
+                    this.remove();
+                }
+            },
+            template : _.template($("#temp").html())
+        });
+        var batmodel = new HeroModel({
+            title : "Batman",
+            fname : "Bruce",
+            lname : "Wayne",
+            photo : "images/batman.jpg",
+            power : 7
+        });
+        var supermodel = new HeroModel({
+            title : "Superman",
+            fname : "Clark",
+            lname : "Kent",
+            photo : "images/superman.jpg",
+            power : 8
+        });
+        var MyRouter = Backbone.Router.extend({
+            routes : {
+                        "" : "homefun",
+                  "batman" : "batfun",
+                "superman" : "superfun"
+            },
+            homefun : function(){
+                console.log("you are at home page");
+            },
+            batfun : function(){
+                $(".boxer").html(new HeroView({model : batmodel}).render().el)
+                console.log("you are at bat page");
+            },
+            superfun : function(){
+                $(".boxer").html(new HeroView({model : supermodel}).render().el)
+                console.log("you are at sup page");
+            }
+        });
+        var mr = new MyRouter();
+        Backbone.history.start();
+    </script>
+</head>
+<body>
+    <div class="boxer"></div>
+</body>
+</html>

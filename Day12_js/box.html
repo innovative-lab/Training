@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <script>
+            var mindtree = {}; // namespace
+
+            window.onload = function() {
+                //-------------------------------------
+                mindtree.box = document.getElementsByClassName("box")[0];
+                
+                mindtree.addHandler = function() {
+                    mindtree.box.innerHTML += "<div class='boxer'></div>";
+                }
+                
+                mindtree.removeHandler = function() {
+                    var elm = mindtree.box.firstChild;
+                    if (elm) {
+                        mindtree.box.removeChild(elm);
+                    } else {
+                        alert("nothing to remove")
+                    };
+                }
+                
+                //-------------------------------------
+                document.querySelectorAll("button")[0]
+                .addEventListener("click", mindtree.addHandler);
+                
+                document.querySelectorAll("button")[1]
+                .addEventListener("click", mindtree.removeHandler);
+            };
+        </script>
+        <style>
+            .box {
+                height: 500px;
+                background-color: #333;
+            }
+            .boxer {
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+                float: left;
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <button>
+            Add Box
+        </button>
+        <button>
+            Remove Box
+        </button>
+        <hr/>
+        <div class="box"></div>
+    </body>
+</html>

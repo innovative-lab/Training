@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/anothermodule.js"></script>
+</head>
+<body ng-app="app" ng-controller="someController">
+	
+	<h1>{{ greet }}</h1>
+	
+</body>
+</html>

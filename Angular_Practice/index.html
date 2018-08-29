@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Full App</title>
+	 <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css" />
+        <script src="lib/jquery-1.12.1 (1).js"></script>
+        <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+	<script src="lib/angular.js"></script>
+	<script src="angular_router/angular_route.js"></script>
+	<script src="app/module/app.js"></script>
+	<script src="app/controller/herocontroller.js"></script>
+	<script src="app/services/valuerecipe.js"></script>
+	<script src="app/services/constantRecipe.js"></script>
+	<script src="app/services/factory.js"></script>
+	<script src="app/services/service.js"></script>
+	<script src="app/services/provider.js"></script>
+	<script src="app/controller/moviescontroller.js"></script>
+	<script src="app/config/config.js"></script>
+</head>
+<body ng-app="app">
+	<div class="box" ng-controller="heroesController">
+		<ng-view></ng-view>
+	</div>
+</body>
+</html>

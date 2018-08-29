@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular.module("app",[])
+		.controller("mycon",function($scope){
+			$scope.title="batman";
+			$scope.$watch("title",function(newvalue,oldvalue){
+				if(newvalue == "joker")
+				{
+					$scope.title="joker not allowed";
+				}
+			})
+		})
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	
+</body>
+</html>

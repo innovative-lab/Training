@@ -1,0 +1,19 @@
+@mixin ComBod($col){
+  border:2px solid red;
+  padding:10px;
+  margin:10px auto;
+  background-color:$col;
+  height:200px;
+  width:400px;
+}
+
+.boxer1{
+  @include ComBod(orange*2);
+  
+}
+.boxer2{
+  @include ComBod(red);
+}
+.boxer3{
+  @include ComBod(green);
+}

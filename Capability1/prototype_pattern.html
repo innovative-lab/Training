@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Prototype</title>
+	<script>
+		var Hero=function(){
+			this.fname="soumya";
+			this.age=99;
+			this.color="black";
+		}
+		var Noob=function(){
+			this.height=6;
+		}
+		
+		Noob.prototype=new Hero();
+		var noob=new Noob();
+		
+		console.log(noob.fname)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

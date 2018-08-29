@@ -1,0 +1,44 @@
+.container{
+    background-color: #999;
+    height: 400px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    font-family: arial;
+    font-size: 40px;
+    line-height: 100px;
+    color: #333;
+    min-width: 50px;
+    padding: 5px;
+    float: left;
+    border:20px solid black;
+    margin:10px;
+}
+.box1{
+    background-color: #B774F2;
+}
+.box2{
+    background-color: #F274DB;
+}
+.box3{
+    background-color: #74F2E7;
+}
+.box4{
+    background-color: #F2F074;
+}
+.box5{
+    background-color: #F29E74;
+}
+.box6{
+    background-color: #747AF2;
+}
+.box7{
+    background-color: #9BD3E8;
+}
+.box8{
+    background-color: #CEE89B;
+}
+.box9{
+    background-color: #E8CA9B;
+}

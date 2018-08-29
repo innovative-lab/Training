@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+    html{
+    	border:5px solid red;
+    }
+    body{
+    	border:5px solid red;
+    }
+    /*
+     normalize.css
+     reset.css
+     */
+
+    /*
+    #list1{
+        width: 400px;
+    }
+    #list1 li{
+        background-color: yellow;
+    }
+    #list2 li{
+        background-color: orange;
+    }
+    #list2>li{
+        background-color: red;
+    }
+    p:hover{
+        background-color: yellow;
+        cursor: default;
+    }
+    a:link{
+        color: black;
+        text-decoration: none;
+    }
+    
+    a:visited{
+        color: green;
+        text-decoration: none;
+    }
+    a:hover{
+        color: orange;
+        text-decoration: none;
+    }
+     */
+    p:first-line{
+        background-color: yellow
+    }
+    p:first-letter{
+        font-family: Georgia;
+        font-size: 150px;
+        baseline-shift:10px;
+    }
+    h1, h2,h3,h4,h5,h6{
+        font-size: 30px;
+        font-family: arial;
+        margin: 0px;
+    }
+    </style>
+</head>
+<body>
+    <ul id="list1">
+        <li id="item1">List Item 1</li>
+        <li id="item2">List Item 2</li>
+        <li id="item3">List Item 3</li>
+    </ul>
+    <ul id="list2">
+        <li id="item4">List Item 4</li>
+        <li id="item5">List Item 5
+            <ol>
+                <li>Orderd list 1</li>
+                <li>Orderd list 2</li>
+                <li>Orderd list 3</li>
+            </ol>
+        </li>
+        <li id="item6">List Item 6</li>
+    </ul>
+    <p class="para">Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p class="para">Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <hr/>
+    <a>I am an Anchor without a link</a>
+    <br/>
+    <a href="#">I am an Anchor with a link</a>
+    <hr/>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <hr/>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+			.module("app",[])
+			.controller("mycon",function($scope){
+				$scope.user="pratik";
+				$scope.price=1223;
+				$scope.gender="male"
+			})
+			.filter("myfilter",function(){
+				var myfilter=function(param1,param2){
+					if(param2 == "male"){
+						return "Mr."+ param1;
+					}
+					else if(param2 == "female"){
+						return "Ms."+ param1;
+					}
+					else{
+						return "It."+ param1;
+					}
+					
+					return myfilter();
+				}
+				
+			})
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	<input type="text" ng-model="user" />
+	<h1>{{ user | myfilter : gender }}</h1>
+</body>
+</html>

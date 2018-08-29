@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Wireframe</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="wireframe-css.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		              <div id="grad" style="color:white">
+    <img id="1" src="images/American_redcross_2012_logo.png" style="height: 140px; width:400px"/>  
+       
+       
+       </div>  
+	</header>
+	<!--//////////////////////////////Container\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+<div class="container">
+	<div class="dropdown">
+		<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Save As
+           <span class="caret"></span></button>
+           <ul class="dropdown-menu">
+              <li><a href="#">PDF</a></li>
+              <li><a href="#">EXCEL</a></li>
+              <li><a href="#">WORD</a></li>
+          </ul>
+           <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-download-alt"></span></button> </td>
+	</div>
+	<!--///////////table\\\\\\\\\\\\\\\\-->
+	<div class="tab" style="margin-top:300px;width:90%;border:1px solid black">
+	       <table  id="t1">
+	       	<thead>
+    <tr>
+      <th>Phone</th>
+    </tr>
+    </thead>
+     <tbody>
+       <tr>
+       <td>Phone-(850) 912-0104</td>
+        </tr>
+        <tr>
+       <td>Phone-(817) 923-4934 </td>
+        </tr>
+         <tr>
+       <td> Phone: (847) 699-2929</td>
+      </tr>
+     </tbody>  
+
+</table >
+      <table id="t2">
+          	<thead>
+    <tr>
+      <th>Email</th>
+    </tr>
+    </thead>
+     <tbody>
+       <tr>
+       <td>navyfcu@org</td>
+        </tr>
+        <tr>
+       <td>info@easternbk.com</td>
+        </tr>
+         <tr>
+       <td>elawrence@vfmac.edu</td>
+      </tr>
+      <tr>
+      	 <td>contactus@navy.com</td>
+      </tr>
+     </tbody>  
+
+</table>
+
+       <td>contactus@navy.com</td>
+       <td><span>Merrifield</span><br> Box 3000, Merrifield,22119<hr><span>Jacksonville</span> <br>11270 Saint Johns Industrial Pkwy S, Jacksonville, 32246 <hr><span>Pensacola</span><br> 5550 Heritage Oaks Dr, Pensacola, 32526</td>
+      <th></th>
+      <th>Address</th>
+
+
+
+
+
+
+     </div>
+</div>
+    <!--//////////////////////////////footer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+		<footer class="footer-distributed">
+
+			<div class="footer-left" style="color: white">
+				<h4>Donate Funds</h4>
+				
+					<a href=""><h6>Your Donation</h6></a>
+					<a href=""><h6>Impact Lives</h6></a>
+					<a href=""><h6>Where Your Money Goes</h6></a>
+				
+			</div>
+			<div class="footer-2" style="color: white">
+				<h4>About Us</h4>
+				
+					<a href=""><h6>Latest News</h6></a>
+					<a href=""><h6>Connect With Us</h6></a>
+					<a href=""><h6>Publications</h6></a>
+				
+			</div>
+
+			<div class="footer-center" style="color: white">
+				<h4>What we Do</h4>
+				
+					<a href=""><h6>Disaster Relief</h6></a>
+					<a href=""><h6>Health & safety</h6></a>
+					<a href=""><h6>Life Saving Bood</h6></a>
+				
+			</div>
+			
+			<div class="footer-4" style="color: white">
+				<h4>Get Assistance</h4>
+				
+					<a href=""><h6>Types Of Emergency</h6></a>
+					<a href=""><h6>Be Red Cross Ready</h6></a>
+					<a href=""><h6>Mobile Apps</h6></a>
+				
+			</div>
+
+			<div class="footer-right" style="color: white">
+				
+				<h4>Contact Us</h4>
+				<h6>(877) 272-7337</h6>
+				<h4>Social Contact</h4>
+				<div class="icon">
+				<a href=""><img src="images/facebook_40x40.png" style="width:25px;height:25px"alt="" /></a>
+				<a href=""><img src="images/twitter_40x40.png" style="width:25px;height:25px"alt="" /></a>
+				<a href=""><img src="images/linkedin.png" style="width:25px;height:25px"alt="" /></a>				
+				</div>
+				
+			</div>
+
+		</footer>
+
+
+ 	
+ 
+ 
+	
+</body>
+</html>

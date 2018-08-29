@@ -1,0 +1,79 @@
+ <style>
+ 	select.custom-dropdown {
+  margin:auto;
+  margin-top:10%;
+  margin-bottom:0%;
+  width:500% !important;
+ -webkit-appearance: none;  /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+ -moz-appearance: none;  /*REMOVES DEFAULT FIREFOX STYLE*/
+ border: 0 !important;  /*REMOVES BORDER*/
+
+ color: #fb4848;
+ -webkit-border-radius: 5px;
+ border-radius: 5px;
+ font-size: 14px;
+ padding: 10px;
+ width: 35%;
+ cursor: pointer;
+ background-color:#fb4848 !important;
+ background: #0d98e8 url(drop-down-arrow.png) no-repeat right center;
+ background-size: 40px 37px; /*TO ACCOUNT FOR @2X IMAGE FOR RETINA */
+}
+#logo{
+	margin-top: 35%;
+}
+
+ </style>
+ <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal open-panel close-panel">
+        <nav id="menu" class="left show">
+          <ul>
+            <li><a href="#/homepage" class="link icon-only close-panel "><i class="fa fa-home"></i>Home</a></li>
+            <li><a ng-click="editdetails()" href="#/editdetails" class="link icon-only close-panel" ><i class="fa fa-envelope "></i>Edit Details</a></li>
+            <li><a href="#/aboutus" class="link icon-only close-panel"><i class="fa fa-font"></i>About Us</a></li>
+          </ul>
+        </nav>
+    </div>
+    <div class="views">
+        <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#/homepage" class="link icon-only open-panel">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+                        <h2 class="title">MedHelp</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div data-page="index" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                        	                            <div class="row home">
+                            	<img ng-click="findLoc()" src="img/help-button-hi.png" class='alert-text' alt="" width="70%" align="absmiddle" id='logo'/> 
+                            	<div class="card" id='ac'>
+   
+  <div class="card" ng-hide='ack'>
+    <div class="card-content">
+        <div class="card-content-inner">
+        	<b ng-hide='ack'>Press the button in case of emergency</b></div>
+    </div>
+</div>
+  <div class="card" ng-show='ack'>
+    <div class="card-content">
+        <div class="card-content-inner">
+        	<b ng-show='ack'>Request sent. Wait for help to arrive.</b></div>
+        	
+    </div>
+</div>
+                            </div>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+           

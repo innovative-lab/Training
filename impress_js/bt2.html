@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Biz Track</title>
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bt2css.css">
+    <style>
+.black_overlay{
+	display:none;
+	position:absolute;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:150%;
+	background-color: black;
+	z-index:1001;
+	opacity: .50;
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+}
+.white_content{
+	display:none;
+	position:absolute;
+	top:10%;
+	left:10%;
+	width:80%;
+	height:80%;
+	border: 15px solid #4A4646;
+	background-color: #4A4646;
+	z-index:1002;
+	overflow:auto;
+	opacity:1.1;
+	-webkit-box-shadow:0 0 100px white;
+	-moz-box-shadow:0 0 100px white;
+	box-shadow:0 0 100px white;
+}
+  
+    </style>
+    
+    <script>
+    var i=0;
+    var namedata=["Ranked among the nation’s best hospitals by U.S. News & World Report","Named one of the nation’s top 5 large health systems by Truven Health Analytics","For the seventh year in a row, Scripps Health landed on Fortune Magazine’s list of America’s 100 Best Companies to Work For.","Scripps doctors are first in San Diego County to implant wireless heart failure monitor post FDA approval"];
+    window.onload=change_image;
+    function change_image()
+    {
+    if(i==4)
+    {
+        i=0;
+    }
+
+    var img="images/p"+(i+1)+".jpg";
+    document.getElementById("img1").background=img;
+    document.getElementById("p").innerHTML=namedata[i];
+    i++;
+    
+    }
+    setInterval(change_image,7000);
+    
+    </script>
+</head>
+
+<body background="images/p1.jpg" id="img1">
+	<header>
+		<div id="logo" background="">
+			<img src="images/8eb5d1d2ab529bff804f013e4e70d685_400x400.jpeg" style="height:130px;width:150px"  />
+		</div>
+          <div id="heade">
+          	<h1><b>Scripps Health</b></h1>
+          </div>
+	</header>
+	<main >
+		
+		<div class="leftside">
+			    	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1" style="width:299px;"><b>Rohini Kulkarni</b></button> 
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                       <div class="modal-content">
+                       <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"><b>Rohini Kulkarni</b></h4>
+                      </div>
+                    <div class="modal-body">
+                          <p>Some text in the modal.</p>
+                    </div>
+                      <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+
+                </div>
+               </div>
+               
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" style="width:299px;"><b>Soumya Pratik</b></button> 
+
+                        <!-- Modal -->
+                        <div id="myModal2" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                       <div class="modal-content">
+                       <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"><b>Soumya Pratik</b></h4>
+                      </div>
+                    <div class="modal-body">
+                          <p>Some text in the modal.</p>
+                    </div>
+                      <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+
+                </div>
+               </div>
+               
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3" style="width:299px;"><b>Sourav Haldar</b></button> 
+
+                        <!-- Modal -->
+                        <div id="myModal3" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                       <div class="modal-content">
+                       <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                    <div class="modal-body">
+                          <p>Some text in the modal.</p>
+                    </div>
+                      <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+
+                </div>
+               </div>
+               
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4" style="width:299px;"><b>Rajat Mayank</b></button> 
+
+                        <!-- Modal -->
+                        <div id="myModal4" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                       <div class="modal-content">
+                       <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                    <div class="modal-body">
+                          <p>Some text in the modal.</p>
+                    </div>
+                      <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+
+                </div>
+               </div>
+			 
+			
+			
+		</div>
+		<div id="add">
+			<p id="p"></p>
+			
+			
+			
+		</div>
+		<div class="main">
+			
+			<section>
+			<h1 style="color:white;font-size:50px">About Us</h1>
+			<hr />
+			<div class="content">
+			<article >
+				<div id="pic"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><img class="picture" src="images/1.jpg" style="height:200px;width:200px" />
+					<div id='light' class="white_content">
+                    <div id="lay_content">
+                    	<h1>About Us</h1>
+                    	<hr />
+                    	<p><h5>Founded in 1924 by philanthropist Ellen Browning Scripps in the community of La Jolla, the health system now extends from Chula Vista to Oceanside. </h5></p>
+                    	<p><h5>A Leader in the Prevention, Diagnosis and Treatment of Disease</h5></p>
+                    	<p><h5>Scripps Health is a $2.7 billion private, nonprofit, integrated health system in San Diego, California that is ranked among the top 15 health systems in the nation. 
+Scripps treats a half-million patients annually.</h5></p>
+                        <h3>The organization's key elements are:</h3>
+                        <ul>
+                        	<li><h5>Four hospitals on five campuses</h5></li>
+                        	<li><h5>More than 2,600 affiliated physicians and 13,000 employees</h5></li>
+                        	<li><h5>Scripps Clinic and Scripps Coastal Medical Center-a network of integrated facilities with specialists from more than 60 medical and surgical specialties at more than 25 outpatient centers and clinics</h5></li>
+                        	<li><h5>Home health care</h5></li>
+                        	<li><h5>Hospice care</h5></li>
+                        	<li><h5>A wide range of health education classes and support services</h5></li>
+                        </ul>
+                    </div> 
+						
+						
+						
+						
+						
+						<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">close</a></div>
+				<div id="fade" class="black_overlay"></div></a></div>
+				
+			</article>
+			
+			
+			
+			
+			
+			<article >
+				<div id="pic"><a href="javascript:void(1)" onclick="document.getElementById('light1').style.display='block';document.getElementById('fade1').style.display='block'"><img class="picture" src="images/2.jpg" style="height:200px;width:200px" />
+					<div id='light1' class="white_content">
+						<div id="lay_content">
+							<h1>
+								Scripps health is 
+							</h1>
+							<hr />
+							<ul>
+								<li><h5>Non-profit</h5></li>
+								<li><h5>Private </h5></li>
+								<li><h5>service organization</h5></li>
+							</ul>
+						</div>
+						
+						
+						
+						<a href="javascript:void(1)" onclick="document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'">close</a></div>
+				<div id="fade1" class="black_overlay"></div></a></div>
+				
+			</article>
+			
+			
+			
+			
+			
+			<article >
+				<div id="pic"><a href="javascript:void(0)" onclick="document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'"><img class="picture" src="images/3.jpg" style="height:200px;width:200px" />
+					<div id='light2' class="white_content">
+						
+						<h1>Scripps Health</h1>
+						<hr />
+						<h5><b>Revenue:</b>$2.6 billion(2015)</h5>
+						<br />
+						<h5><b>Size :</b></h5>
+						<ul>
+							<li><h5>Four acute hospitals,and 25 outpatient centres</h5></li>
+							<li><h5>More than 2,600 affiliated physicians and 13,000 employees </h5></li>
+						</ul>
+						
+						<br /><br />
+						<h1>Sharp HealthCare</h1>
+						<hr />
+						<p><h5><b>Revenue:</b>$2.7 billion(2015)</h5></p>
+						<br />
+						<h5><b>Size :</b></h5>
+						<ul>
+							<li><h5>Four acute-care hospitals, three specialty hospitals</h5></li>
+							<li><h5>More than 17,000 dedicated employees, including more than 4,000 physicians</h5></li>
+						</ul>
+						
+						<br />
+						<br />
+						
+
+						
+						<a href="javascript:void(0)" onclick="document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'">close</a></div>
+				<div id="fade2" class="black_overlay"></div></a></div>
+				
+			</article>
+			
+			
+			
+			
+		<article >
+				<div id="pic"><a href="javascript:void(0)" onclick="document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'"><img class="picture" src="images/4.jpg" style="height:200px;width:200px" />
+					<div id='light3' class="white_content">
+						
+						<h1>Organisation Structure</h1>
+						<hr />
+						<p>
+							<h5>
+								<ul>
+									<li>
+										Corporate Medical Division (includes nursing, quality, research and medical management and physician co-management); 
+									</li>
+									<li>Clinical Operations Division (includes clinical support, clinical ancillaries, and clinical service lines); </li>
+									<li>Support Services Division (includes surgery, pharmacy, and supply chain management, facilities design, and construction and support services)</li>
+									<li>Administrative Services Division (includes finance, human resources, legal, audit and compliance, information services, physician services, community benefit, project management, government affairs, marketing, communications, and philanthropy)</li>
+								</ul>
+							</h5>
+						</p>
+						
+						
+						<a href="javascript:void(0)" onclick="document.getElementById('light3').style.display='none';document.getElementById('fade3').style.display='none'">close</a></div>
+				<div id="fade3" class="black_overlay"></div></a></div>
+				
+			</article>
+			
+			
+			
+			
+			
+			<article >
+				<div id="pic"><a href="javascript:void(0)" onclick="document.getElementById('light4').style.display='block';document.getElementById('fade4').style.display='block'"><img class="picture" src="images/5.jpg" style="height:200px;width:200px" />
+					<div id='light4' class="white_content"><div id="bf"><img src="images/organization structure Edited.PNG"  /></div>
+						
+						
+						<a href="javascript:void(0)" onclick="document.getElementById('light4').style.display='none';document.getElementById('fade4').style.display='none'">close</a></div>
+				<div id="fade4" class="black_overlay"></div></a></div>
+				
+			</article>
+			
+			
+			
+			
+			
+			<article >
+				<div id="pic"><a href="javascript:void(0)" onclick="document.getElementById('light5').style.display='block';document.getElementById('fade5').style.display='block'"><img class="picture" src="images/6.jpg" style="height:200px;width:200px" />
+					<div id='light5' class="white_content">
+						
+						<h1>MedAssets</h1> 
+						<hr />
+						<p>
+							<h5>
+								MedAssets has provided Scripps Health with spend management solutions to lower supply costs and increase the operational efficiency of its supply chain. 
+MedAssets also provided Automated Invoice Management Services Powered by Ariba
+							</h5>
+						</p>
+						
+						
+						
+						
+						<a href="javascript:void(0)" onclick="document.getElementById('light5').style.display='none';document.getElementById('fade5').style.display='none'">close</a></div>
+				<div id="fade5" class="black_overlay"></div></a></div>
+				
+			</article>
+			
+			
+			
+			
+			
+			<article >
+				<div id="pic"><a href="javascript:void(0)" onclick="document.getElementById('light6').style.display='block';document.getElementById('fade6').style.display='block'"><img class="picture" src="images/7.jpg" style="height:200px;width:200px" />
+					<div id='light6' class="white_content">
+						
+						<h1>
+							Role of IT
+						</h1>
+						<hr />
+						<h3>Centricity</h3>
+						<p><h5>
+           Centricity is a brand of healthcare IT software[1] from GE Healthcare, a division of General Electric. It includes software for independent physician practices, academic medical centers, hospitals and large integrated delivery networks.
+The various modules perform practice management, revenue cycle management, electronic medical records, medical imaging, and other functions. 
+
+						</h5></p>
+						<h3>Allscripts</h3>
+						<p><h5>Allscripts is the brand name of Chicago-based AllscriptsMisys Healthcare Solutions Inc. which provides an e-prescribing system,electronic health record (EHR), practice management (PM) and care management systems, respectively.
+Scripps Health uses Allscripts Electronic Health Record (EHR) named EPIC.</h5></p>
+						
+						<a href="javascript:void(0)" onclick="document.getElementById('light6').style.display='none';document.getElementById('fade6').style.display='none'">close</a></div>
+				<div id="fade6" class="black_overlay"></div></a></div>
+				
+			</article>
+			
+			
+			
+			
+			
+			
+			<article >
+				<div id="pic"><a href="javascript:void(0)" onclick="document.getElementById('light7').style.display='block';document.getElementById('fade7').style.display='block'"><img class="picture" src="images/8.jpg" style="height:200px;width:200px" />
+					<div id='light7' class="white_content">
+						
+						<h1>Emerging IT trends</h1><hr />
+						<h3>Wearable Computing</h3>
+						<p><h5>From fitness bands to smart watches, wearable computing is becoming an increasingly 
+                               popular consumer technology for health and wellness applications.
+                               Technology companies are developing a myriad of wearable health devices that can track 
+                               physical activity, monitor glucose and even sense if the user falls</h5></p>
+                         <h3>Nosqldatabases</h3>
+                         <p><h5>NoSQL databases are an important technology that’s part of the larger enterprise Big Data 
+and analytics movement.
+NoSQL databases like Cassandra, HBase, or MongoDB are also attractive to enterprise 
+developers because they require little overhead and can be up and running quickly for
+prototyping new kinds of apps or data analysis </h5></p>
+
+                         <h3>App Creation</h3>
+                         <p><h5>Promote “good” apps by asking six key questions about integration, 
+interoperability, feedback, behavior reinforcement, outcomes measurement, 
+and sustainability.</h5></p>
+                              <br />
+						
+						<a href="javascript:void(0)" onclick="document.getElementById('light7').style.display='none';document.getElementById('fade7').style.display='none'">close</a></div>
+				<div id="fade7" class="black_overlay"></div></a></div>
+				
+			</article>	
+			</div>
+			</section>
+			
+		
+			
+			
+		</div>
+		
+	</main>
+	<footer>
+			
+		</footer>
+</body>
+</html>
+

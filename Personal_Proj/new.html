@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		var arr = [27,3,21,29,28,26,18,14,7];
+		/*
+		for(var i = 0; i < arr.length ; i++){
+			alert(arr[i]);
+		};
+		 */
+		
+		/*
+		var inrCur = [];
+		arr.forEach(function(val, index, arr){
+			inrCur.push("INR "+val);
+		});
+		var usCur = [];
+		arr.forEach(function(val, index, arr){
+			usCur.push("$ "+val);
+		});
+		console.log(inrCur);
+		console.log(usCur);
+		 */
+		/*
+		arr.forEach(function(val, index, arr){
+			arr[index]="h1 "+val;
+		});
+		 */
+
+		/*
+		var narr = [];
+		arr.forEach(function(){
+			narr.push(prompt("give me a value"));
+		})
+		console.log(narr)
+		 */
+
+		/*
+		var inrarr = arr.map(function(v,i,a){
+			return "INR "+v;
+		});
+		console.log(inrarr);
+		 */
+		/*
+		Filter
+		var bornafter15 = arr.filter(function(v,i,a){
+			return v > 15;
+		});
+		console.log(bornafter15);
+		 */
+		
+		/*
+		Every
+		 */
+		var allBornAfter15 = arr.every(function(v,i,a){
+			return v > 15;
+		});
+		console.log(allBornAfter15);
+		/*
+		Some
+		var atleast1BornAfter15 = arr.some(function(v,i,a){
+			return v > 15;
+		});
+		console.log(atleast1BornAfter15);
+		 */
+		
+		/*
+		Reduce
+		var sumofdates = arr.reduce(function(initVal, v, i, a){
+			console.log(v);
+			//console.log(i);
+			//console.log(a);
+			return initVal+=v;
+		},0);
+		console.log(sumofdates);
+		 */
+		/*
+		Reduce
+		 */
+		var sumofdates = arr.reduce(function(initVal, v, i, a){
+			console.log(v);
+			//console.log(i);
+			//console.log(a);
+			return initVal+=v;
+		},0);
+		console.log(sumofdates);
+		/*
+		Reduce Right
+		var sumofdates = arr.reduceRight(function(initVal, v, i, a){
+			console.log(v);
+			//console.log(i);
+			//console.log(a);
+			return initVal+=v;
+		},0);
+		console.log(sumofdates);
+		 */
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

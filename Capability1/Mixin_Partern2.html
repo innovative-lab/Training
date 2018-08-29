@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		var Hero=function(){
+			fname="soumya"
+		}
+		var Zero={
+			lname:"pratik"
+		}
+		$.extend(Hero.prototype,Zero);
+		var hero=new Hero();
+		console.log(hero.lname);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

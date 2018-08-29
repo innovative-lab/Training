@@ -1,0 +1,53 @@
+header{
+	height:50px;
+	background-color: #97DFF7;
+	position: absolute;
+	width:100%;
+}
+.navbar{
+	background-color: #97DFF7;
+	border:0px solid black;
+	width:100%;
+	position: absolute;
+	margin-top:50px;
+}
+.container{
+	height:700px;
+	border:2px solid black;
+	margin-top:0px;
+	width:100%;
+	position: absolute;
+	margin-top:100px;
+	
+}
+body{
+	position:relative;
+	width:100%;
+}
+footer{
+	height:100px;
+	background-color: black;
+	width:100%;
+	margin-top:800px;
+	position: absolute;
+}
+.table{
+	border:1px solid black;
+	background-color:#D9EFFA;
+	margin-top:200px;
+}
+button{
+	display:block;
+	margin :auto;
+}
+#search1,#search2,#search3,#search4,#search5{
+	position:absolute;
+	width:50px;
+}
+#search2{
+	margin-left:150px;
+}
+
+
+
+

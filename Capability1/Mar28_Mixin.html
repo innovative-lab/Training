@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Mixin Pattren</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		var hero=function(){
+			fname="soumya";
+			lname="pratik"
+		}
+		var person={
+			sirname:"senapaty"
+		}
+		
+		$.extend(hero.prototype,person);
+		var Hero=new hero();
+		
+		console.log(Hero.sirname);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

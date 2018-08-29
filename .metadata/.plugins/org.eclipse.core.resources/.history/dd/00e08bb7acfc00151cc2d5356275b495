@@ -1,0 +1,8 @@
+describe("check Hero's property",function(){
+	var hero=new Hero();
+	it("the age returned must be greater then 18",function(){
+		expect(hero.age()).toBeGreaterThan(18);
+		expect(hero.age()).toBe("Bhook lagi hai");
+		
+	})
+})

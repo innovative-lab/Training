@@ -1,0 +1,38 @@
+a<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script >
+		angular
+		.module("app",[])
+		.controller("herocontroller",function($scope,heroservice){
+			heroservice.hs
+			.then(function(r,s,x){
+				$scope.heroes=r;
+			},function(e,s,x){
+				alert("retarded")
+			})
+			
+		})
+		.service("heroservice",function($http){
+			this.hs=$http.get("data/viewdata.json")
+			})
+		
+		/*
+		.service("heroservice",function($http){
+			this.hs=$http({
+				url:"data/viewdata.json",
+				method:"GET",
+				responseType:"JSON"
+			})
+		})
+		 * 
+		 */
+	</script>
+</head>
+<body ng-app="app" ng-controller="herocontroller">
+	<h1>{{ heroes }}</h1>
+</body>
+</html>

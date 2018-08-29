@@ -1,0 +1,47 @@
+<div data-page="login-screen" class="page">
+  <div class="page-content login-screen-content">
+    <img src="img/O4WJ710.png" alt="" width='20%' align="center" style="margin-left: 40%; margin-top:15%"  />
+    <div class="login-screen-title" style="margin-top: 5%;">Med<span style="color: gray">Help</span>  <br/> <span style=" font-size: 13px" >Mindtree kalinga</span></div>
+    <form class="login"  name="myForm" novalidate>
+      <div class="list-block">
+        <ul>
+          <li class="item-content">
+            <div class="item-inner">
+              <div style=" margin-top: 5%; margin-bottom: 5%" class="item-title label">MID</div>
+              <div class="item-input">
+                <input type="text" style=" margin-top: 5%;margin-bottom: 5%"   ng-model="username" placeholder="MXXXXXXX" name="username" ng-minlength="8" ng-maxlength="8" ng-pattern="/^[M][0-9]*$/" required/>
+                <span style="color:red" ng-show="myForm.username.$dirty && myForm.username.$invalid">
+					<span ng-show="myForm.username.$error.required && myForm.username.$dirty">MID is Required</span>
+					<span ng-show="myForm.username.$error.pattern && myForm.username.$dirty || myForm.username.$error.minlength || myForm.username.$error.maxlength">Inavalid MID</span>
+					
+					</span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div style=" margin-top: 5% ;margin-bottom: 5%" class="item-title label">Password</div>
+              <div class="item-input">
+                <input style=" margin-top: 5% ; margin-bottom: 5%" type="password" name="password" placeholder="Enter your password" ng-model="password" ng-minlength="8" ng-maxlength="20" required/>
+                 <span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+					<span ng-show="myForm.password.$error.required && myForm.password.$dirty">Password is Required</span>
+					<span ng-show="myForm.password.$error.minlength && myForm.password.$dirty">Your Password is too short</span>
+					<span ng-show="myForm.password.$error.maxlength && myForm.password.$dirty">Your Password is too long</span>
+					
+					</span>
+              </div>
+            </div>
+          </li>	
+        </ul>
+      </div>
+      <div class="list-block">
+        <ul>
+          <li><a  ng-click="disp()" class="item-link button button-round" ng-disabled="myForm.username.$pristine && myForm.password.$pristine || myForm.username.$invalid || myForm.password.$invalid">Register</a></li>
+        </ul>
+        <div class="list-block-label">
+          <a href="index.html"></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>  

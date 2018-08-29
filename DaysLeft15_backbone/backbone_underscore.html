@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 300px;
+            margin: auto;
+            background-color: silver;
+        }
+        .box h1, h2{
+            margin: 0px;
+            color: white;
+            text-align: center;
+            font-family: Arial;
+        }
+        .box input{
+            width: 200px;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script>
+        var HeroModel = Backbone.Model.extend({})
+        var HeroView = Backbone.View.extend({
+            tagName : "section",
+            initialize : function(){
+                console.log("an instance was created");
+            },
+            render : function(){
+                this.$el.html(this.template(this.model.toJSON()));
+                return this.el;
+            },
+            template : _.template("<div class='box'><h1><%= title %></h1><img src='<%=  photo %>' width='200' /><h2><span><%= fname %> <%= lname %></span></h2><input type='range' value='<%= power %>'/></div>")
+        });
+        var hm = new HeroModel({
+            title : "Batman",
+            fname : "Bruce",
+            lname : "Wayne",
+            photo : "images/batman.jpg",
+            power : 7
+        });
+        var hv = new HeroView({
+            model : hm
+        });
+        window.onload = function(){
+            document.body.appendChild(hv.render())
+        }
+    </script>
+</head>
+<body>
+    
+    
+    
+    
+    
+    
+</body>
+</html>

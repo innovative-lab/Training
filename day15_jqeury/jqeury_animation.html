@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery Effects</title>
+    <style>
+        body{
+            width: 300px;
+            margin: auto;
+        }
+        .box{
+            width: 300px;
+            height: 100px;
+            background-color: orange;
+            margin: auto;
+        }
+        button{
+            width: 300px;
+            display: block;
+            margin: 5px auto;
+            padding: 5px;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script src="config/jquery_config.js"></script>
+    <script>
+        $(function(){
+            $("button:contains('Show')").on("click",function(){
+                // $(".box").show(); // slow fast 
+                   $(".box").show("mindtree");
+            })
+            $("button:contains('Hide')").on("click",function(){
+                $(".box").hide("mindtree");
+            })
+            $("button:contains('Toggle')").on("click",function(){
+                $(".box").toggle("mindtree");
+            })
+            $("button:contains('FadeIn')").on("click",function(){
+                $(".box").fadeIn("mindtree");
+            })
+            $("button:contains('FadeOut')").on("click",function(){
+                $(".box").fadeOut("mindtree");
+            })
+            $("button:contains('FadeTo')").on("click",function(){
+                $(".box").fadeTo("mindtree",.2);
+            })
+            $("button:contains('FadeBackTo')").on("click",function(){
+                $(".box").fadeTo("mindtree",1);
+            })
+            $("button:contains('SlideUp')").on("click",function(){
+                $(".box").slideUp("mindtree");
+            })
+            $("button:contains('SlideDown')").on("click",function(){
+                $(".box").slideDown("mindtree");
+            })
+            $("button:contains('SlideToggle')").on("click",function(){
+                $(".box").slideToggle("mindtree");
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>Show</button>
+    <button>Hide</button>
+    <button>Toggle</button>
+    <button>FadeIn</button>
+    <button>FadeOut</button>
+    <button>FadeTo</button>
+    <button>FadeBackTo</button>
+    <button>SlideUp</button>
+    <button>SlideDown</button>
+    <button>SlideToggle</button>
+    <hr/>
+    <div class="box"></div>
+</body>
+</html>

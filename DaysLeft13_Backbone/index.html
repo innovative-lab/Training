@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Collection With Server</title>
+    <style>
+        th{
+            text-align: right;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script>
+        var Hero = Backbone.Model.extend({});
+        var Heroes = Backbone.Collection.extend({
+            model : Hero,
+            url : "/heros"
+        });
+        /*
+         * title
+         * fname
+         * lname
+         * phone
+         * photo
+         * city
+         * details
+         */
+        var hero=new Hero();
+        var heroes=new Heroes();
+        $(function(){
+        	$("button").on("click",function(){
+        		hero.set({
+        			title:$("#ht").val(),
+        			fname:$("#hfn").val(),
+        			lname:$("#hln").val(),
+        			phone:$("#hph").val(),
+        			photo:$("#hpho").val(),
+        			city:$("#hc").val(),
+        			details:$("#hd").val(),
+        		})
+        		heroes.add(hero);
+        		hero.save();
+        	})
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Title</th>
+            <td>
+                <input type="text" id="ht"/>
+            </td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td>
+                <input type="text"  id="hfn"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>
+                <input type="text" id="hln"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td>
+                <input type="text" id="hph"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Photo</th>
+            <td>
+                <input type="text" id="hpho"/>
+            </td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>
+                <input type="text" id="hc"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Details</th>
+            <td>
+                <textarea id="hd"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <button>Add Hero</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

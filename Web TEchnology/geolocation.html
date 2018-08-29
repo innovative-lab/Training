@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Geolocation</title>
+	<script>
+	/*
+	 * 
+	 */
+		window.onload = function(){
+			if(navigator.geolocation){
+			//	alert("we can use geolocation")
+			document.getElementById("log").innerHTML = "Geolocation is supported";
+			navigator.geolocation.getCurrentPosition(successFun,errorFun)
+			
+			}else{
+			//	alert("are you really using IE 8..")
+			document.getElementById("log").innerHTML = "Geolocation is not supported";
+			
+			}
+		};
+		function successFun(){
+			alert("Hurray.... we have geolocation")
+		};
+		function errorFun(){
+			alert("update your browser")
+		};
+	/*
+	function init(arg1,arg2){
+		if(false){
+			arg1();
+		}else{
+			arg2();
+		}
+	}
+	function callme(){
+		alert("hello there");
+	};
+	function callyou(){
+		alert("hello world");
+	};
+	init(callme,callyou);
+	 */
+	</script>
+</head>
+<body>
+	<h1 id="log"></h1>
+</body>
+</html>

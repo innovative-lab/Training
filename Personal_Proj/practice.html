@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <script src="lib/jquery-1.12.1 (1).js"></script>
+	 <link rel='stylesheet' />
+	<script>
+		window.onload=function(){
+			$("#btn1").on("click",function(){
+				$('link').attr({href:"red.css"});
+			})
+			$("#btn2").on("click",function(){
+				$('link').attr({href:"green.css"});
+			})
+			$("#btn3").on("click",function(){
+				$('link').attr({href:"blue.css"});
+			})
+		}
+	</script>
+</head>
+<body>
+	<button id="btn1">Red</button>
+	<button id="btn2">Green</button>
+	<button id="btn3">Blue</button>
+</body>
+</html>

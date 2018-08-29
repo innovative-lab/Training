@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+    // class
+    var Hero = function(){
+        // public properties
+        this.fname = arguments[0];
+        this.lname = arguments[1];
+    };
+    Hero.prototype.city = "Gotham";
+    // instance
+    var hero1 = new Hero("bruce", "wayne");
+    console.log("Line 17+++++++++++++++++++");
+    console.log(hero1.city);
+    hero1.city = "Bangalore";
+    console.log("Line 20+++++++++++++++++++");
+    console.log(hero1.city);
+    
+    console.log("Line 24+++++++++++++++++++");
+    console.log(hero1.city);
+    Hero.prototype.city = "Kolkata";
+    var hero2 = new Hero("clark", "kent");
+    var hero3 = new Hero("peter", "parker");
+    var hero4 = new Hero("kit", "walker");
+    var hero5 = new Hero("tony", "stark");
+    console.log("+++++++++++++++++++");
+    console.log(hero2.city);
+    console.log(hero3.city);
+    console.log(hero4.city);
+    console.log(hero5.city);
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

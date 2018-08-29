@@ -1,0 +1,30 @@
+extends template
+
+block vars
+    - var title = 'Register'
+
+block body
+    h1 Create an Account
+
+    if error
+    p ERROR: #{error}
+
+    form(method="post")
+    	input(type="hidden", name="_csrf", value="csrfToken")
+        label First Name:
+            input(type="text", name="firstName", required=true)
+        br
+
+        label Last Name:
+            input(type="text", name="lastName", required=true)
+        br
+
+        label Email:
+            input(type="email", name="email", required=true)
+        br
+
+        label Password:
+            input(type="password", name="password", required=true)
+        br
+
+        input(type="submit")

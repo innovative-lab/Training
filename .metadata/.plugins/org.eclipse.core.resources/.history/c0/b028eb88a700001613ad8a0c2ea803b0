@@ -1,0 +1,7 @@
+var gulp = require("gulp")
+var gulputil = require("gulp-util");
+
+
+gulp.task("mindtree",function(){
+	gulputil.log("this was my first task..")
+})

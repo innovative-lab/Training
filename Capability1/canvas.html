@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		
+	</style>
+	<script>
+		var can=null;
+		var ctx=null;
+		window.onload=function(){
+		can=document.getElementById("can");
+		 ctx=can.getContext("2d");
+		ctx.canvas.height=400;
+		ctx.canvas.width=400;
+		
+		ctx.beginPath();
+		ctx.lineWidth=100;
+		ctx.strokeStyle="black";
+		ctx.moveTo(100,100);
+		
+		ctx.lineTo(200,200);
+		ctx.closePath();
+		ctx.stroke();
+		
+		}
+	</script>
+</head>
+<body>
+	<canvas id="can"></canvas>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Validation</title>
+    <script>
+    function storeFun()
+    {
+    	localStorage.un=document.getElementById("un").value;
+    	localStorage.ue=document.getElementById("ue").value;
+    	
+    }
+    function readFun()
+    {
+    	alert(localStorage.un+" | "+localStorage.un);
+    	
+    	
+    }
+    	
+    </script>
+</head>
+<body>
+ 
+        <table border="0" cellspacing="5" cellpadding="5">
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" name="username" id="un"/>
+            </td>
+        </tr>
+      
+        <tr>
+            <td>User eMail</td>
+            <td>
+                <input type="email"  name="useremail" id="ue" />
+            </td>
+        </tr> 
+        
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <button onclick="storeFun()">
+                	subnit
+                </button>
+                <button onclick="readFun()">Read Value</button>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+#box1{
+	margin:auto;
+	width:620px;
+	height:100px;
+	background-color: gray;
+}
+#con{
+	position: relative;
+	width:620px;
+	margin:auto;
+	height:500px;
+	border:1px solid black;
+	margin-top:10px;
+}
+#box2{
+	height:500px;
+	width:305px;
+	position: absolute;
+	background-color: gray;
+}
+#box3{
+	height:200px;
+	width:305px;
+	position: absolute;
+	background-color: gray;
+	margin-left:315px;
+	
+}
+#box4{
+	height:290px;
+	width:305px;
+	position: absolute;
+	background-color: gray;
+	margin-left:315px;
+	margin-top:210px;
+	
+}
+#box5{
+	margin:10px auto;
+	width:620px;
+	height:100px;
+	background-color: gray;
+}
+

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+	/*
+		var fun=function(){
+			alert(arguments.length);
+			alert(arguments[1]+"i snow "+arguments[0]);
+		};
+		fun("mulike","kalinga");
+	 * 
+	   window.name="Rajani";
+	   var fun=function(){
+		return this.name;
+	   };
+	   console.log(fun());
+	 * 
+	   window.data="hello there";
+	   (function(msg){
+		   var data=msg;
+		   alert(data);
+	   })("i am secure here");
+	 */
+	function tissue(arg){
+		var num=5;
+		arg(num);
+	}
+	function issue(num){
+		alert(num*5);
+	}
+	tissue(issue);
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

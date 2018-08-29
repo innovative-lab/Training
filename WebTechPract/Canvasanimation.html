@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Canvas Fun</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        var num = 0;
+        var ctx = null
+        window.onload = function(){
+            ctx = document.getElementById("can").getContext("2d");
+            ctx.canvas.width = 400;
+            ctx.canvas.height = 400;
+            ctx.font = "bold 80px georgia";
+            // ctx.scale(2,1);
+            // ctx.rotate((Math.PI/180)*10);
+            ctx.translate(10,100);
+            ctx.fillText("Welcome",0,0);
+            setInterval(function(){
+                num+=0.1;
+                // ctx.scale(num,1);
+                ctx.rotate((Math.PI/180)*num);
+                ctx.font = "bold 80px georgia";
+                ctx.fillText("Welcome",0,0);
+                console.log(num);
+            },100);
+            /*
+             rotation value in radiance 0 / 7.2;
+             translate left offset and top offset
+             scale width multiplier and height multiplier
+             */
+        };
+        function callFun(){
+            
+        }
+    </script>
+</head>
+<body>
+    <canvas id="can" >Update your browser</canvas>
+</body>
+</html>

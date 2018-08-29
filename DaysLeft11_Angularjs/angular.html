@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<style>
+		.redbox{
+			height: 200px;
+			width: 200px;
+			background-color: red;
+		}
+		.greenbox{
+			height: 200px;
+			width: 200px;
+			background-color: green;
+		}
+		.orangebox{
+			height: 200px;
+			width: 200px;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body ng-app>        <!--(ng-app) is a attribute of angular. its called directive  ||  scope of angularjs is body for now-->
+	
+	<input type="text" ng-model="user"/>
+	<input type="text" value="{{ user }}" />      <!--event binding-->
+	<h1>{{ user }}</h1>                           <!--interpolation--><!--{{ expression }}-->
+	<div class="{{ user }}"></div>                <!--class binding-->
+	
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Offline check application</title>
+	<script>
+		var log=null;
+		window.onload=function(){
+			setInterval(checkStatus,1000);
+			log=document.getElementById("log");
+			
+		};
+		function checkStatus(){
+			if(navigator.onLine){
+				log.innerHTML="Online";
+				log.style.color="green";
+			}else{
+				log.innerHTML="Offline";
+				log.style.color="red";
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<h1>You are <span id="log"></span></h1>
+</body>
+</html>

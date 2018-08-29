@@ -1,0 +1,42 @@
+(function(){
+	
+angular
+     	.module("app")
+     	.controller("createEventcontroller",function($scope,$http){
+     		
+     		
+     		 $scope.emplist=null;
+              $scope.eventName=""
+              $scope.mid="";
+              $scope.name="";
+              $scope.photo="";
+              $scope.date="";
+              $scope.sttime="";
+              $scope.etime="";
+              $scope.loc="";
+              $scope.details="";
+              $scope.join="";
+     		
+     		 $scope.addFun=function(){
+               
+               var data={
+               	   eventName:$scope.evt,
+                   mid : $scope.mid,
+                   name : $scope.name,
+                   photo : $scope.photo,
+                   date :$scope.date,
+                   starttime :$scope.stime,
+                   endtime:$scope.etime,
+                   location:$scope.loc,
+                   Details:$scope.desc,
+                   Joined:[],
+               };
+               $http.post("/emplist",data)
+               .success(function(r,s,x){
+                   console.log("data uploaded on server")
+                   refresh();
+               })
+               .error(errorHandler)
+          }
+     	})
+}())

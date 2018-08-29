@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: auto;
+        }
+        .redbox{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: auto;
+        }
+        .greenbox{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: auto;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js "></script>
+    <script>
+        $(function(){
+            /*
+            $(".box").click(function(){
+                alert("you clicked me")
+            })
+            $(".box").mouseover(function(){
+                alert("you clicked me")
+            })
+            $(".box").mouseout(function(){
+                alert("you clicked me")
+            })
+            $(".box").on("click", function(){
+                alert("you clicked me")
+            })
+            $(".box").mouseover(function(){
+                $(".box").toggleClass("redbox");
+            })
+            $(".box").mouseout(function(){
+                $(".box").toggleClass("greenbox");
+            })
+            $(".box").hover(
+            function(){
+                $(".box").toggleClass("redbox");
+            },
+            function(){
+                $(".box").toggleClass("greenbox");
+            });
+             */
+            /*
+            $(".box").bind("mouseover", function(evt){
+                $("h1").append("you " +evt.type+ " fun 1 <br/>")
+            })
+            $(".box").bind("mouseout", function(evt){
+                $("h1").append("you " +evt.type+ " fun 2 <br/>")
+            })
+             */
+            $(".box").on({
+                mouseover : function(evt){
+                    $("h1").append("you " +evt.type+ " fun 1 <br/>")
+                },
+                mouseout : function (evt){
+                    $("h1").append("you " +evt.type+ " fun 2 <br/>")
+                }
+            })
+            $("button").on("click",function(){
+            	$(".box").off("mouseover");
+            	$(".box").off("mouseout");
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    <button>off it</button>
+    <hr/>
+    <h1 id="log"></h1>
+</body>
+</html>
+

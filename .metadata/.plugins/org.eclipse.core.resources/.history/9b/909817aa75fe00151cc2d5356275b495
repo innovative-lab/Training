@@ -1,0 +1,13 @@
+var fs = require("fs");
+
+/*
+ * 
+})
+var data=JSON.parse(fs.readFileSync("./data.json").toString());
+
+console.log(data);
+ */
+
+var data=fs.readFile("./data.txt",function(error,data){
+	console.log(data.toString());
+

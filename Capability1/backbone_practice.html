@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Canvas Fun</title>
+	<style>
+		canvas{
+			border: 1px solid red;
+		}
+	</style>
+	<script>
+		var num = 0;
+		var ctx = null
+		window.onload = function(){
+			ctx = document.getElementById("can").getContext("2d");
+			ctx.canvas.width = 400;
+			ctx.canvas.height = 400;
+			ctx.translate(100,100);
+			ctx.font = "bold 40px georgia";
+			
+			setInterval(function(){
+				num+=0.1; 
+				var r= Math.round(Math.random()*255);
+				var g= Math.round(Math.random()*255);
+				var b= Math.round(Math.random()*255);
+				//==================================//
+				ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+				ctx.rotate((Math.PI/180)*num);
+				ctx.fillText("Vijay",0,0);
+			},100);
+			
+		};
+		
+	</script>
+</head>
+<body>
+	<canvas id="can" >Update your browser</canvas>
+</body>
+</html>

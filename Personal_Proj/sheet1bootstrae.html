@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>New Web Project</title>
+        <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css" />
+        <script src="lib/jquery-1.12.1.js"></script>
+        <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+        
+        <style>
+            .redbox{
+                background-color: red;
+               
+            }
+            .greenbox{
+                background-color: green;
+                
+            }
+            .silverbox{
+            	background-color: gray;
+            }
+            .height50{
+            	height:50px;
+            }
+             .height100{
+            	height:100px;
+            }
+             .height200{
+            	height:200px;
+            }
+            .whitebox{
+            	background-color: pink;
+            }
+            
+        </style>
+        <script>
+            $(function(){
+                $(window).on("resize", function(){
+                    console.log($("body").width());
+                })
+            })
+        </script>
+    </head>
+    <body>
+          <main class="container">
+          	
+          	<div class="row1">
+          		<div class="redbox height50 col-lg-12"></div>
+          	</div>
+          	<div class="row2">
+          		<div class="silverbox height100 col-lg-12"></div>
+          	</div>
+          	<div class="row3">
+          		<div class="whitebox height100 col-lg-12"></div>
+          	</div>
+          	<div class="row4">
+          		<div id="vb1" class="greenbox height200 col-lg-4"></div>
+          		<div id="vb2" class="silverbox height200 col-lg-4"></div>
+          		<div id="vb3" class="greenbox height200 col-lg-4"></div>
+          	</div>
+          	<div class="row5">
+          		<div class="redbox height50 col-lg-12"></div>
+          	</div>
+          	
+          </main>
+    </body>
+</html>

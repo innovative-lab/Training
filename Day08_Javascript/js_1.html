@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>JS Fun</title>
+    <script>
+    // window.onload = init; // non compliant
+    /*
+     * window.addEventListener("load", init);// w3c compliant;
+     */
+    window.addEventListener("DOMContentLoaded", init);// w3c compliant;
+    function init(){
+        // alert("Hello World");
+        document.getElementsByTagName("li")[0].addEventListener("click",clickHandler);
+        document.getElementsByTagName("li")[4].addEventListener("click",stopHandler);
+    }
+    function clickHandler(){
+        alert("you clicked me");
+    }
+    function stopHandler(){
+        document.getElementsByTagName("li")[0].removeEventListener("click",clickHandler);
+    }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+</body>
+</html>

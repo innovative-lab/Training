@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+			.module("app",[])
+			.controller("mycon",function($scope){
+				$scope.val=$scope.mt;
+				
+				$scope.hero=["soumya","pratik","senapaty"];
+				
+				$scope.addfun=function(){
+					var elm= createElement("div");
+					elm.setAttribute("style","height:50px;background-color:blue");
+					elm.innerHTML=val;
+					document.body.appendChild(elm);
+				}
+			})
+			
+				
+				
+			}
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	<input type="text" ng-model="mt" /><button ng-click="addfun()">add me</button>
+	<table ng-repeat="h in hero | filter : mt">
+		
+		<td>{{ h }}</td>
+	</table>
+</body>
+</html>

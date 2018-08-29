@@ -1,0 +1,6 @@
+(function(){
+	angular.module("app",[])
+	.controller("someController",function($scope){
+		$scope.title="Hello from mindtree"
+	})
+}())

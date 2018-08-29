@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		a:hover{
+			color:orange;
+		}
+		a:focus{
+			color:pink;
+		}
+		
+		
+	</style>
+	<script src="lib/angular.js"></script>
+	<script src="angular_router/angular_route.js"></script>
+	<script>
+		angular
+		     .module("app",["ngRoute"])
+		     .controller("ironmanController",function($scope){
+		     	$scope.fname="tony";
+		$scope.lname="stark";
+		$scope.movie="ironman";
+		$scope.power="8";
+		$scope.photo="images/ironman.jpg"
+		     })
+		     .controller("supermanController",function($scope){
+		     	$scope.fname="clark";
+		$scope.lname="kent";
+		$scope.movie="ironman";
+		$scope.power="8";
+		$scope.photo="images/superman.jpg"
+		})
+		     .controller("batmanController",function($scope){
+		     	$scope.fname="bruce";
+		$scope.lname="wyane";
+		$scope.movie="batman";
+		$scope.power="8";
+		$scope.photo="images/batmanman.jpg"
+		})
+		     .config(function($routeProvider){
+		     	     $routeProvider
+		     	     .when("/",{
+		     	     	controller:"batmanController",
+		     	     	template:"<h1>{{ fname }}</h1>"
+		     	     })
+		     	     .when("/superman",{
+		     	     	controller:"supermanController",
+		     	     	template:"<h1>{{ fname }}</h1>"
+		     	     })
+		     	     .when("/ironman",{
+		     	     	controller:"ironmanController",
+		     	     	template:"<h1>{{ fname }}</h1>"
+		     	     })
+		     	
+		     })
+	</script>
+</head>
+<body ng-app="app" >
+	<data-ng-view></data-ng-view>
+	
+	<a href="#/superman">superman</a>
+	<a href="#/ironman">ironman</a>
+	<a href="#/">batman</a>
+	
+</body>
+</html>

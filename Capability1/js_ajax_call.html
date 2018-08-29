@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>AJAX CALL</title>
+	<script>
+		var xhr=new XMLHttpRequest();
+		window.onload=function(){
+			xhr.open("get","data/heroes.xml",true)
+            xhr.send();
+            xhr.onreadystatechange= ajaxHandler;
+		}
+		
+		function ajaxHandler(){
+			var data=xhr.responseXML;
+			document.getElementById("box").innerHTML+=data.getElementsByTagName("hTitle")[0].innerHTML;
+		}
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>

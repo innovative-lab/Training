@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<style>
+		.cont{
+			height:400px;
+			width:600px;
+			margin:auto;
+			background-color: gray;
+		}
+		.box{
+			height:40px;
+			width:40px;
+			margin:5px 5px;
+			background-color: silver;
+			float:left;
+		}
+	</style>
+	<script>
+	  
+	  
+		var mod=(function(){
+			var count=1;
+			
+			var iterator=function(){
+				
+				return count++;
+			};
+			var div = function(){
+				return "<div class='box'><h3>"+iterator()+"</h3></div>"
+			};
+			return {
+				div:div
+				};
+		}());		
+		window.onload=function(){
+			$("button").on("click",function(){
+				if($(".num").value==null){
+					$(".cont").append(mod.div());
+			    }
+			    else{
+			    	var val=$(".num").value;
+			    	$(".cont").append("<div class='box'>"+val+"</div>");
+			   }
+			})
+		}
+	</script>
+</head>
+<body>
+	<input type="text" class="num" />
+	<button>click me</button>
+	<div class="cont"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.name="Mindtree";
+		var obj={
+			name:"kalinga",
+			fun:function(){
+				return this.name;
+			}
+		};
+		function init(){
+			return this.name;
+		}
+		console.log(init());
+		console.log("***************");
+		console.log(obj.fun());
+		var morefun=obj.fun;
+		console.log(morefun());
+		
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

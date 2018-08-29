@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        #box{
+            height: 400px;
+            background-color: #333;
+        }
+        #box div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin: 5px;
+            float: left;
+        }
+        button{
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        var app = {};
+            app.model = {};
+            app.controller = {};
+            app.view = {};
+            
+            app.model.num = 1;
+            app.model.error = "nothing to remove";
+            
+            app.controller.addBoxHandler = function(){
+                var elm = document.createElement("div");
+                    elm.innerHTML = app.model.num;
+                    document.getElementById("box").appendChild(elm);
+                    app.model.num++;
+            }
+            app.controller.removeBoxHandler = function(){
+                var elm = document.getElementById("box").firstChild;
+                if(elm){
+                    document.getElementById("box").removeChild(elm);
+                }else{
+                    alert(app.model.error)
+                }
+            }
+            /*
+            Model : where data is stored;
+            Controller : where logic is stored;
+            View : where user interaction elements is stored;
+             */
+            
+        window.onload = function(){
+            document.getElementById("addBox").addEventListener("click", app.controller.addBoxHandler)
+            document.getElementById("removeBox").addEventListener("click", app.controller.removeBoxHandler)
+        };
+        
+        
+        
+    </script>
+</head>
+<body>
+    <button id="addBox">Add Box</button>
+    <button id="removeBox">Remove Box</button>
+    <div id="box"></div>
+</body>
+</html>

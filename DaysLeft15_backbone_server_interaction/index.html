@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script>
+        var Hero = Backbone.Model.extend({});
+        var hero = new Hero();
+        $(function(){
+            $("#btn1").on("click", function(){
+                hero.set({
+                    fname : "Bruce",
+                    lname : "Wayne"
+                });
+                console.log("data updated")
+            });
+            $("#btn2").on("click", function(){
+                console.log(hero.get("fname"))
+            });
+        })
+    </script>
+</head>
+<body>
+    <h1>Hello from main app</h1>
+    <button id="btn1">Add Info to Hero</button>
+    <button id="btn2">Read Info to Hero</button>
+</body>
+</html>

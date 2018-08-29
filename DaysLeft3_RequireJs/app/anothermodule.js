@@ -1,0 +1,10 @@
+// (function(){
+// }())
+
+define(function(){
+	
+	 angular.module("anothermodule",[])
+ 	.controller("anothercontroller",function($scope){
+		 $scope.greet="hello world!!"
+	 })
+})

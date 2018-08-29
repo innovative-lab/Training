@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.box{
+			height:600px;
+			width:600px;
+			background-color: gray;
+			margin:0 auto;
+		}
+		button{
+			width:600px;
+			
+		}
+	</style>
+	<script>
+	var xhr= new XMLHttpRequest();
+			window.onload=function(){
+			document.getElementsByTagName("button")[0]
+			.onclick=clickHandler;
+			xhr.onreadystatechange = ajaxHandler;
+		};
+		function ajaxHandler(){
+			var data=xhr.responseXML;
+			if(  xhr.readyState==4 && xhr.status==200)
+			{
+				document.getElementsByTagName("div")[0]
+				.innerHTML+=xhr.readyState+"<hr/>"+ data.getElementsByTagName("hName")[0].innerHTML+"<hr/>";
+			}
+		}
+		function clickHandler(){
+			xhr.open("get","data/heros.xml",false);
+			xhr.send();
+			
+		}
+	</script>
+	
+</head>
+<body>
+	<button>Click Me</button>
+	<div class="box"></div>
+</body>
+</html>

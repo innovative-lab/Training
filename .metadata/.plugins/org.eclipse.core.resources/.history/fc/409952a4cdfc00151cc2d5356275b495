@@ -1,0 +1,43 @@
+<div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12 head1 header">
+                  <div class="col-xs-4">
+                 <a href="#/createevent"> <button type="button" class="btn pull-left btn1"><span class="glyphicon glyphicon-th-list"></span></button> </a>
+                  </div>
+                  <div class="col-xs-4">
+                  <h3 class="col-sm-offset-4 col-xs-offset-4 title">TITLE</h3>
+                  </div>
+                  <div class="col-xs-4">
+                  <button type="button" class="btn pull-right btn2"><span class="glyphicon glyphicon-search searchicon"></span></button>                
+                  </div>
+            </div>
+            </div>
+            <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-lg-12 head2 header">
+                  <div class="col-xs-4">
+                  <button type="button" class="btn pull-left btn3"><span class="glyphicon glyphicon-user"></span></button>
+                  <h3 class="col-xs-4 username">Divyanshu</h3>
+                  </div>
+                  </div>
+            </div>
+	<div class="row" ng-repeat="event in emplist">
+		<div class="col-sm-12 col-xs-12">
+			<img src="images/download.jpg" class="aatishimg1"/>
+			<div class="row">
+				<div class="col-sm-3 col-xs-3 aatishtext01"><h1 class="aatishcount">{{ $index+1 }}</h1></div>
+				<div class="col-sm-9 col-xs-9">
+					<div class="row">
+						<div class="col-sm-12 col-xs-2 aatishtext01 aatishmovie">{{ event.name }} {{ event.date | date:'dd-MMM' }}, {{ event.starttime | date :'HH:mm'}}</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-sm-12 col-xs-12 aatishtext01 aatishcreated">{{ event.name }}</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 col-xs-12 aatishtext01 aatishpeople">{{ event.Joined.length+1 }} People Going</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	

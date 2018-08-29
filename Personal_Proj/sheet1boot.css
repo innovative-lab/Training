@@ -1,0 +1,9 @@
+#box1,#box2,#box3{
+	background-color: gray;
+}
+#box1,#box3{
+	height:100px;
+}
+#box2{
+	height:150px;
+}

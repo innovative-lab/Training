@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+        var mindtree = (function(){
+                var branch1 = "Bangalore";
+                return {
+                    branch1 : branch1
+                }
+            }());
+            
+            (function(mt){
+                mt.branch2 = "Kalinga"
+            }(mindtree))
+            
+    document.addEventListener("DOMContentLoaded", function(){
+        document.body.innerHTML += "<h1>"+mindtree.branch1+"</h1>";
+        document.body.innerHTML += "<h1>"+mindtree.branch2+"</h1>";
+    })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

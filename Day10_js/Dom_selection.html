@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>DOM Selection</title>
+    <script>
+        window.onload = function(){
+            // alert(document.children[0].children.length);
+            // alert(document.children[0].tagName);
+            // alert(document.children[0].children[0].tagName);
+            // alert(document.children[0].children[1].children.length);
+            // alert(document.children[0].children[0].nextSibling.tagName);
+            // alert(document.body.children[0].tagName);
+            // document.body.children[0].innerHTML = "Sangeetha";
+            // document.body.children[0].innerHTML = "<img src='images/grass.png'/>";
+            // document.body.children[0].textContent = "<img src='images/grass.png'/>";
+            document.body.children[0].outerHTML = "<ol><li> I am a List Item </li><li>list 2</li></ol>";
+        };
+    </script>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>

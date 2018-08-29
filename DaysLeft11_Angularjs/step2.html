@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+</head>
+<body ng-app ng-init="user='pratik'">   <!-- ng-init is for initializing a variable and it delcares a var as global-->
+	<h1>Hello {{ user }}</h1>
+	<h1>{{ 5/2 }}</h1>
+	<h1 ng-init="power='5';user='di'">power {{ power}}</h1>
+</body>
+</html>

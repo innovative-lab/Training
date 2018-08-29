@@ -1,0 +1,111 @@
+header{
+	height:50px;
+	background-color: #97DFF7;
+	position: absolute;
+	width:100%;
+}
+.navbar{
+	background-color: #97DFF7;
+	border:0px solid black;
+	width:100%;
+	position: absolute;
+	margin-top:50px;
+}
+.container{
+	height:900px;
+	border:2px solid black;
+	margin-top:0px;
+	width:100%;
+	position: absolute;
+	margin-top:100px;
+	
+}
+body{
+	position:relative;
+	width:100%;
+}
+footer{
+	height:100px;
+	background-color: black;
+	width:100%;
+	margin-top:1000px;
+	position: absolute;
+}
+.table{
+	border:1px solid black;
+	background-color:#D9EFFA;
+	margin-top:200px;
+}
+button{
+	display:block;
+	margin :auto;
+}
+#search1,#search2,#search3,#search4,#search5{
+	position:absolute;
+	width:150px;
+	margin-top:150px;
+}
+#search2{
+	margin-left:290px;
+	}
+#search3{
+	margin-left:700px;
+}
+#search4{
+	margin-left:1030px;
+}
+#search5{
+	margin-left:1200px;
+}
+td{
+	font:bold;
+}
+#btn1,#btn2,#btn3,#btn4{
+	position: absolute;
+	width: 150px;
+}
+#navbar{
+	margin-top:50px;
+	position:relative;
+	margin-left:100px; 
+}
+#btn1{
+	margin-left:250px;
+}
+#btn2{
+	margin-left:450px;
+}
+#btn3{
+	margin-left:650px;
+}
+#btn4{
+	margin-left:850px;
+}
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse;
+ 
+  margin:200px; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+
+
+

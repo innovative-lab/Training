@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <title>Document</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+       <script src="lib/jquery-1.12.1.js"></script>
+       <!--link rel="stylesheet" href="style/mobile.css" media="screen" /-->
+       <style>
+       #cureventbody,html,.container{
+              width:100%;
+              height:100%;
+       }
+       .height100{
+              height:100%;
+       }
+       .height50{
+              height:50%;
+       }
+       .height1{
+              height:10%;
+       }
+       .height2{
+              height:80%;
+       }
+       .height3{
+              height:10%;
+       }
+       .headerbox{
+              background-color:#607D8B;
+       }
+       .bodybox{
+              background-color: #B0BEC5;
+       }
+       .silverbox{
+              background-color: #E1E4E6;
+       }
+       .btn-style{
+              width:100%;
+              border-radius:5%;
+              background-color:#607D8B;
+       }
+       .redbox{
+              background-color:red;
+       }
+       .blackbox{
+              background-color:black;
+       }
+       .silver1box{
+              background-color:silver;
+       }
+       </style>
+       <script>
+              
+       </script>
+</head>
+<body class="container" id="cureventbody">
+       <div class="row height1 headerbox">
+              <div class="col-xs-12 height100">
+                     <div class="row height50">
+                           <div class="col-xs-4 blackbox height100"></div>
+                           <div class="col-xs-4 height100"></div>
+                           <div class="col-xs-4 height100">
+                                  <button id="back" class="btn btn-md btn-style" aria-label="Right Align"><a href="index.html"><span class="glyphicon glyphicon-arrow-left" style="color:white" aria-hidden="true"></span></a></button>
+                           </div>
+                           
+                     </div>
+                     <div class="row height50">
+                           <div class="col-xs-6 height100"></div>
+                           <div class="col-xs-6 height100">
+                                  <div class="row">
+                                         <div class="col-xs-6"></div>
+                                         <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                          <ul class="dropdown-menu slidedown">
+                            <div>Event Details</div>
+                            <div>Movies </div>
+                            <li class="divider"></li>
+                            <li><a href="heroview.html">Leave</a></li>
+                        </ul>
+                        </button>
+                    </div>
+                                  </div>
+                           </div>
+                     </div>
+              </div>
+       </div>
+       <div class="row height2 bodybox "></div>
+       <div class="row height3 silverbox">
+       <div class="panel-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-sm btn-style">
+                                Send</button>
+                        </span>
+                    </div>
+                </div>
+         </div>
+</body>
+</html>

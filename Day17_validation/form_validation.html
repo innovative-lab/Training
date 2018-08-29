@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML 5 Validation </title>
+        <style>
+            input:required{
+                border: 2px solid aqua;
+            }
+             input:invalid{
+                border: 2px solid orangered;
+            }
+            input:valid:not([type='submit']){
+                border: 2px solid greenyellow;
+            }
+        </style>
+        <script>
+            window.addEventListener("DOMContentLoaded", function(){
+                document.querySelector("#ua").addEventListener("input", function(evt){
+                    var val = Number(evt.target.value);
+                   if(val > 80){
+                       evt.target.setCustomValidity("you are too old to join mindtree")
+                   }else if(val < 18){
+                        evt.target.setCustomValidity("you are too young to join mindtree")
+                   }else{
+                       evt.target.setCustomValidity("")
+                   }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form action="#" >
+            <label>User Name <input name="username" type="text" required /></label>
+            <label>User Age <input id="ua" name="userage" required /></label>
+            <input type="submit" value="login"/>
+        </form>
+    </body>
+</html>
+

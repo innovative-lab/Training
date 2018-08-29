@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		#pratik_body{
+			background-image: url("images/2.png");
+			height:1000px;
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			
+		}
+		#pratik_mid{
+			background-color: transparent;
+			border:0px;
+			font-size:50px;
+			margin-top:745px;
+			margin-left:230px;
+			display:block;
+			
+		}
+		
+		#pratik_pass{
+				background-color: transparent;
+			border:0px;
+			font-size:50px;
+			margin-top:88px;
+			margin-left:230px;
+			display:block;
+		}
+	</style>
+</head>
+<body id="pratik_body">
+	<input type="text" id="pratik_mid" placeholder="MID"/>
+	<input type="text" id="pratik_pass" placeholder="Password"/>
+	
+</body>
+</html>

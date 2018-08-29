@@ -1,0 +1,35 @@
+(function(){
+	  
+	angular
+	  .module("app")
+	  .controller("logincontroller",function($scope,$rootScope,loginservice){
+	  	//$scope.mid1=-1;
+	  	 // $rootScope.u_mid=mid1
+	  	 // alert($root.u_mid);
+    	// $scope.data={
+    		// mid:$scope.mid1,
+    		// pass:$scope.password
+    	// }
+// 	  	 
+// 	  	 
+	  	// $scope.callToAddToDetails = function(data){
+        	// loginservice.add_details(data);
+    	// };
+    	
+    	$scope.login_data=function(){
+    		console.log(":aieytr8");
+    		console.log($scope.mid1);
+    		$rootScope.user={
+    		           "mid2":$scope.mid1,
+    		           "pass":$scope.password
+    		                 };
+    		alert($rootScope.umid);
+    	};
+    	
+    
+    
+	  	 //alert($rootScope.mid1)
+	  	
+	  	   // $rootScope.lmid=mid1;
+	  })
+}())

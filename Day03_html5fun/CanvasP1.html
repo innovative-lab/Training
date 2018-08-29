@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <title>Canvas Fun</title>
+        <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+        <script>
+                var num = 0;
+                var ctx = null;
+                var i=-170;
+                var j=400;
+                window.onload = function(){
+                        ctx = document.getElementById("can").getContext("2d");
+                        ctx.canvas.width = 400;
+                        ctx.canvas.height = 400;
+                        ctx.translate(0,0);
+                        ctx.font = "bold 40px georgia";
+                        
+                        setInterval(function(){
+                                num+=0.1; 
+                                   
+                                ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);                   
+                                var r= Math.round(Math.random()*255);
+                                var g= Math.round(Math.random()*255);
+                                var b= Math.round(Math.random()*255);
+                                //==================================//
+                                ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+                                var r= Math.round(Math.random()*255);
+                                var g= Math.round(Math.random()*255);
+                                var b= Math.round(Math.random()*255);
+                                ctx.strokeStyle="rgb("+r+","+g+","+b+")";
+                                ctx.lineWidth=5;
+                                //ctx.rotate((Math.PI/180)*num);
+                                
+                                ctx.strokeText("Soumya",i,100);
+                                ctx.fillText("Soumya",i,100);
+                                
+                                i+=1;
+                                if(i>=400)
+                                {i=-170;}
+                                
+                            
+                               
+                                var r= Math.round(Math.random()*255);
+                                var g= Math.round(Math.random()*255);
+                                var b= Math.round(Math.random()*255);
+                                //==================================//
+                                ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+                                var r= Math.round(Math.random()*255);
+                                var g= Math.round(Math.random()*255);
+                                var b= Math.round(Math.random()*255);
+                                ctx.strokeStyle="rgb("+r+","+g+","+b+")";
+                                ctx.lineWidth=5;
+                                //ctx.rotate((Math.PI/180)*num);
+                                
+                                ctx.strokeText("Pratik",j,100);
+                                ctx.fillText("Pratik",j,100);
+                                
+                                j-=1;
+                                if(j<=-165)
+                                {
+                                	j=400;
+                                }
+                        },10);
+                     
+                       
+                        
+                };
+                
+        </script>
+</head>
+<body>
+        <canvas id="can" >Update your browser</canvas>
+</body>
+</html>

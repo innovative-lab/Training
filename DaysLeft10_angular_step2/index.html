@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script src="app/module/mainapp.js"></script>
+	<!--script src="app/module/childapp.js"></script-->
+	<script src="app/controller/firstcontroller.js"></script>
+	<!--script src="app/controller/secondcontroller.js"></script-->
+</head>
+<body ng-app="mainapp">
+	<div class="box" ng-controller="firstController as hero">
+		<h1>{{ hero.fname }}</h1>
+		<h1>{{ hero.lname }}</h1>
+	</div>
+	
+	
+</body>
+</html>

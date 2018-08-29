@@ -1,0 +1,21 @@
+<table class="table table-striped">
+		<tr>
+		<th>index</th>
+		<th>Id</th>
+		
+		<th>Title</th>
+		<th>City</th>
+		<th>Power</th>
+		<th>Images</th>
+		<th>Movielist</th>
+		</tr>
+		<tr ng-repeat="hero in heroes">
+			<th>{{ $index+1 }}</th>
+			<th>{{ hero.id }}</th>
+			<th>{{ hero.title }}</th>
+			<th>{{ hero.city }}</th>
+			<th>{{ hero.power }}</th>
+			<th><img src="{{ hero.photo }}" style="width:100px;height: 100px;" /></th>
+			<th><a href="#/movies/{{ $index }}">{{ hero.movies }}</a></th>
+		</tr>
+	</table>

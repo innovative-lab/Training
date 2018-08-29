@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+    /*
+        var num = new Number();
+        Number.prototype.saymessage = function(){
+            return "hello there";
+        }
+        num = 1;
+        console.log(typeof num);
+        
+        console.log(num.saymessage());
+     */
+    
+    
+    // class
+    function Hero(){
+        // public properties
+        this.fname = arguments[0];
+        this.lname = arguments[1];
+        console.log(this);
+        // private properties;
+        var secret = "My secret";
+        // public method;
+        this.fullname = function(){
+            return this.fname +" "+this.lname;
+        }
+        // private method;
+        var usesecret = function(){
+            this.secret = "change";
+        };
+        usesecret();
+    };
+    
+    // instance
+    var hero = new Hero("bruce", "wayne");
+    console.log(hero.lname);
+    console.log(hero.fullname());
+    console.log(hero.secret);
+    // console.log(hero instanceof Hero);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

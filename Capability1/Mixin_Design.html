@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Mixin Pat</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		var Hero=function(){
+			this.fanme="soumya";
+			this.lname="pratik"
+		}
+		var zero={
+			sirname:"senapaty"
+		}
+		$.extend(Hero.prototype,zero);
+		
+		var hero=new Hero();
+		console.log(hero.sirname);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

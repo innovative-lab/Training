@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                        margin:20px 600px;
+                }
+        </style>
+	<script>
+		var img=null;
+		var boxL=0;
+		var ctx=null;
+		var boxC=-200;
+		window.onload=function(){
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			img=new Image();
+			img.src="images/images/horse.jpg";
+	/*		img.onload=function(){
+				setInterval(anim,50)
+	};   */
+	        document.getElementsByTagName("button")[0].addEventListener("click",moveLeft)
+		};
+		function anim()
+		{
+			ctx.drawImage(img,boxL,0);
+			boxL-=200;
+			if(boxL<-1800)
+			{
+				boxL=0;
+			}
+		}
+		
+		function moveLeft(){
+			for(var i=0;i<200;i++){
+				ctx.drawImage(img,boxL,0);
+				boxL-=1;
+				if(boxL==boxC)
+				{
+					boxC=boxC-200;
+					
+				}
+				if(boxL<-1800){
+					boxL=0;
+				}
+				clearInterval(moveLeft);
+			}	
+			
+		}
+			
+		
+		
+		
+	</script>
+</head>
+<body>
+		<canvas id="can" width="200" height="140"></canvas><hr />
+		<button id="btn1">left </button>
+		<button id="btn2">right</button>
+</body>
+</html>

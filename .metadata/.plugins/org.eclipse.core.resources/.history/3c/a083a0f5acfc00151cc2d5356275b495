@@ -1,0 +1,12 @@
+var Hero=function(){
+	
+	
+}
+
+Hero.prototype.age=function(){
+	return 22;
+}
+
+Hero.prototype.age=function(){
+	return "Bhook lagi hai";
+}

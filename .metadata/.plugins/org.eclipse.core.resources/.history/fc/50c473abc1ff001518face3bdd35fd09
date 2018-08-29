@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	  <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css" />
+        <script src="lib/jquery-1.12.1 (1).js"></script>
+        <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+	<script src="lib/angular.js"></script>
+	<script src="com/mindtree/module/newmodule.js"></script>
+	<script src="com/mindtree/controller/newcontroller.js"></script>
+</head>
+
+<body data-ng-app="app" data-ng-controller="mycontroller">
+
+  <ul>
+  	<li data-ng-repeat="hero in heroes"><img data-ng-src="{{ hero.photo }}" style="height: 50px;width: 50px;margin:5px" align="absmiddle" />{{ hero.title+" "+hero.power}}</li>
+  </ul>
+  <input type="text" ng-model="mt" />
+<hr />
+
+  <table class="table table-striped">
+  	
+  		<tr>
+  			<th>SL #</th>
+  			<th >title</th>
+  			<th >fname</th>
+  			<th ng-click="sortFun('lname')">lname</th>
+  			<th ng-click="sortFun('city')">city</th>
+  			<th ng-click="sortFun('image')">image</th>
+  			<th ng-click="sortFun('power')">range</th>
+  			<th ng-click="sortFun('power')">power</th>
+  			<th ng-click="sortFun('price')">price</th>
+  			<th ng-click="sortFun('releasedate')">releasedate</th>
+  		</tr>
+  		<tr data-ng-repeat="hero in heroes  | filter : sorton">   <!--ng-repeat="user in usersdb"-->
+  			<td>{{$index+1}}</td>
+  			<td>{{hero.title | uppercase}}</td>
+  			<td>{{hero.fname}}</td>
+  			<td>{{hero.lname}}</td>
+  			<td>{{hero.city}}</td>
+  			<td><img data-ng-src="{{ hero.photo }}" style="height: 50px;width: 50px;margin:5px" align="absmiddle" /></td>
+  			<td><input type="range" value="{{hero.power}}" min='0' max='10'/></td>
+  			<td>{{hero.power}}</td>
+  			<td>{{hero.price | currency : "INR" }}</td>
+  			<td>{{hero.releasedate | date : 'dd-MMM-yyyy'}}</td>
+  		</tr>
+  	
+  </table>
+
+</body>
+</html>

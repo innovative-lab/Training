@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Backbone View</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script>
+	var mymodel=Backbone.Model.extend({});
+	var myview=Backbone.View.extend({
+		tagName:"section",
+		initialize:function(){
+			console.log("initialised");
+		},
+		render:function(){
+			this.el.innerHTML=this.temp;
+			return this;
+		},
+		temp:"<h1>soumya</h1>"
+	});
+	
+	var mymod=new mymodel();
+	var mv=new myview({
+		model:mymod
+	})
+	
+	window.onload=function(){
+	    mv.render().$el.appendTo("body");
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

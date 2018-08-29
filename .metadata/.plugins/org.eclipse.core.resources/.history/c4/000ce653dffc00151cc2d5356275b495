@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.box{
+			background-image: url("img/spiderman.jpg")
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Geolocation</title>
+        <style>
+            #box{
+                padding: 20px;
+                font-family: arial;
+                font-size: 20px;
+                font-variant: small-caps;
+                color: silver;
+                background-color: #333333;
+                height: 200px;5
+                overflow: auto;
+            }
+            input, button{
+                display: block;
+                width: 90%;
+                margin: 5%;
+            }
+            #map{
+                display: block;
+                margin: auto;
+                max-width: 100%;
+            }
+        </style>
+        <script>
+            var pos = null;
+            var wp = null;
+            function init(){            
+                if(navigator.geolocation){
+                    wp = navigator.geolocation.watchPosition(successFun, failFun, {
+                        timeout : 5000,
+                        enableHighAccuracy : true,
+                        maximumAge : 5000
+                    });
+                };
+            };
+            function successFun(position){
+                document.getElementById("box").textContent += "Lon : "+position.coords.longitude +" | Lat : "+position.coords.latitude;
+                pos = position;
+            };
+            function failFun(error){
+                alert(error.message);
+            };
+            function rendermap(elm){
+                document.getElementById("map").src = "https://maps.googleapis.com/maps/api/staticmap?center="+pos.coords.latitude+","+pos.coords.longitude+"&zoom="+elm.value+"&size=500x700&markers=color:orange|label:V|"+pos.coords.latitude+","+pos.coords.longitude;
+            }
+            
+            function stopGeo(){
+                navigator.geolocation.clearWatch(wp);
+            }
+            /*
+             https://maps.googleapis.com/maps/api/staticmap
+             
+             https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400
+            
+             markers=color:blue|label:S|pos.coords.latitude+","+pos.coords.longitude
+            
+             */
+        </script>
+    </head>
+    <body onload="init()">
+        <!--h1>Latitude : <span id="lat"></span></h1>
+        <h1>Longitude : <span id="lon"></span></h1-->
+        <div id="box"></div>
+        <input onchange="rendermap(this)" value="10" type="range" min="1" max="20" step="1" />
+       <hr/>
+        <img id="map"/>
+       <hr/>
+       <button onclick="stopGeo()">Stop Tracking Me</button>
+    </body>
+</html>

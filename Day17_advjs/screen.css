@@ -1,0 +1,40 @@
+body{
+	margin:0px;
+}
+header{
+	height:100px;
+
+	background-color: red;
+	display:flex;
+}
+header p{
+	margin:auto;
+	display:block;
+	flex-wrap:wrap;
+}
+main{
+	padding:50px;
+	height:600px;
+	background-color: gray;
+	
+}
+#container{
+
+	margin:auto;
+	background-color: #90C3D4;
+	height:600px;
+	width:80%;
+	display:flex;
+	padding:20px;
+    
+}
+#col1,#col2,#col3,#col4{
+	float:left;
+	margin-left:20px;
+	margin-top:20px;
+	width:23%;
+	height:500px;
+	background-color: white;
+	
+}
+

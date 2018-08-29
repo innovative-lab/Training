@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DaysLeft0_Grunt_n_Gulp/index.js&apos; to &apos;gulpfile.js&apos;" description="Rename resource &apos;index.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="index.js" name="gulpfile.js" stamp="1460461165551" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DaysLeft12_Backbone_delete_update/backbone_exmple.html&apos; to &apos;Index.html&apos;" description="Rename resource &apos;backbone_exmple.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="backbone_exmple.html" name="Index.html" stamp="1459226003471" updateReferences="true"/>
+</session>

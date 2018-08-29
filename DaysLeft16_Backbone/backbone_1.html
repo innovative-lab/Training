@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script>
+		var Person= Backbone.Model.extend({
+			defaults:{
+				fname:"bruce",
+				lname:"wayne",
+				fullname:{
+					fn:"pratik",
+					ln:"senapaty"
+				},
+				},
+				increasePower : function(){
+					var val=this.get("power");
+					this.set("power",val+1);
+				},
+				decreasePower : function(){
+					var val=this.get("power");
+					this.set("power",val-1);
+				}
+			
+		});
+		var person=new Person({
+			power:5,
+			city:"gotham",
+		});
+		console.log(person.get("fullname"));
+		//console.log(person.get("fname"));  //get() can take only 1 arg
+		//person.set("fname","joker");    //set() can take objects as well as single attribute
+		//console.log(person.get("fname"));
+		person.on("change",function(){
+			$("#log").text(person.get("power"));
+		})
+	    $(function(){
+	    	$("#ibtn").on("click",function(){
+	    		person.increasePower();
+	    		
+	    	});
+	    	$("#dbtn").on("click",function(){
+	    		person.decreasePower();
+	    		//$("#log").text(hero.get("power"));
+	    	});
+	    });
+	</script>
+</head>
+<body>
+	<button id="ibtn">increase</button>
+	<button id="dbtn">decrease</button>
+	<hr />
+	<h1 id="log"></h1>
+</body>
+</html>

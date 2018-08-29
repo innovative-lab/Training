@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		#pratik_body{
+			background-image: url("images/2.png");
+			height:1750px;
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			
+		}
+		#pratik_mid{
+			background-color: transparent;
+			border:0px;
+			font-size:50px;
+			margin-top:745px;
+			margin-left:230px;
+			
+		}
+		#pratik_mid:hover{
+			border-color:0px;
+		}
+	</style>
+</head>
+<body id="pratik_body">
+	<input type="text" id="pratik_mid" placeholder="MID"/>
+	
+</body>
+</html>

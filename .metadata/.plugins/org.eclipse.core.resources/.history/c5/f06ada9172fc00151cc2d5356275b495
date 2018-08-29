@@ -1,0 +1,8 @@
+(function(){
+	
+angular
+     	.module("app")
+     	.controller("createEventcontroller",function($scope,loginservice){
+     		$scope.logindb=loginservice.getLoginData();
+     	})
+}())

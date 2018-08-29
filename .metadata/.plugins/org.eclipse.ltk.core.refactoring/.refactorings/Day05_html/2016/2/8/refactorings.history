@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Day05_html/validation2.html&apos; to &apos;localstorage.html&apos;" description="Rename resource &apos;validation2.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="validation2.html" name="localstorage.html" stamp="1455854035610" updateReferences="true"/>
+</session>

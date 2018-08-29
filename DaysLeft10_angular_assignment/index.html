@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script src="app/module/mainapp.js"></script>
+	<script src="app/controller/batman.js"></script>
+	<script src="app/controller/ironman.js"></script>
+	<script src="app/controller/superman.js"></script>
+	
+	<style>
+		.box1,.box2,.box3{
+			float:left;
+			width:150px;
+			height:350px;
+			background-color: cyan;
+			margin:10px 10px;
+			padding:10px;
+			border: 2px dashed black;
+			
+		}
+		div img{
+			width:150px;
+			height:150px;
+		}
+	</style>
+	
+</head>
+<body ng-app="mainapp">
+	<div class="box1"ng-controller="batmanController as batman" >
+		<h3>fname :{{batman.fname}}</h3>
+		<h3>lname :{{batman.lname}}</h3>
+		<h3>{{batman.power}}</h3>
+		<h3>{{batman.movie}}</h3>
+		<h3><img src="{{ batman.photo }}" alt="" /></h3>
+	</div>
+	
+	<div class="box2" ng-controller="supermanController as superman">
+		<h3>{{superman.fname}}</h3>
+		<h3>{{superman.lname}}</h3>
+		<h3>{{superman.power}}</h3>
+		<h3>{{superman.movie}}</h3>
+		<h3><img src="{{ superman.photo }}" alt="" /></h3>
+	</div>
+	
+	<div class="box3" ng-controller="ironmanController as ironman">
+		<h3>{{ironman.fname}}</h3>
+		<h3>{{ironman.lname}}</h3>
+		<h3>{{ironman.power}}</h3>
+		<h3>{{ironman.movie}}</h3>
+		<h3><img src="{{ ironman.photo }}" alt="" /></h3>
+	</div>
+	
+</body>
+</html>

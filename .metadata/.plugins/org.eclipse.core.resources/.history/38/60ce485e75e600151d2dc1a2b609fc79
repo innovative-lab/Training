@@ -1,0 +1,9 @@
+header{
+	height:100px;
+	background-color: #97DFF7;
+	position:absolute;
+}
+.navbar{
+	background-color: #97DFF7;
+	position:absolute;
+}

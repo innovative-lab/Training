@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+	var border=["solid","dotted","double","dashed","ridge"];
+	window.onload=function(){
+	for(var i=0;i<border.length;i++)
+	{
+		document.images[i].setAttribute("style","border: 10px "+border[i]+" red;");
+	}
+	};
+	</script>
+</head>
+<body>
+	<img src="images/1.jpg"></img>
+	<img src="images/2.jpg"></img>
+	<img src="images/3.jpg"></img>
+	<img src="images/4.jpg"></img>
+	<img src="images/5.jpg"></img>
+</body>
+</html>

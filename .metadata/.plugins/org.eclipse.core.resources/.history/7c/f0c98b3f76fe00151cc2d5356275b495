@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		#inner{
+			height: 10px;
+			width:100px;
+			background-color: orange
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			document.getElementsByTagName("button")[0].addEventListener("click",function(){
+				
+				
+				document.getElementsByTagName("div")[0].innerHTML="<div id='inner'></div>";
+			
+			
+			
+			
+			})
+		}
+	</script>
+</head>
+<body>
+	<button id="box">click me</button>
+	<div></div>
+</body>
+</html>

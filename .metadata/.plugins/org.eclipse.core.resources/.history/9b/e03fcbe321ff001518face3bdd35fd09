@@ -1,0 +1,11 @@
+html(lang=en)
+	head
+		title=title
+	body
+		h1 #{msg}
+		h1=msg
+		
+		ul
+			for hero in hlist
+				li=h1=hero
+		hr

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		var Cart={
+			costPrice:100,
+			getSellingPrice:function(){
+				return this.costPrice+this.costPrice*0.2;
+			},
+			
+			getTotal:function(){
+			    
+				function getTax(){
+					 return getSellingPrice()*0.1;
+				}
+				return this.getSellingPrice()+getTax.call(Cart);
+			}
+		}
+		
+		console.log(Cart.getTotal());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

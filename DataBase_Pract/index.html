@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+	angular
+	   .module("app",[])
+	   .controller("mycon",function($scope,$http){
+	   	
+	   	$scope.fn="";
+	   	
+	   	$scope.add_me=function(){
+	   		var data={
+	   			fn:$scope.fn,
+	   		}
+	   		$http.post("/add",data)
+	   		.success(function(r,s,x){
+	   			console.log("uploaded on server")
+	   		})
+	   		.error(function(e,s,x){
+	   			console.log("something went wrong")
+	   		})
+	   		
+	   	}
+	   	
+	   	$scope.get_data=function(){
+	   		
+	   		$http.get("/add")
+	   		.success(function(r,s,x){
+	   			$scope.add=r;
+	   			alert(r[0].uname)
+	   			console.log(r);
+	   			console.log("uploaded on server")
+	   		})
+	   		.error(function(e,s,x){
+	   			console.log("something went wrong")
+	   		})
+	   		
+	   	}
+	   	
+	   })
+		
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	<label >fname :<input type="text" ng-model="fn" /></label>
+	<button ng-click="add_me()">Add to DB</button>
+	<button ng-click="get_data()">Get data</button>
+	<table ng-repeat="emp in add">
+		<tr><th>FNAME</th></tr>
+		<tr><td>{{ emp.fn }}</td></tr>
+	</table>
+</body>
+</html>

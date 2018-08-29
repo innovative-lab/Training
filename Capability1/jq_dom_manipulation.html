@@ -1,0 +1,51 @@
+<!doctype htmlmage>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>jQuery Traversals</title>
+	<style>
+		.box{
+			width: 300px;
+			background-color: silver;
+			margin: 10px;
+			padding: 10px;
+		}
+		div{
+			width: 300px;
+			background-color: orange;
+		}
+		ul{
+			border : 5px dashed gray;
+		}
+	</style>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		$(function(){
+			// alert($("a").attr("href"));
+			// $("h1").text($("a").attr("href"));
+			// $("a").attr("href", "images/superman.jpg");
+			/*
+			$("a").attr({
+				href : "images/supergirl.jpg",
+				target : "_blank"
+			});
+			 */
+			 $("img").wrap();
+			//$("a").removeAttr("href")
+		})
+	</script>
+</head>
+<body>
+	<h1></h1>
+	<hr/>
+	<a href="images/rajani.jpg" ><img src="images/batman.jpg" 	alt="bat man" 	width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/ironman.jpg" 	alt="iron-man" 	width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/joker.jpg" 	alt="joker" 	width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/phantom.jpg" 	alt="phantom" 	width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/rajani.jpg" 	alt="rajani" 	width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/robin.jpg" 	alt="robin" 	width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/spiderman.jpg" alt="spider-man" width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/supergirl.jpg" alt="supergirl" width="100" /></a>
+	<a href="images/rajani.jpg" ><img src="images/superman.jpg" 	alt="superman" 	width="100" /></a>
+</body>
+</html>

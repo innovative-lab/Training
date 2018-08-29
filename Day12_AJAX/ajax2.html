@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+       
+    </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+            window.onload = function(){
+                xhr.open("get","data/heros.xml",true);
+                xhr.send();
+                xhr.onreadystatechange = ajaxHandler;
+                
+                document.getElementsByTagName("select")[0].onchange=changeFun;
+            }
+            function ajaxHandler(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    var data = xhr.responseXML;
+                    for(var i = 0 ; i < data.getElementsByTagName('hName').length; i++){
+                        document.getElementsByTagName("select")[0].innerHTML += "<option>"+data.getElementsByTagName("hName")[i].innerHTML+"</option>";
+                    }
+                };
+            }
+            function changeFun(){
+            	alert(document.getElementsByTagName("select")[0].selectedIndex);
+            }
+            
+            
+    </script>
+</head>
+<body>
+    <select>
+        <option> Select Your Hero </option>
+    </select>
+</body>
+</html>

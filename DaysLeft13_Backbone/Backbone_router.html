@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Backbone router</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script type="template" id="temp">
+		<div class='box'>
+		   <h1><%= title %></h1>
+		   <img src='<%=  photo %>' width='200' />
+		   <h2><span><%= fname %> <%= lname %></span></h2>
+		   <input type='range' value='<%= power %>'/>
+		</div>
+	</script>
+	<script>
+	    var MyModel=Backbone.Model.extend({});
+	    var BatModel=new MyModel({
+	    	title : "Batman",
+            fname : "Bruce",
+            lname : "Wayne",
+            photo : "images/batman.jpg",
+            power : 7
+	    })
+	    var SuperModel=new MyModel({
+	    	title : "SuperMan",
+            fname : "Clark",
+            lname : "Kent",
+            photo : "images/superman.jpg",
+            power : 8
+	    })
+	   var HeroView = Backbone.View.extend({
+            tagName : "section",
+            initialize : function(){
+                console.log("an instance was created");
+            },
+            render : function(){
+                this.$el.html(this.template(this.model.toJSON()));
+                return this;
+            },
+            template : _.template($("#temp").html())
+        });
+		var MyRouter=Backbone.Router.extend({
+			routes:{
+				           "" : "homefun",
+				   "mindtree" : "mindfun",
+				  "bangalore" : "blrfun"
+			},
+			homefun:function(){
+				console.log("u r at home page");
+			
+			},
+			mindfun:function(){
+				console.log("u r at mindtree page");
+				$(".box").html(new HeroView({model:BatModel}).render().el)
+			},
+			blrfun:function(){
+				console.log("u r at blore page");
+			}
+			
+		});
+		var mr=new MyRouter();
+		Backbone.history.start();
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

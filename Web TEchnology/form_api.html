@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Form API</title>
+	<script>
+		function callFun(src,traget){
+			document.getElementById(traget).value = src.value;
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Name Of The Tag</td>
+			<td>Tag As Rendered In The Browser</td>
+		</tr>
+		<tr>
+			<td>Text</td>
+			<td>
+				<input type="text" />
+			</td>
+		</tr>
+		<tr>
+			<td>Color</td>
+			<td>
+				<input  type="color" onchange="callFun(this,'col')" /><output id="col"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Search</td>
+			<td>
+				<input type="search"  />
+			</td>
+		</tr>
+		<tr>
+			<td>Number</td>
+			<td>
+				<input  onchange="callFun(this,'num')"  type="number" min="5" max="100" step="5"/><span id="num"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>Date</td>
+			<td>
+				<input type="date" min="2016-02-16" max="2016-04-24" step="7" />
+			</td>
+		</tr>
+		<tr>
+			<td>Week</td>
+			<td>
+				<input type="week"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Month</td>
+			<td>
+				<input type="month"/>
+			</td>
+		</tr>
+		<tr>
+			<td>eMail</td>
+			<td>
+				<input type="email"/>
+			</td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td>
+				<input type="url"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Range</td>
+			<td>
+				<input type="range" onchange="callFun(this,'rng')" /><span id="rng"></span>
+			</td>
+		</tr>
+	</table>
+	<hr/>
+	<table border="0" cellspacing="5" cellpadding="5">
+		<tr>
+			<th>Progress</th>
+			<td>
+				<input min="0" max="1" step="0.1" type="range" onchange="callFun(this,'prog')" />
+				<progress id="prog" value="0.5"></progress>
+			</td>
+		</tr>
+		<tr>
+			<th>Meter</th>
+			<td>
+                                <input min="0" max="1" step="0.1" type="range" onchange="callFun(this,'proge')" />
+				<meter id="proge" low="0.3" high="0.8" value="0.3" optimum="0.9"></meter>
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/*
+ * ///////////////////////////////// LOG IN ////////////////////////////
+ */
+.bodySyed{
+        		background-color: #B21727;
+        		height:750px;
+        	}
+        	.panelSyed{
+       			background-color : #f5e3e3;
+       		
+       		}
+        	.logoSyed{
+        		margin:auto;
+        		padding : 5px;
+        		background-color : #f5e3e3;
+        	}
+        	.headerSyed{
+				background-color: #AE3A3A;
+				height: 60px;
+			}
+			.headSyed{
+				background-color: #B21727;
+				height: 100px;
+			}
+
+
+/*
+ * //////////////////////////////  create event /////////////////////////////////////
+ * 
+ */
+
+ .bodySyed1{
+              background-color : #f5e3e3;
+              padding: 0px;
+          }
+          .headerSyed{
+              height:60px;
+              background-color: #AE3A3A;
+          }
+          .formSyed{
+              margin-top: 5px;
+          }
+          .privateCollapseSyed{
+              height: 200px;
+              overflow: auto;
+          }
+          .eventHeaderSyed{
+              font-size: 24px;
+              font-weight: bolder;
+          }
+          
+          
+/*
+ * /////////////////////////////// event Details //////////////////////////
+ * 
+ */
+
+body{
+            font-family:helvetica;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .title{
+	        margin-top: 15px;
+             margin-left: 20px;
+             font-size: 25px;
+            font-weight: bolder;
+              color: white;
+         }
+         .aatishheader{
+         	background-color:#AE3A3A;
+         	height:112px;
+         }
+       .username{
+            margin-top:12px;
+            margin-left:0px;
+            font-size: 25px;
+            color: #FFFFFF;
+        }
+       .btn3, .btn1, .btn2{
+          margin-top:0px; 
+          background-color:#AE3A3A;
+          color: #FFFFFF;
+          font-size: 30px;
+        }
+    	.aatishimg1{
+    		width: 100%;
+    		position: relative;
+    		margin-top:1%;
+    	}
+    	.aatishtext01{
+    		position: absolute;
+    		margin-top:-23%;
+    		color:#ffffff;
+    	}
+    	.aatishcount{
+    		font-size: 60px;
+    		 margin-left: 4%;
+    	}
+    	.aatishmovie{
+    		margin-left: 27%;
+             font-size: 22px;
+             margin-top: -25%;
+            
+    	}
+    	.aatishcreated{
+    		margin-left: 27%;
+   			font-size: 22px;
+    		margin-top: -17%;
+    	}
+    	.aatishpeople{
+    		margin-left: 27%;
+   			font-size: 22px;
+    		margin-top: -10%;
+    	}

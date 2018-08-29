@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+		.module("app",[])
+		var mycontroller=function($s,ms){
+			$s.title=ms.hname
+		}
+		angular.module("app")
+		.controller("mycon",["$scope","myservice",mycontroller])
+		
+		
+		var serviceFun=function($http){
+			this.hname="batman"
+		}
+		angular.module("app")
+		.service("myservice",["$http",serviceFun])
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	<h1>{{ hname }}</h1>
+	
+</body>
+</html>

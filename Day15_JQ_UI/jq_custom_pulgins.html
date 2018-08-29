@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="lib/jquery-ui.css" />
+	<script src="lib/jquery-1.12.1.js"></script>
+	<script src="lib/jquery-ui.js"></script>
+	<script>
+	/*
+	 * 
+		$(function(){
+			$.fn.mindtree=function(){
+				this
+				.css("border","5px solid red")
+				.on("click",function(){
+					alert("you clicked me")
+				})
+			}
+		})
+		$("h1").mindtree();
+	 */
+	$.fn.magic=function(){
+		this
+		.find("li:odd")
+		.css({
+			background-color: "gray",
+			height: "50px"
+		})
+		.end()
+		.find("li:even")
+		.css({
+			background-color:"orange",
+			height: "150px
+		})
+		.on("click",function(evt){
+			$(evt.target).next().slideUp();
+		})
+		
+	}
+	$("li").magic();
+	
+	</script>
+</head>
+<body>
+	<ul>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque labore adipisci possimus sit soluta suscipit laborum illo! Laborum tempore tenetur vel excepturi quibusdam perferendis error eveniet asperiores enim suscipit.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laudantium eos provident blanditiis ratione voluptatem commodi incidunt cum laborum dolore quasi esse obcaecati temporibus aspernatur pariatur suscipit dolorem reprehenderit minus!</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis soluta non obcaecati accusantium tempore nisi natus architecto fuga harum aspernatur ut aut unde consequuntur eligendi asperiores neque aperiam alias eos.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis et assumenda reiciendis culpa tempora error quod velit fugiat quidem sapiente soluta animi voluptates hic. Eum necessitatibus quae a nobis error.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur cumque magni sit repellendus vel animi fuga asperiores. Nesciunt molestiae natus iusto delectus explicabo ea fuga harum quod architecto inventore numquam.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum inventore ex eos esse pariatur quidem quod aut? Reiciendis adipisci corporis temporibus tempora commodi in totam. Soluta officiis obcaecati necessitatibus omnis?</li>
+	</ul>
+	
+</body>
+</html>

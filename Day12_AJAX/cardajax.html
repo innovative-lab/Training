@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        select{
+            width: 200px;
+            display: block;
+            padding : 5px;
+            margin: 10px auto;
+        }
+        .box{
+            width: 200px;
+            padding : 5px;
+            margin: 10px;
+            background-color: #333333;
+            float: left;
+        }
+        .box h1, h2{
+            color: #333333;
+            background-color: #999999;
+            margin: 0px;
+            text-align: center;
+            font-family: arial;
+            font-variant: small-caps;
+        }
+        .box h2{
+            color: #333333;
+            background-color: #999999;
+            margin: 0px;
+            text-align: center;
+            font-family: arial;
+            font-size: 16px;
+        }
+        .box img{
+            width: 200px;
+            display: block;
+        }
+        .box textarea{
+            width: 195px;
+            height: 60px;
+        }
+    </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+        var data = null;
+        window.onload = function(){
+            xhr.open("get","data/heros.xml",true);
+            xhr.send();
+            xhr.onreadystatechange = ajaxHandler;
+        }
+        function ajaxHandler(){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                data = xhr.responseXML;
+                for(var i = 0 ; i < data.getElementsByTagName("hero").length; i++){
+                    var ht = data.getElementsByTagName("hName")[i].firstChild.nodeValue;
+                    var hi = data.getElementsByTagName("hPhoto")[i].firstChild.nodeValue;
+                    var hp = data.getElementsByTagName("hPhone")[i].firstChild.nodeValue;
+                    var hd = data.getElementsByTagName("hDetails")[i].firstChild.nodeValue;
+                    document.body.innerHTML += "<div class='box'><h1>"+ht+"</h1><img src='"+hi+"'/><h2>Call : <span>"+hp+"</span></h2><textarea>"+hd+"</textarea></div>";
+                };                    
+            };
+            
+        }
+            
+    </script>
+</head>
+<body>
+
+<!--
+    <div class="box">
+        <h1>Batman</h1>
+        <img src="images/batman.jpg"/>
+        <h2>Call : <span>123-123-123</span></h2>
+        <textarea>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </textarea>
+    </div>
+-->
+    
+
+</body>
+</html>

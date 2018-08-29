@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>I-Page</title>
+	<link rel="stylesheet" href="ipage-css.css" />
+	
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		window.onload=function(){
+	    $('.sidebutton').on("click",function(){
+		$(".container").css("display","block")
+		
+	    })
+	    
+	    $('.sidebutton').on("click",function(){
+		$(".heade").css(headinObj)
+	    })
+	    
+        $('.sidebutton').on("dblclick",function(){
+		$(".container").css("display","none")
+	    })
+	    
+	    $('.sidebutton').on("dblclick",function(){
+		$(".heade").hide("drop",{});
+	    })
+	    
+	     var headinObj={
+	    	'display':'block',
+	    	'animation':'mymove 3s'
+	    }
+	    
+	    
+	    var headoutObj={
+	    	'animation':'mymoveout 3s'
+	    }
+	    
+	  
+	    
+       }
+
+	</script>
+</head>
+<body>
+	
+	<header class="heade">
+		
+	</header>
+	<div class="sidebutton"></div>
+	<main class="container">
+		
+	</main>
+</body>
+</html>

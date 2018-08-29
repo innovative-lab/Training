@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Storage</title>
+    <script>
+    var message = "Good morning";
+    // [object Object]
+    
+    // JSON.parse
+    // JSON.stringify
+        function storeFun(){
+            var data = {
+                un : document.getElementById("un").value,
+                ue : document.getElementById("ue").value,
+                ua : document.getElementById("ua").value
+            };
+            localStorage.data = JSON.stringify(data);
+        };
+        function readFun(){
+            // alert(localStorage.data.length);
+            var data = JSON.parse(localStorage.data)
+            alert(data.ua);
+        };
+    </script>
+</head>
+<body>
+    
+        <table border="0" cellspacing="5" cellpadding="5">
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" name="username" id="un" />
+            </td>
+        </tr>
+        <tr>
+            <td>User Age</td>
+            <td>
+                <input type="number"  name="userage" id="ua" />
+            </td>
+        </tr>
+        <tr>
+            <td>User eMail</td>
+            <td>
+                <input type="email"  name="useremail" id="ue" />
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <button onclick="storeFun()">submit</button>
+            </td>
+        </tr>
+    </table>
+
+    <hr/>
+    <button onclick="readFun()">Read Values</button>
+    
+</body>
+</html>

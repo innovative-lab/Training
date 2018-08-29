@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'/>
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" />
+	<style>
+		#vaishb{
+		padding:0px;
+        font-style:lora;
+
+	}
+	.rohini_heading{
+           width:100%;
+           background-color:#AE3A3A;
+           height:200px;
+           position:fixed;
+     }
+     .rohini_searchicon{
+           font-size:60px;
+           margin-top:10px;
+           position:fixed;
+           left:93%;  
+           color:white;
+     }
+     .rohini_menuicon{
+           font-size:60px;
+           margin-top:10px;
+           position:fixed;
+           left:2%;
+           color:white;
+     }
+     .rohini_title{
+           font-size:60px;
+           color:white;
+           position:fixed;
+           left:45%;
+           top:0px;
+           }
+     .rohini_usericon{
+           font-size:60px;
+           color:white;
+           position:fixed;
+           left:2%;
+           top:120px;
+     }
+
+		#vaishdiv1{
+			width:100%;
+			height:200px;
+			margin-bottom:30px;
+			padding-left:40px;
+		}
+		#vaishimg1{
+			border-radius: 50%;
+			width:150px;
+			height:150px;
+			float:left;
+		}
+		#vaishhd{
+			font-size: 70px;
+			padding-left: 200px;
+			padding-top:40px;
+		}
+		#vaish1{
+			width:100%;
+			height:200px;
+		}
+		#vaishsp{
+			width:100%;
+			margin-top:50px;
+		}
+		#vaishsp2{
+			width:100%;
+			margin-top:50px;
+			padding-left:40px;
+		}
+		#vaishdiv3{
+			margin:5px;
+			font-size: 50px;
+			color:black;
+		}
+		#vaishdiv4{
+			width:300px;
+			font-size: 50px;
+			color:black;
+			float:left;
+			margin-right:15px;
+			margin-bottom:5px;
+		}
+		#vaish2{
+			padding-left:45px;
+			font-size:45px;
+		}
+	</style>
+</head>
+<body id="vaishb" ng-app="vaishapp" ng-controller="vaishcontroller">
+	<header id="vaish1">
+		<div class="rohini_heading">
+		   <a href="html1.html"><div class="glyphicon glyphicon-th-list rohini_menuicon "></div></a>
+           <div class="rohini_title">Title</div>
+           <a href=""><div class="glyphicon glyphicon-search rohini_searchicon"></div></a>
+           <a href=""><div class="glyphicon glyphicon-user rohini_usericon"></div></a>
+       </div>
+	</header>
+	<div id="vaishsp2" ng-repeat="event in eventdb">
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Created By</b></div>
+			<div id="vaishdiv5">{{ event. }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>MID</b></div>
+			<div id="vaishdiv5">{{ event. }} </div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Type</b></div>
+			<div id="vaishdiv5">{{ event. }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Venue</b></div>
+			<div id="vaishdiv5">{{ event. }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Date</b></div>
+			<div id="vaishdiv5">{{ event. }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Start time</b></div>
+			<div id="vaishdiv5">{{ event. }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>End time</b></div>
+			<div id="vaishdiv5">{{ event. }}</div>
+		</div>
+		<div id="vaishdiv3">
+			<div id="vaishdiv4"><b>Details</b></div>
+			<div id="vaishdt">{{ event. }}<div>
+		</div>
+	</div>
+	<h1 id="vaish2">{{ event. }} people are in this group </h1>
+	<div id="vaishsp">
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img ng-src="{{ event. }}"  id="vaishimg1"/></div>
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img ng-src="{{ event. }}"  id="vaishimg1"/></div>
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img ng-src="{{ event. }}"  id="vaishimg1"/></div>
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	    <div id="vaishdiv1">
+		     <div id="vaishimgdiv"><img ng-src="{{ event. }}"  id="vaishimg1"/></div>
+		     <div id="vaishdiv2"><h1 id="vaishhd">{{ event. }}</h1></div>
+	    </div>
+	</div>
+</body>
+</html>

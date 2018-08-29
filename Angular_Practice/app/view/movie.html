@@ -1,0 +1,19 @@
+<h1>{{ message }}</h1>
+<h1>{{ pra }}</h1>
+<h1>
+	{{ prov }}
+</h1>
+<table class="table table-striped">
+	<tr>
+		<th>Sl No</th>
+		<th>Title</th>
+		<th>Poster</th>
+	</tr>
+	<tr ng-repeat="movie in selectedMovies">
+		
+		<th>{{ movie.sl }}</th>
+		<th>{{ movie.title }}</th>
+		<th><img src="{{ movie.poster }}" alt="" /></th> 
+		
+	</tr>
+</table>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title><%= title %></title>
+</head>
+<body>
+	<h1><%= msg %></h1>
+	<ul>
+		<li><%= hlist[0] %></li>
+		<li><%= hlist[2] %></li>
+		<li><%= hlist[3] %></li>
+		<li><%= hlist[1] %></li>
+	</ul>
+	<hr />
+	<ul>
+	   <% for(var i=0; i< hlist.length;i++){ %>
+	     <li><%= hlist[i] %></li>
+	   <% } %>
+	</ul>
+</body>
+</html>

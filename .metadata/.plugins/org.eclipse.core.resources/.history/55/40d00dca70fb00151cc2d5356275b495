@@ -1,0 +1,32 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="_http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<title>Document</title>
+	<style>
+	body{
+		padding:0px;
+		margin:0px;
+	}
+	.heading{
+		width:100%;
+		background-color:#AE3A3A;
+		height:100px;
+	}
+	.searchicon{
+		font-size:30px;
+		margin-top:10px;
+		position:fixed;
+		left:80%;	
+	}
+	</style>
+</head>
+<body>
+	<div class="heading">
+		<span class="glyphicon glyphicon-search searchicon"></span>
+	</div>
+</body>
+</html> 

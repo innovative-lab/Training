@@ -1,0 +1,7 @@
+(function(){
+	angular.module("anotherapp",[])
+	
+	.controller("mycon",function($scope){
+		$scope.greet="hello world!!"
+	})
+}())

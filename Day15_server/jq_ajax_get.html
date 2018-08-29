@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 200px;
+            margin: auto;
+            background-color: #333;
+            color: silver;
+            padding: 5px;
+            font-family: Arial;
+            overflow: auto;
+        }
+        button{
+            display: block;
+            width: 410px;
+            padding: 5px;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script>
+        $(function(){
+            $("button").on("click",function(){
+            //	$.get("data/heroes.json",responseHandler)
+            //  $.post("data/heroes.json",responseHandler)
+            //  $.getJSON("data/heroes.json",responseHandler)
+            
+                $.ajax("http://localhost:5555")
+                .done(responseHandler)                    //success and error
+                .error(errorHandler)                      //done and fail
+                                                          //then(successfunction,errorfunction)
+            })
+        });
+         function errorHandler(jqxhr,s,e)
+        {
+        	$(".box").text(e);
+        	
+        	console.log(e);
+        	console.log("=======");
+        	console.log(s);
+        	console.log("=======");
+        	console.log(jqxhr);
+        	
+        	
+        	
+        }
+        function responseHandler(r,s,jqxhr)
+        {
+        	
+        	
+        	console.log(r);
+        	console.log("=======");
+        	console.log(s);
+        	console.log("=======");
+        	console.log(jqxhr);
+        	
+        	$(".box").text(r.heroes.hero[0].title);
+        	
+        }
+    </script>
+</head>
+<body>
+    <button>Get Data</button>
+    <div class="box"></div>
+</body>
+</html>

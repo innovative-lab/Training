@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		body{
+			background-color: blue;
+		}
+	</style>
+	<script>
+	addEventListener("load",function(){
+		document.getElementById('close').addEventListener("click",closeMe);
+		document.getElementById('closeP').addEventListener("click",closeParent);});
+		function closeMe(){
+			window.close();
+		}
+		function closeParent(){
+			opener.close();
+		}
+		
+	</script>
+</head>
+<body>
+	<button id="close">close me</button>
+	<button id="closeP">close Parent</button>
+	
+</body>
+</html>

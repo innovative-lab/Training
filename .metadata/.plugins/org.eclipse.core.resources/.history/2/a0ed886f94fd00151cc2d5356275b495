@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+		 .module("app",[])
+		 .controller("firstController",function($scope,$rootScope){
+		 	$rootScope.power=$scope.pow;
+		 	$scope.data=$rootScope.power;
+		 	$scope.innerFun=function(){
+		 		$rootScope.power=$rootScope.power+1;
+		 		$scope.data=$rootScope.power;
+		 	}
+		 })
+	</script>
+</head>
+<body ng-app="app" ng-controller="firstController">
+	<input type="text"  ng-model="pow" />
+	<h1>{{ data }}</h1>
+	<h1>{{ $root.power }}</h1>
+	<button ng-click="innerFun()">Increase</button>
+</body>
+</html>

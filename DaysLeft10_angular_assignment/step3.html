@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+		     .module("myapp",[])
+		     .controller("firstController",function($scope,$rootScope){
+		     	$scope.data1="soumya";
+		     })
+		     .controller("secondController",function($scope,$rootScope){
+		     	$scope.data2="pratik";
+		     });
+	</script>
+</head>
+<body ng-app="myapp">
+	<div class="box" ng-controller="firstController">
+		<h1>{{ data1 }}</h1>
+		<div class="nestedbox" ng-controller="secondController">
+			<h1>{{ data2 }}</h1>
+		</div>
+	</div>
+</body>
+</html>

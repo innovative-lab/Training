@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var boxX=-50;
+		var boxY=100;
+		var ctx=null;
+		window.onload=function(){
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			
+			setInterval(anim,100);
+			setInterval(anim2,10);
+		};
+		function anim(){
+			var boxX=Math.round(Math.random()*400);
+			var boxY=Math.round(Math.random()*400);
+			var boxD=Math.round(Math.random()*50);
+		
+			var r=Math.round(Math.random()*255);
+			var g=Math.round(Math.random()*255);
+			var b=Math.round(Math.random()*255);
+			var a=Math.random();
+
+			//ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+			ctx.fillStyle="rgb("+r+","+g+","+b+")";
+			ctx.fillRect(boxX,boxY,boxD,boxD);
+			boxX+=1;
+			if(boxX>1000)
+			{
+				boxX=-50;
+			}
+		};
+		
+	</script>>
+</head>
+<body>
+		<canvas id="can" width="400" height="400"></canvas>
+</body>
+</html>

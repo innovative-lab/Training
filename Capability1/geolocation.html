@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Geolocation</title>
+        <script>
+        	var pos = null;
+	        function init(){        	
+	        	if(navigator.geolocation){
+	        		navigator.geolocation.getCurrentPosition(successFun, failFun);
+	        	};
+	        };
+	        
+        	function successFun(position){
+        		document.getElementById("lat").textContent = position.coords.latitude;
+        		document.getElementById("lon").textContent = position.coords.longitude;
+        		pos = position;
+        	};
+        	function failFun(error){
+        		alert(error.message);
+        	};
+        	function rendermap(elm){
+        		document.getElementById("map").src = "https://maps.googleapis.com/maps/api/staticmap?center="+pos.coords.latitude+","+pos.coords.longitude+"&zoom="+elm.value+"&size=400x400"
+        	}
+        	/*
+        	 https://maps.googleapis.com/maps/api/staticmap
+        	 
+        	 https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400
+        	 */
+        </script>
+    </head>
+    <body onload="init()">
+        <h1>Latitude : <span id="lat"></span></h1>
+        <h1>Longitude : <span id="lon"></span></h1>
+        <input onchange="rendermap(this)" value="10" type="range" min="1" max="20" step="1" />
+       <hr/>
+        <img id="map"/>
+    </body>
+</html>

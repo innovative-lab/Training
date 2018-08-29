@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+        var worker = null;
+        window.onload = function(){
+            worker = new Worker("workers/worker1.js");
+            worker.onmessage = messageHandler;
+        };
+        function messageHandler(evt){
+            document.getElementById("log").textContent = evt.data;
+        }
+        
+        function sendMessage(){
+            worker.postMessage(document.getElementById("ti").value); 
+        }
+        function stopMessage(){
+            worker.terminate();
+        }
+        function startMessage(){
+        	worker = new Worker("workers/worker1.js");
+            worker.onmessage = messageHandler;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="ti" />
+    <button onclick="sendMessage()">send</button>
+    <button onclick="stopMessage()">stop</button>
+    <button onclick="startMessage()">start</button>
+    <hr/>
+    <h1>Number is : <span id="log"></span></h1>
+</body>
+</html>

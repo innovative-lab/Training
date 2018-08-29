@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Angular_Practice/app/controller/1stcontroller.js&apos; to &apos;herocontroller.js&apos;" description="Rename resource &apos;1stcontroller.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/controller/1stcontroller.js" name="herocontroller.js" stamp="1459442691544" updateReferences="true"/>
+</session>

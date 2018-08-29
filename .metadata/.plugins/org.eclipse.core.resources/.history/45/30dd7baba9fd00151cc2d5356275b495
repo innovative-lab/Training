@@ -1,0 +1,48 @@
+<div class="bodySyed">
+	<div class="container">    
+        
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
+        <div class="headSyed"></div>
+        <div class="panel panel-default" >
+            <!-- <div class="header col-xs-12 col-sm-12 headerSyed">
+            					<div class="setting col-xs-1 col-xs-offset-11">
+            									
+            					</div>		            
+          	</div> -->
+            <div class="row logoSyed">
+            	<img src="images/logo.jpg" width="100%" height="100%"/>
+            </div>    
+
+            <div class="panel-body panelSyed" >
+            	
+            	<!-- <img src="images/logo.jpg" width="100%" height="100%"/> -->
+
+                <form name="form" id="form" class="form-horizontal">
+                   
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="user" type="text" class="form-control" name="user" pattern="[mM0-9]{8}" placeholder="MID" data-ng-model="mid1">                                        
+                    </div>
+                    <br />
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password" data-ng-model="password">
+                    </div>
+                    
+                    <br />                                                                  
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls" >
+                            <a href="#/menu"><button ng-click="login_data(mid1,password)" type="submit" class="btn btn-primary pull-right" ><i class="glyphicon glyphicon-log-in"></i> Log in</button> </a>                         
+                        </div>
+                    </div>
+
+                </form>     
+
+            </div>                     
+        </div>  
+    </div>
+</div>
+</div>

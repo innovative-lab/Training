@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		window.onload=function(){
+			$(".btn").on("click",refresh)
+			
+			var refresh=function(){
+				$.ajax({
+					url:"/herolists",
+					method:"GET",
+					dataType:"json"
+					
+				}).done(function(r,s,x){
+					for(var i=0;i<r.length;i++)
+					$(".box").append(r[i].fname+"<br />")
+				})
+			}
+			
+			$("#insert").on("click",function(){
+				var uname= {
+					"user" : $('#ua').val()
+				}
+				$.ajax({
+					url:"/herolists",
+					method:"POST",
+					dataType:"json",
+					data:JSON.stringify(uname),
+					contentType:"application/json"
+					
+				}).done(function(r,s,x){
+					console.log(r);
+					$(".box").html("")
+					refresh();
+				})
+				
+				
+				 
+			})
+		}
+	</script>
+</head>
+<body>
+	<button class="btn">click me</button>
+	<div class="box"></div>
+	<h1>hii</h1>
+	<hr />
+	<fieldset>
+		<legend>Add noobs</legend>
+		
+		<label >Name :<label><input type="text" id="ua"/>
+			<label for=""></label><button id="insert">insert</button>
+		
+	</fieldset>
+</body>
+</html>

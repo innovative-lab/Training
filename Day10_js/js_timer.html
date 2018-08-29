@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		var c=setInterval(function(){
+			console.log("hello at : "+new Date() );
+		},1000);
+		addEventListener("load",function(){
+			document.getElementsByTagName("button")[0]
+			.addEventListener("click",function(){
+			   clearInterval(c);
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>atop Interval</button>
+</body>
+</html>

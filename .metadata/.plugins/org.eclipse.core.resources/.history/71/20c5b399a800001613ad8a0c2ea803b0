@@ -1,0 +1,14 @@
+var funone= function(){
+	console.log("hello from funone")
+}
+
+
+
+
+var funone= function(){
+	console.log("hello from funtwo")
+}
+
+var funone= function(){
+	console.log("hello from funthree")
+}

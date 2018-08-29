@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var can=null;
+		var ctx=null;
+		window.onload=function(){
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			var img=new Image();
+			img.src="images/joker.jpg";
+			img.onload=function(){
+				ctx.drawImage(img,0,0,150,150);
+			};
+		};
+	</script>
+</head>
+<body>
+
+	<canvas id="can"></canvas>
+</body>
+</html>

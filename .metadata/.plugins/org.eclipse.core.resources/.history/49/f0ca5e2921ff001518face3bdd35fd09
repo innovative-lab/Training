@@ -1,0 +1,21 @@
+var express = require("express");
+var app = express();
+
+var bp = require("body-parser");
+app.use(express.static(__dirname+"/views"));
+app.use(bp.urlencoded());
+
+var title="soumya";
+var msg="hello";
+var heroes=["spiderman","superman","batman"];
+
+app.get("/",function(req,res){
+	res.render("home.jade",{
+		title:title,
+		msg:msg,
+		hlist:heroes
+	})
+});
+
+app.listen(8989);
+console.log("your server is running on 8989");

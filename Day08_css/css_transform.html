@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Transform</title>
+    <style>
+        @keyframes vj{
+            0%{
+                background-color: #B774F2;
+                transform: rotate(0deg) scale(0,0);
+            }
+            10%{
+                background-color: #F274DB;
+                transform: rotate(36deg) scale(1,1);
+            }
+            20%{
+                background-color: #74F2E7;
+                transform: rotate(72deg) scale(2,2);
+            }
+            30%{
+                background-color: #F2F074;
+                transform: rotate(108deg) scale(3,3);
+            }
+            40%{
+                background-color: #F29E74;
+                transform: rotate(144deg) scale(4,4);
+            }
+            50%{
+                background-color: #747AF2;
+                transform: rotate(180deg) scale(5,5);
+            }
+            60%{
+                background-color: #B774F2;
+                transform: rotate(216deg) scale(4,4);
+            }
+            70%{
+                background-color: #F274DB;
+                transform: rotate(252deg) scale(3,3);
+            }
+            80%{
+                background-color: #74F2E7;
+                transform: rotate(288deg) scale(2,2);
+            }
+            90%{
+                background-color: #F2F074;
+                transform: rotate(324deg) scale(1,1);
+            }
+            100%{
+                background-color: #F29E74;
+                transform: rotate(360deg) scale(0,0);
+            }            
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 100px auto;
+            border-radius:50%; 
+        }
+        .box{
+            animation-name: vj;
+            animation-duration: 2s;
+            animation-iteration-count : infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+    .image { 
+       position: relative; 
+        width: 100%; /* for IE 6 */
+}
+
+.another { 
+      position: absolute; 
+      top: 200px;  
+}
+#imag{
+    width:100%;
+}
+#frm{
+    margin-top:120%;
+}
+.form-control1{
+    width:130%;
+    height:100px;
+    font-size: 65px;
+    border-radius: 40px;
+    margin-left: -8%;
+    opacity: .6;
+}
+.labelclass{
+    font-size: 65px;
+}
+
+#logbtn{
+    width: 47%;
+    height: 80px;
+    margin-top: 40px;
+    margin-left: 36%;
+    
+    border-radius: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="image">
+      <img src="images/ballon.jpg" alt="Update your browser" id="imag"/>
+    </div>  
+     <div class="row another">
+       <div class="col-sm-12 col-xs-12">
+           <div class="row">
+               <div class="col-sm-2 col-xs-2"></div>
+               <div class="col-sm-8 col-xs-8">
+           <form id="frm"> 
+                <div class="form-group">
+                  <label for="exampleInputEmail1" class="labelclass">MID:</label>
+                   <input type="text" id="inpml" class="form-control form-control1" id="exampleInputEmail1" placeholder="Mindtree Id" pattern="m1036115">
+                </div>
+              <div class="form-group">
+               <label for="exampleInputPassword1" class="labelclass">Password:</label>
+            <input type="password" id="inppss" class="form-control form-control1" id="exampleInputPassword1" placeholder="Password">
+             </div>
+             <button type="submit" class="btn btn-primary"id="logbtn"><h2>Submit</h2></button>
+          </form>
+       </div>
+               <div class="col-sm-2 col-xs-2"></div>
+           </div>
+       </div>
+     </div>
+   
+</body>
+</html>

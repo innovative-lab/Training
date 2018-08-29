@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML 5 Validation </title>
+    </head>
+    <body>
+    	<!-- validation for email -->
+    	<!--
+    		080-1234-1234
+    	-->
+        <form action="#" >
+            <label>User Age  <input id="ua" name="userage" pattern="\w{5}" required /></label>
+            <br/>
+            <label for="up">User Phone </label>
+            <input id="up" name="userphone" title="###-####-####" pattern="\d{3}-\d{4}-\d{4}" required />
+            <input type="submit" value="login"/>
+        </form>
+    </body>
+</html>

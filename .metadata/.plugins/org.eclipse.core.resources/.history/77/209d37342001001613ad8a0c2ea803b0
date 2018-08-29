@@ -1,0 +1,250 @@
+<div class="views">
+	
+	<div class="view view-main">
+		<!--<div class="navbar">
+			<div class="navbar-inner" >
+				<div class="left">
+					<a href="#/homepage" class="link icon-only open-panel"> <i class="fa fa-bars"></i> </a>
+				</div>
+				<div class="center" style="text-align: center ">
+					<h2 class="title" style="color: red">Details</h2>
+				</div>
+			</div>
+		</div>-->
+		<div class="pages navbar-through">
+			<div data-page="form" class="page">
+				<div class="page-content">
+ <form class="login"  name="myForm" novalidate>
+					
+					<div class="content-block-title"></div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Name
+										</div>
+										<div class="item-input">
+												
+											<input type="text"   ng-model="name" placeholder="Enter your Name" name="name" ng-maxlength="50" ng-pattern="/^[A-Za-z ]*$/" required id="name"/>
+								                <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+													<span ng-show="myForm.name.$error.required && myForm.name.$dirty">Name is Required</span>
+													<span ng-show="myForm.name.$error.pattern && myForm.name.$dirty">Name is not valid</span>
+													
+												</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+			
+					<div class="content-block-title"></div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Age
+										</div>
+										<div class="item-input">
+											<input type="tel"   ng-model="age" placeholder="Enter your Age" name="age" ng-maxlength="2" ng-pattern="/^[0-9]*$/" required id="age"/>
+							                <span style="color:red" ng-show="myForm.age.$dirty && myForm.age.$invalid">
+												<span ng-show="myForm.age.$error.required && myForm.age.$dirty">Age is Required</span>
+													<span ng-show="myForm.age.$error.pattern && myForm.age.$dirty">Inavalid Age</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content-block-title"></div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Phone
+										</div>
+										<div class="item-input">
+											<input type="tel"  ng-model="phone" placeholder="Enter your Contact" name="phone" ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]*$/" id="phone" required/>
+							                <span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+												<span ng-show="myForm.phone.$error.required">Phone is Required </span>
+												<span ng-show="myForm.phone.$error.pattern || myForm.phone.$error.minlength || myForm.phone.$error.maxlength">Inavalid Phone</span>
+												
+												
+											</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					
+					<div class="content-block-title"></div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Gender
+										</div>
+										<div class="item-input">
+											<select id="gender" placeholder="select">
+												<option>Male</option>
+												<option>Female</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content-block-title"></div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Blood Group
+										</div>
+										<div class="item-input">
+											<select id="bg">
+												<option default selected="selected">A+ve</option>
+												<option>A-ve</option>
+												<option>B+ve</option>
+												<option>B-ve</option>
+												<option>O+ve</option>
+												<option>O-ve</option>
+												<option>AB+ve</option>
+												<option>AB-ve</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				
+					<div class="content-block-title"></div>
+					<div class="list-block">
+						<ul>
+							<li class="align-top">
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Chronic Diseases(if any)
+										</div>
+										<div class="item-input">
+											<textarea></textarea>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content-block-title">
+						<h2>Emergency Contact Details</h2>
+					</div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Person 1
+										</div>
+										<div class="item-input">
+											<input type="text" placeholder="Enter Name" ng-model="person1" name="person1" ng-maxlength="50" ng-pattern="/^[A-Za-z ]*$/">
+						<input type="tel" placeholder="Enter Contact Number" ng-model="num1" name="num1 " ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]*$/">
+												<span style="color:red" ng-show="myForm.person1.$dirty && myForm.person1.$invalid">
+												<span ng-show="myForm.person1.$error.pattern && myForm.person1.$dirty">Inavalid Name</span>
+												
+											</span>
+												<span style="color:red" ng-show="myForm.num1.$dirty && myForm.num1.$invalid">
+												<span ng-show="myForm.num1.$error.required">Phone is Required </span>
+												<span ng-show="myForm.num1.$error.pattern || myForm.num1.$error.minlength">Inavalid Phone</span>
+												<span ng-show="myForm.num1.$error.maxlength">Your Number is too long</span>
+												
+											</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Person 2
+										</div>
+										<div class="item-input">
+											<input type="text" placeholder="Enter Name" ng-model="person2" name="person2" ng-maxlength="50" ng-pattern="/^[A-Za-z ]*$/">
+											<input type="tel" placeholder="Enter Contact Number" ng-model="num2" name="num2 " ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]*$/">
+												<span style="color:red" ng-show="myForm.person2.$dirty && myForm.person2.$invalid">
+												<span ng-show="myForm.person2.$error.pattern && myForm.person2.$dirty">Inavalid Name</span>
+												
+											</span>
+												<span style="color:red" ng-show="myForm.num2.$dirty && myForm.num2.$invalid">
+												<span ng-show="myForm.num2.$error.required">Phone is Required </span>
+												<span ng-show="myForm.num2.$error.pattern || myForm.num2.$error.minlength">Inavalid Phone</span>
+												<span ng-show="myForm.num2.$error.maxlength">Your Number is too long</span>
+												
+											</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-block">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title label">
+											Person 3
+										</div>
+										<div class="item-input">
+											<input type="text" placeholder="Enter Name" ng-model="person3" name="person3" ng-maxlength="50" ng-pattern="/^[A-Za-z ]*$/">
+											<input type="tel" placeholder="Enter Contact Number" ng-model="num3" name="num3" ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]*$/">
+												<span style="color:red" ng-show="myForm.person3.$dirty && myForm.person3.$invalid">
+												<span ng-show="myForm.person3.$error.pattern && myForm.person3.$dirty">Inavalid Name</span>
+												
+											</span>
+												<span style="color:red" ng-show="myForm.num3.$dirty && myForm.num3.$invalid">
+												<span ng-show="myForm.num3.$error.required">Phone is Required </span>
+												<span ng-show="myForm.num3.$error.pattern || myForm.num3.$error.minlength">Inavalid Phone</span>
+												<span ng-show="myForm.num3.$error.maxlength">Your Number is too long</span>
+												
+											</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<a href="#/homepage" ng-click="add()" ng-hide= "display" style="margin-left: 5% ; margin-top: 5% ;display: inline-block; width: 40%" class="button button-round">Submit</a>
+					<a href="#/homepage" ng-click="edit()" ng-show="display" style="margin-left: 5% ; margin-top: 5% ;display: inline-block; width: 40%" class="button button-round">Save</a>
+					<a href="#/homepage" ng-click="canc()" style="display: inline-block; width: 40%" class="button button-round">Cancel</a>
+				</div>
+			</div>
+       
+        
+      </div>
+</form>
+		</div>
+	</div>
+</div>

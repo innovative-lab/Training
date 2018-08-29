@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        .orangeBox{
+            width: 300px;
+            height: 50px;
+            margin: 5px;
+            background-color: orange;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script>
+    /* every view element will have a property called el or $el */
+        var Hero = Backbone.Model.extend({});
+        
+        var HeroView = Backbone.View.extend({
+            tagName : "li",
+            className : "orangeBox",
+            initialize : function(){
+                console.log("a view was initialized");
+            },
+            render : function(){
+                this.el.innerHTML = this.model.get("title");
+                console.log("render was called");
+                return this;
+            }
+        });
+        
+        var hero = new Hero();
+            hero.set({
+                title : "Welcome to your life there is no trurning back",
+                power : 5
+            })
+            hero.on("change:title", function(){
+                heroview.render().$el.appendTo("body");
+            })
+        var heroview = new HeroView({
+            model : hero
+        });
+        
+        window.onload = function(){
+            heroview.render().$el.appendTo("body");
+            document.querySelectorAll("button")[0].addEventListener("click", function(){
+                hero.set("title","Joker");
+            })
+            document.querySelectorAll("button")[1].addEventListener("click", function(){
+                var val = hero.get("power");
+                hero.set("power",val+=1);
+                console.log(hero.changedAttributes())
+            })
+        }
+    </script>
+</head>
+<body>
+    <button>Change to joker</button>
+    <button>Increase Power</button>
+    <ul id="list"></ul>
+</body>
+</html>
+

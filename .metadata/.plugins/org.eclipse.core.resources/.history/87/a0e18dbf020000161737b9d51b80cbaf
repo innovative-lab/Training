@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+			.module("app",[])
+			.controller("mycon",function($scope){
+				$scope.hero=["soumya","pratik","senapaty"]
+			})
+	</script>
+</head>
+<body ng-app="app" ng-controller="mycon">
+	<table ng-repeat="h in hero">
+		<td>{{ h }}</td>
+	</table>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Drag Drop</title>
+	
+	<script src="lib/jquery-1.12.1.js"></script>
+	<script src="lib/jquery-ui.js"></script>
+	<script src="lib/jGravity.js"></script>
+	<link rel="stylesheet" href="lib/jquery-ui.css">
+	<script>
+	  window.onload=function(){
+	  	$("#contianer").on("click",function(){
+	  		
+		 $('#contianer').jGravity({
+		  ignoreClass:"fixbox",
+		  target:"everything",
+		  
+		  })
+		 })
+	  }
+	/*
+	 
+		 $(function() {
+		 	for(var i=1;i<10;i++)
+		 	{
+		 		elm=".box"+i;
+                $( elm ).draggable(
+               	{
+           	         snap: ".box"+(i+1)
+           	    }
+           )==
+          }
+        });
+	 */
+	</script>
+	<style>
+		.box{
+			width:100px;
+			height:100px;
+			background-color:#333;
+			margin:10px;
+			color:white;
+			font-size:50px;
+			text-align:center;
+			float:left;
+		}
+		#contianer{
+			width:900px;
+			float:left;
+			height:300px;
+			background-color: pink;
+			border:2px solid red;
+		}
+		.fixbox{
+			width:100px;
+			height:100px;
+			float:left;
+			margin:20px;
+			border:2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="contianer">
+	<div class="box box1">1</div>
+	<div class="box box2">2</div>
+	<div class="box box3">3</div>
+	<div class="box box4">4</div>
+	<div class="box box5">5</div>
+	<div class="box box6">6</div>
+	<div class="box box7">7</div>
+	<div class="box box8">8</div>
+	<div class="box box9">9</div>
+	<div class="box box10">10</div>
+	</div>
+	<div>
+		<div class="fixbox boxX1">B1</div>
+		<div class="fixbox boxX2">B2</div>
+		<div class="fixbox boxX3">B3</div>
+		<div class="fixbox boxX4">B4</div>
+		<div class="fixbox boxX5">B5</div>
+	</div>
+	
+	
+</body>
+</html>

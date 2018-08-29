@@ -1,0 +1,258 @@
+body{
+	height:100px;
+	font-family:Arial;
+}
+.header{
+	height:100px;
+	
+	background-color: #607D8B;
+}
+#menu_glyph{
+	background-color: #607D8B;
+	color:white;
+	border:0px; 
+}
+.content{
+	height:550px;
+	
+	background-color: #B0BEC5;
+}
+.from-group,input, .btn{
+	
+	margin-top:30px;
+}
+
+#ce{
+	margin-top:25px;
+	background-color: #607D8B;
+	border-radius: 20px;
+	font-size: 20px;
+	box-shadow:0px 0px 10px #888888
+}
+.jumbotron{
+	background-color: white;
+	margin-top:25px;
+	height:400px;
+	padding:0px;
+	padding-top:10px;
+}
+.jumbotron h3{
+	text-align:center;
+	margin-top:0px;
+	border:1px solid transparent;
+	
+}
+#btnlinediv{
+	height:50px;
+	padding:0px;
+	
+	
+}
+.btnlive{
+	padding:0px;
+    margin-top:0px;
+	border-radius: 20px;
+	font-size: 20px;
+}
+
+.events{
+	padding:0px;
+	overflow-y: auto;
+	height:450px;
+	
+	margin:auto;
+	
+}
+.event{
+	box-shadow: 0px 0px 30px #888888;
+	height:400px
+	padding:0px;
+	background-color: white;
+	
+}
+.event img{
+	
+	height:100px;
+	float:left;
+	border:3px solid #607D8B;
+	padding:0px;
+}
+.info{
+	
+	padding:0px;
+	height:250px;
+}
+.left,.info{
+	margin-top:20px;
+}
+.left{
+	float:left;
+	padding:5px;
+}
+.left .btn{
+	background-color: #607D8B;
+	margin-top:10px;
+	border-radius: 20px;
+}
+.left img{
+	
+}
+table{
+	border:1px solid #607D8B;
+}
+
+#even{
+	background-color: #B0BEC5;
+}
+.header>input{
+	margin-top:60px;
+	
+	border-radius:0%;
+	
+	
+}
+.header button{
+	padding:0px;
+	height:34px;
+}
+.header .form-group{
+	padding: 0px;
+}
+
+
+/*
+ * 
+ * /////////////////// LOGIN PAGE CSS /////////////////////////////
+ * 
+ */
+.login_header{
+	height:250px;
+	background-color: gray;
+	background: url("lib/images.jpg")
+	
+}
+.login_content{
+	height:400px;
+	box-shadow: 0 0 30px black;
+	background-color:#607D8B
+}
+.login_form{
+	background-color: white;
+	margin-top:50px;
+	box-shadow: 0 0 20px black;
+	
+}
+.form-group{
+	
+	padding: 0px;
+}
+.login_form h4{
+	margin-bottom:0px;
+	margin-top:0px;
+	
+}
+form-control:focus{
+	border-color:white;
+   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, .6);
+   
+}
+.login_form button{
+	
+	background-color:#607D8B;
+	margin-bottom:20px;
+	
+}
+.login{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.login:hover{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.login:link{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.login:active{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+#back{
+	color: #FFFFFF;
+}
+.form{
+	margin-top:10px;
+}
+
+/*
+ * ////////////////////// chat window (current event)////////////////////////
+ */
+          .headerbox{
+              background-color:#607D8B;
+          }
+          .bodybox{
+              background-color:#B0BEC5;
+          }
+          .height100{
+              height:100px;
+          }
+          .height50{
+              height:50px;
+          }
+          .height600{
+              height:487px;
+          }
+          .backbtn{
+              padding:10px 0px 0px 63px;
+          }
+          .btn-color{
+              color:white;
+              background-color:#607D8B;
+              margin:20px 7px 3px 0px;
+              padding:0px;
+              
+          }
+          #glyph{
+          	margin-top:3px;
+          }
+          .header-font{
+              font-size:25px;
+              color:white;
+              padding:0px;
+              padding-left:10px;
+              padding-top:5px;
+            
+          }
+          .evtnm{
+              margin-top:15px;
+              font-size:19px;
+              color:white;
+          }
+
+
+/*
+ * /////////////////////////////////////////////////////////////////////////////
+ * ///////////////////////////CreateEvent Page//////////////////////////////////
+ */
+
+	#createEvent{
+       		background-color : #b0bec5;
+       		padding: 0px;
+       	}
+       	.header1{
+			height:100px;
+			background-color: #607D8B;
+		}
+		.form{
+			margin-top: 5px;
+		}
+
+
+
+
+
+
+
+
+

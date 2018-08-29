@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		/*     APPEND
+		$(function(){
+        $("a[href $='batman.jpg']").append("<img src='images/batman.jpg' width='40' align='absmiddle'/>");
+        $("a[href $='ironman.jpg']").append("<img src='images/ironman.jpg' width='40' align='absmiddle'/>");
+        $("a[href $='superman.jpg']").append("<img src='images/superman.jpg' width='40' align='absmiddle'/>");
+        $("a[href $='supergirl.jpg']").append("<img src='images/supergirl.jpg' width='40' align='absmiddle'/>");
+                })
+		 * 
+		 *     CHAIN
+		 * $(function(){
+        $("ul")
+        .find("a[href $= 'batman.jpg']")
+        .append("<img src='images/batman.jpg' width='40' align='absmiddle'/>")
+        .end()
+        .find("a[href $= 'superman.jpg']")
+        .append("<img src='images/superman.jpg' width='40' align='absmiddle'/>")
+        .end()
+        .find("a[href $= 'supergirl.jpg']")
+        .append("<img src='images/supergirl.jpg' width='40' align='absmiddle'/>")
+        .end()
+        .find("a[href $= 'ironman.jpg']")
+        .append("<img src='images/ironman.jpg' width='40' align='absmiddle'/>")
+
+                })
+                
+                
+                DYNAMIC
+                ------------
+                $(function(){
+
+$("a").each(function(i, elm){
+        var elm = $(elm);
+        var path = elm.attr("href");
+        elm.append("<img src='"+path+"' width='40' align='absmiddle'/>")
+})
+
+                FOR LOOP
+                __________________________
+          $(function(){
+
+for (var i = 0; i < $("a").length; i++){
+        // var path = $("a").eq(i).attr("href");
+        var path = $("a")[i].getAttribute("href");
+        $("a").eq(i).append("<img src='"+path+"' width='40' align='absmiddle'/>")
+}
+
+                })
+		 */
+		
+	</script>
+</head>
+
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Wireframe</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="wireframe-css.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		              <div id="grad" style="color:white">
+       <img id="1" src="images/American_redcross_2012_logo.png" style="height: 140px; width:400px"/>
+       <img id="2" src="images/Header.png" style="height: 140px; width:1150px"/>
+       
+       </div>
+
+
+  
+	</header>
+	
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#"><b>DATA | CENTRIC</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+         <li class="dropdown">
+        
+      </ul>
+   
+    </div>
+  </div>
+</nav>
+           
+    <!--//////////////////////////////////Content block\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+<div class="container" > 
+	<div class="dropdown">
+		<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Save As
+           <span class="caret"></span></button>
+           <ul class="dropdown-menu">
+              <li><a href="#">PDF</a></li>
+              <li><a href="#">EXCEL</a></li>
+              <li><a href="#">WORD</a></li>
+          </ul>
+           <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-download-alt"></span></button> </td>
+	</div>
+    <div class="topnavbar">
+    		<div id="search1">
+    			 <input type="text" class="form-control" id="pwd" placeholder="Search by ID">
+    		</div>
+    		<div id="search2">
+    			 <input type="text" class="form-control" id="pwd" placeholder="Search by Name">
+    		</div>
+    		<div id="search3">
+    			 <input type="text" class="form-control" id="pwd" placeholder="Search by Addr">
+    		</div>
+    		<div id="search4">
+    			 <input type="text" class="form-control" id="pwd" placeholder="Search by City">
+    		</div>
+    		<div id="search5">
+    			 <input type="text" class="form-control" id="pwd" placeholder="Search by Phone">
+    		</div>
+    </div>
+    		<!-- search bar --
+    		     <div class="search">
+                    <input type="text" class="form-control " maxlength="64" placeholder="Search" />
+                    <button type="submit" class="btn btn-danger "><span class="glyphicon glyphicon-search"></span></button>
+                 </div>
+                 
+           <!-- search bar -->
+    		  	<table>
+	 <thead>
+      <tr>
+        <th>Constituent Master Id</th>
+        <th>Constituent Org Name</th>
+        <th>Constituent Adrress</th>
+        <th>city Name</th>
+        <th>Phone</th>
+        <th>Edit</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>40971094</td>
+        <td>Murphy's Pub Employees & Patrons</td>
+        <td>4618 Fremont Ave N </td>
+        <td>Seattle</td>
+        <td>(206) 632-7113</td>
+     <td>   <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button> </td>
+        <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+      </tr>
+      <tr>
+         <td>40350608</td>
+        <td>-Richard P. Dulaney Foundation Inc.</td>
+        <td>Po Box 18167 </td>
+        <td>Oklahoma City  </td>
+        <td>(405) 528-7717</td>
+        <td>	 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button> </td>
+        	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+      </tr>
+       <tr>
+         <td>40350608</td>
+        <td>-Richard P. Dulaney Foundation Inc.</td>
+        <td>Po Box 18167 </td>
+        <td>Oklahoma City  </td>
+        <td>(405) 528-7717</td>
+        <td>	 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button></td>
+        	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+      </tr>
+      <tr>
+         <td>40071137</td>
+        <td>-Subway</td>
+        <td>81 Main St</td>
+        <td>Gorham </td>
+        <td>(207) 839-2693</td>
+        <td>	 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button>  </td>
+        	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+      </tr>
+      <tr>
+         <td>40559197</td>
+        <td>-Aslan Enterprises, Inc.</td>
+        <td>Po Box 593</td>
+        <td>Lake Stevens </td>
+        <td>(425) 330-6353</td>
+        	<td> <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button>  </td>
+        	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+      </tr>
+      
+                    <tr>
+                     <td>40246059</td>
+                     <td>C & C Boring Co.</td>
+                     <td>892 Whitney Ave</td>
+                     <td>Memphis</td>
+                     <td>(901) 357-4481</td>
+                     <td> 	 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button> </td>
+                      	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+              </tr>
+              <tr>
+                     <td>40214594</td>
+                     <td>Maple Point Middle School</td>
+                     <td>2250 Langhorne Yardley Rd</td>
+                     <td>Langhorne</td>
+                     <td>(215) 809-6230</td>
+                      <td>	 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button> </td>
+                      	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+              </tr>
+              <tr>
+                     <td>40758814</td>
+                     <td>Arizona Prof Land Surveyo</td>
+                     <td>7002 E 1st Ave</td>
+                     <td>Scottsdale</td>
+                     <td>(602) 994-4551</td>
+                     <td> 	 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button> </td>
+                      	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+              </tr>
+              <tr>
+                     <td>110662345</td>
+                     <td>Usa For Unhcr</td>
+                     <td>1775 K St NW</td>
+                     <td>Washington</td>
+                     <td>(202) 296-1115</td>
+                      <td>	 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                      	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+              </tr>
+              <tr>
+                     <td>40288046</td>
+                     <td>The Derby</td>
+                     <td>2016 Harrison Ave</td>
+                     <td>Butte</td>
+                     <td>(406) 723-9086</td>
+                      	<td> <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                      	 <td>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+              </tr>
+
+     
+       </tbody>
+</table>
+ <div id="navbar">
+    		        <button type="button" class="btn btn-danger" id="btn1">First Page<td></td></button>
+    	            <button type="button" class="btn btn-danger" id="btn2">Previous Page<td></td></button>
+    	            <button type="button" class="btn btn-danger" id="btnnum" style="background-color:white;border:1px solid gray;color:black">Page 1</button>
+    				<button type="button" class="btn btn-danger" id="btn3">Next Page</button>
+    				<button type="button" class="btn btn-danger" id="btn4">Last Page</button>
+    				
+    				<input type="text"  id="pagenum" placeholder="Page 1">
+    				<button type="button" class="btn btn-danger" id="btn6">Go</button>
+    				
+    				
+    				<button type="button" class="btn btn-danger" id="btn5">Total Page 200</button>
+   </div>
+  
+    	
+   <!-- 	/////////////////////////footer part\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+  
+    	</div>
+ <footer>
+ 	
+ </footer>
+	
+</body>
+</html>

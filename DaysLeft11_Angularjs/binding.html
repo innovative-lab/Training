@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+</head>
+<body ng-app ng-init="user='rajni'">
+	<h1>Interpolation : {{ user  +"'s page" }}</h1>   <!--one way binding-->
+	<h1 ng-bind="user | uppercase"></h1>
+	<hr />
+	<h1 title="{{::user}}"></h1>           <!--one time binding-->
+	<input type="text" ng-model="user"/>   <!--two way bind-->
+	<input type="text" ng-value="user" />  <!--value binding-->
+	
+</body>
+</html>

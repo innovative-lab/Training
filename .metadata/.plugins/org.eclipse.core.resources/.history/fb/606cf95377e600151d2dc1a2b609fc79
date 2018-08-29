@@ -1,0 +1,10 @@
+header{
+	height:500px;
+	background-color: #97DFF7;
+	
+}
+.navbar{
+	background-color: #97DFF7;
+	
+	
+}

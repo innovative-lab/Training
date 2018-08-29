@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Module Pattern</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="data/module,js"></script>
+	<script>
+	window.onload=function(){
+		var mod=(function($,mm){
+			$("body").append(mm.message);
+		}(jQuery,mymod))
+		
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

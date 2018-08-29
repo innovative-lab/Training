@@ -1,0 +1,69 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<style>
+	.custom{
+		color: #fb4848;
+	}
+	#map{
+		width:400px;
+		height:300px;
+	}
+</style>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="views">
+        <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                    </div>
+                    <div class="center">
+                        <h2 class="title">MedHelp</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div data-page="index" class="page">
+                    <div class="page-content">
+                    	 <h3 class="custom" align="center">Notifications</h3>
+            <div class="card">
+    <div class="card-content">
+        <div class="card-content-inner">
+           
+            <h3 ng-hide="notificationshow" class="custom" align="center">No Emergency</h3>
+           </div>
+    </div>
+</div>
+                    <div class="card demo-card-header-pic" ng-show="notificationshow">
+                    <h3 class="custom">EMERGENCY ALERT</h3>
+                     <div class="item-input">
+                    <div id='map'></div>
+                   <!-- <div style="background-image:url('https://maps.googleapis.com/maps/api/staticmap?center={{ lat }},{{ lon }}&zoom={{ zoom }}&size=300x300&maptype=satellite&markers=color:red|label:E| {{ lat }} ,{{ lon }}')" valign="bottom" class="card-header color-white no-border">Emergency Location</div-->
+                        </div>
+    <div class="card-content">
+        <div class="card-content-inner">
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="#" class="link">Latitude{{ lat }}</a>
+        <a href="#" class="link">Longitude{{ lon }}</a>
+    </div>
+    <a  class="button" ng-click="detailsfun()" style="width: 50%; display:inline-block">Details</a> <a  class="button" ng-click="approvefun()" style="width: 49%; display: inline-block">Mark as Read</a>  
+</div>
+<div class="card" ng-show="detailsshow">
+    <div class="card-content">
+        <div class="card-content-inner">
+           <h3 class="custom">MID: {{ mid }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gender: {{ gender }}</h3>
+           <h3 class="custom">Name: {{ nm }} &nbsp;&nbsp;&nbsp;&nbsp; Age: {{ age}}</h3>
+           <h3 class="custom">Blood-Group: {{bg}}&nbsp;&nbsp;&nbsp;&nbsp; Phone:{{ phone }}</h3>
+           </div>
+    </div>
+</div>
+ 
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+         
+    </div>
+   

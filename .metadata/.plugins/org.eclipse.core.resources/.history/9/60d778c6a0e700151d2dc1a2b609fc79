@@ -1,0 +1,428 @@
+header{
+	
+	
+	position: absolute;
+	width:100%;
+}
+       #grad{
+              background:linear-gradient(-90deg,#62D1B9 ,white);
+              height:130px;
+              width:100%;
+              
+       }
+      
+b{
+	font-size:20px;
+	color:black;
+}
+.navbar{
+	background-color:#D9EFFA;
+	border:0px solid black;
+	width:100%;
+	position: absolute;
+	margin-top:130px;
+}
+.container{
+	height:900px;
+/*	background-image: url("images/peppermint-crosshatch-fade.jpg");  */
+	
+	width:100%;
+	position: absolute;
+	margin-top:120px;
+	
+}
+.dropdown .btn-primary{
+	position:absolute;
+	margin-left:1400px;
+	margin-top:20px;
+	background-color: white;
+	color:black;
+	
+}
+.dropdown .dropdown-menu{
+	position:absolute;
+	margin-left:1400px;
+	color:black;
+	margin-top:60px;
+	background-color: white;
+}
+.dropdown .btn-danger{
+	position:absolute;
+	margin-left:1490px;
+	margin-top:20px;
+	width: 50px;
+	
+	
+}
+.topnavbar{
+	margin-top:100px;
+	background:linear-gradient(180deg,#7D7D7D,black); 
+	width:90%;
+	margin-left:75px;
+	border:1px solid black;
+	height:60px;
+	padding:10px;
+	
+}
+body{
+	position:relative;
+	width:100%;
+	
+}
+/* footer{
+	height:150px;
+	background-color: black;
+	width:100%;
+	margin-top:1000px;
+	position: absolute;
+	margin-left:0px;
+	background:linear-gradient(90deg,#AFDBD2,#AFDBD2);
+	
+} */
+
+
+button{
+	display:block;
+	margin :auto;
+}
+#search1,#search2,#search3,#search4,#search5{
+	position:absolute;
+	width:150px;
+	
+}
+#search1{
+	width:220px;
+}
+#search2{
+	margin-left:230px;
+	width:360px;
+	}
+#search3{
+	margin-left:600px;
+	width:280px;
+}
+#search4{
+	margin-left:890px;
+}
+#search5{
+	margin-left:1050px;
+}
+td{
+	font:bold;
+}
+#navbar{
+	margin-top:50px;
+
+	margin-left:0px;
+	height: 50px;
+	
+	
+}
+#btn1,#btn2,#btn3,#btn4,#btn5,#btn6{
+	position: absolute;
+	width: 150px;
+}
+
+
+#navbar .btn{
+	background-color: #616161;
+	border:2px solid #616161; 
+}
+#btn1{
+	margin-left:200px;
+}
+#btn2{
+	margin-left:400px;
+}
+#btnnum{
+	margin-left:600px;
+	width:80px;
+	height:50px;
+}
+#btn3{
+	margin-left:50px;
+}
+#btn4{
+	margin-left:250px;
+}
+#navbar #pagenum{
+	
+	margin-left:450px;
+	background-color: white;
+	border:1px solid black; 
+	color:black;
+	width:75px;
+	height:35px;
+	margin-top:0px;
+	position: absolute;
+	padding:10px;
+}
+#navbar #btn6{
+	margin-left:525px;
+	width: 50px;
+}
+#navbar #btn5{
+	
+	margin-left:630px;
+	background-color: white;
+	border:1px solid black; 
+	color:black;float:top;
+	width:130px;
+}
+
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 90%; 
+  border:2px solid black;
+  font-size:17px;
+  margin-top:0px;
+  margin-left:75px; 
+}
+.tab table{
+	position: absolute;
+	width:25%;
+	height:300px;
+	margin-top: 50px;
+}
+#t1{
+	margin-left:125px;
+	
+}
+#t2{
+	margin-left:525px;
+	
+}
+#t3{
+	margin-left:925px;
+	
+}
+.tab{
+	margin-left:75px;
+	position: relative;
+	height:400px;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+ background:linear-gradient(180deg,white,#878787); 
+}
+tr:nth-of-type(even) { 
+ background:linear-gradient(180deg,white,#878787); 
+}
+th { 
+ background:linear-gradient(180deg,#7D7D7D,black); 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+table .btn{
+	width:50px;
+	background-color: #616161;
+	border:2px solid #616161;
+	
+}
+.search input{
+	position:absolute;
+	width:150px;
+	margin-top:150px;
+	margin-left:1350px;
+}
+.search .btn{
+	position:absolute;
+	width:50px;
+	margin-top:150px;
+	margin-left:1500px;
+}
+
+
+/* ------------------Search Bar----------------
+ #search {
+ 
+    
+    width: 200px;
+    position:absolute;
+}
+
+.search {
+	   margin-left:1300px;
+	   margin-top: 150px;
+    padding: 5px 0;
+    width: 10px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    float: left;
+    line-height: 22px;
+}
+
+    .search input {
+        position: absolute;
+        width: 0px;
+        float: right;
+        margin-left: 200px;
+        -webkit-transition: all 0.7s ease-in-out;
+        -moz-transition: all 0.7s ease-in-out;
+        -o-transition: all 0.7s ease-in-out;
+        transition: all 0.7s ease-in-out;
+        height: 30px;
+        line-height: 18px;
+        padding: 0 2px 0 2px;
+        border-radius:1px;
+    }
+
+        .search:hover input, .search input:focus {
+            width: 200px;
+            margin-left: 0px;
+        }
+
+.search .btn {
+    height: 30px;
+    position: absolute;
+   margin-left:180px;
+    
+}
+ ------------------Search Bar----------------*/
+/* ----------------footer--------------------*/
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+    position:absolute;
+	padding: 55px 50px;
+	margin-top: 1050px;
+	height:300px;
+}
+
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right,
+.footer-distributed .footer-2,
+.footer-distributed .footer-4{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 16%;
+	margin-left:5%;
+	
+}
+/*------footer-2-------*/
+.footer-distributed .footer-2{
+	width: 16%;
+	height:200px;
+	
+}
+.footer-distributed h4{
+	
+}
+.footer-distributed div{
+	margin:20px;
+}
+
+/* The company logo */
+
+
+
+
+
+/* Footer links 
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 16%;
+	
+}
+
+}
+/*--- footer-4 --- */
+.footer-distributed .footer-4{
+	width: 16%;
+	height:200px
+	border:1px solid white;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+	margin-left:50px;
+	
+}
+.icon img{
+	float:left;
+	vertical-align: top;
+	margin:5px;
+}
+.icon a{
+	
+	margin:0px;
+	
+}
+
+
+
+
+
+
+
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+

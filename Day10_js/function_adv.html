@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+	/*
+	 * 
+		var notfun=function(){
+			var secret="My name";
+			
+			return function(){
+				return secret;
+			};
+		};
+		var of = notfun();
+		console.log(of());
+	 */
+	var msg=function(num){
+		var count=num;
+		this.fname="soumya";
+		return function(mssg){
+			for(var i=0;i<count;i++)
+			{
+				console.log(i+","+mssg);
+			}
+		};
+	};
+	
+	var msc= new msg(5);
+	console.log(msc.fname);
+	msc("Dhinka Chika Dhinka Chika re re re.....");
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

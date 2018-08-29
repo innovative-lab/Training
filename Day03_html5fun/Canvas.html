@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <title>Canvas Fun</title>
+        <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+        <script>
+                var num = 0;
+                var num2=360;
+                var ctx = null
+                window.onload = function(){
+                        ctx = document.getElementById("can").getContext("2d");
+                        ctx2 = document.getElementById("can2").getContext("2d");
+                        ctx.canvas.width = 400;
+                        ctx.canvas.height = 400;
+                        ctx.translate(can.width/2,can.height/2);
+                        ctx.font = "bold 40px georgia";
+                        
+                        ctx2.canvas.width = 400;
+                        ctx2.canvas.height = 400;
+                        ctx2.translate(can.width/2,can.height/2);
+                        ctx2.font = "bold 40px georgia";
+                        
+                        setInterval(function(){
+                                num+=0.1; 
+                                ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+                                var r= Math.round(Math.random()*255);
+                                var g= Math.round(Math.random()*255);
+                                var b= Math.round(Math.random()*255);
+                                //==================================//
+                                ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+                                ctx.rotate((Math.PI/180)*num);
+                                ctx.fillText("Soumya",0,0);
+                                
+                                
+                                num2-=0.1; 
+                                var r= Math.round(Math.random()*255);
+                                var g= Math.round(Math.random()*255);
+                                var b= Math.round(Math.random()*255);
+                                //==================================//
+                                ctx2.fillStyle = "rgb("+r+","+g+","+b+")";
+                                ctx2.rotate((Math.PI/180)*num2);
+                                ctx2.fillText("Pratik",0,0);
+
+                                
+                                
+                                
+                        },100);
+                        
+                };
+                
+        </script>
+</head>
+<body>
+        <canvas id="can" ></canvas>
+        <canvas id="can2"></canvas>
+        
+</body>
+</html>

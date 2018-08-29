@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>History APi</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+	    addEventListener("popState",popHandler)
+		$("#batman").on("click",pushHandler)
+		$("#ironman").on("click",pushHandler)
+		$("#joker").on("click",pushHandler)
+		$("#rajani").on("click",pushHandler)
+		
+		
+		function pushHandler(evt){
+			evt.preventDefault();
+			var data={
+				htitle:evt.target.id,
+				hphoto:evt.target.getAttribute("href")
+			}
+			history.pushState(data,data.htitle,data.htitle);
+			$("#htitle").html(evt.target.id);
+			document.getElementById("hphoto").src = evt.target.getAttribute("href");
+		}
+		
+		function popHandler(evt){
+			document.getElementById("htitle").innerHTML = evt.state.htitle;
+            document.getElementById("hphoto").src = evt.state.hphoto;
+            document.title = evt.state.htitle;
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<a href="images/batman.jpg" id="batman">Batman</a>
+	<a href="images/ironman.jpg" id="ironman">Ironman</a>
+	<a href="images/joker.jpg" id="joker">Joker</a>
+	<a href="images/rajani.jpg" id="rajani">Rajani</a>
+	<hr />
+	
+	<h1 id="htitle"></h1>
+	<img id="hphoto"/>
+	
+</body>
+</html>

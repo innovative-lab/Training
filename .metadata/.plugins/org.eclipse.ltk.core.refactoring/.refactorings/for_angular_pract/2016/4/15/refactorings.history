@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;for_angular_pract/server.congif&apos; to &apos;server.config&apos;" description="Rename resource &apos;server.congif&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="server.congif" name="server.config" stamp="1460225011043" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;for_angular_pract/custom_directives&apos; to &apos;custom_directives.html&apos;" description="Rename resource &apos;custom_directives&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="custom_directives" name="custom_directives.html" stamp="1460240123543" updateReferences="true"/>
+</session>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Functions</title>
+    <script>
+    /*
+        function myfun(){
+            console.log("hello di");
+        };
+        myfun();
+     */
+    /*
+        var myfun = function(){
+            console.log("hello di");
+        };
+        myfun();
+     */
+    /*
+        var myfun = function(){
+            console.log(arguments[0], arguments[1]);
+        };
+        myfun("hello", "world");
+     */
+    var fname = "Peter";
+    var lname = "Parker";
+    
+    
+     var hero1 = {
+         fname : "Bruce",
+         lname : "Wayne"
+     }
+     var hero2 = {
+         fname : "Tony",
+         lname : "Stark"
+     }
+     var hero3 = {
+         fname : "Kit",
+         lname : "Walker",
+         fullname : function(){
+             return this.fname+" "+this.lname;
+         }
+     }
+    var myfun = function(city,arg2){
+        this.fname = arg2
+        console.log( fname,this.fname,this.lname,city);
+        console.log(this);
+    };
+        // call
+        // apply
+        // bind
+     //myfun.call(hero2,"Gotham","Senapathy");
+     myfun.apply(hero2,["Gotham","Senapathy"]);
+    
+    //myfun.bind(hero2)("Gotham","Senapathy");
+    // console.log(hero3.fullname.call(hero1))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

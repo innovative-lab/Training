@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css" />
+     <script src="lib/jquery-1.12.1 (1).js"></script>
+     <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="stylesheets/maincss.css" />
+     <style>
+     	.img-top{
+     		height:50px;
+     		width:100px;
+     	}
+     </style>
+</head>
+<body>
+	<div class="row">
+       <div class="header col-xs-12 col-sm-12">
+		<div class="setting col-xs-1 col-xs-offset-11">
+			<button >
+				<span class="glyphicon glyphicon-option-vertical"></span>
+			</button>
+			
+		</div>
+             <div class="form-group col-xs-7 col-xs-offset-2">
+             	 <input type="text" class="form-control " id="usr" placeholder="Search">
+            </div>
+            <button class="btn col-xs-1"><span class="glyphicon glyphicon-search "></span></button>
+       </div>
+       <div class="content col-xs-12">
+       	<button type="button" class="btn col-xs-offset-3 col-xs-6" id="ce"><a href="createEvent_page.html" class="login"><b>Create Event</b></a></button>
+       	<button type="button" class="btn col-xs-offset-3 col-xs-6" id="ce"><a href="currentEvent_page.html" class="login"><b>Current Event</b></a></button>
+       	
+       	<div class="jumbotron col-xs-offset-0 col-xs-12">
+       		<div class="button col-xs-12" id="btnlinediv">
+       		<button type="button" class="btn btnlive  col-xs-offset-3 col-xs-6" style="background-color: white;border:2px solid #607D8B">Live Events</button>
+       		</div>
+       		<hr />
+       		<div class="events row col-xs-12" data-spy="scroll">
+       		<div class="event col-xs-offset-1 col-xs-10">
+       			<div class="left col-xs-4">
+       			<img src="images/batman.jpg" class="col-xs-12 img-circle"  />
+       			<button type="button" class="btn col-xs-12"><b>Chat</b></button>
+       			<button type="button" class="btn col-xs-12"><b>Join</b></button>
+       			</div>
+       			<div class="info col-xs-8">
+       				<table class="table table-striped">
+       					<tr id="odd">
+       						<th><b>Event</b></th>
+       						<td>Movie</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Name</b></th>
+       						<td>Bruce </td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Timing</b></th>
+       						<td>19.00</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Location</b></th>
+       						<td>Patia</td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Description</b></th>
+       						<td>blah blah blah!!!</td>
+       					</tr>
+       					
+       				</table>
+       				<!--h3>Event : Movie</h3>
+       				<h4><b>Name :</b>Bruce Wyane</h4>
+       				<h4><b>Timing :</b>19.00</h4-->
+       			</div>
+       			
+       			
+       		
+       		</div>
+       		<div class="event col-xs-offset-1 col-xs-10">
+       			<div class="left col-xs-4">
+       			<img src="images/superman.jpg" class="col-xs-12 img-circle"  />
+       			<button type="button" class="btn col-xs-12"><b>Chat</b></button>
+       			<button type="button" class="btn col-xs-12"><b>Join</b></button>
+       			</div>
+       			<div class="info col-xs-8"><table class="table table-striped">
+       					<tr id="odd">
+       						<th><b>Event</b></th>
+       						<td>Movie</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Name</b></th>
+       						<td>Bruce </td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Timing</b></th>
+       						<td>19.00</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Location</b></th>
+       						<td>Patia</td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Description</b></th>
+       						<td>blah blah blah!!!</td>
+       					</tr>
+       					
+       				</table></div>
+       		
+       		</div>
+       		<div class="event col-xs-offset-1 col-xs-10">
+       			<div class="left col-xs-4">
+       			<img src="images/spiderman.jpg" class="col-xs-12 img-circle"  />
+       			<button type="button" class="btn col-xs-12"><b>Chat</b></button>
+       			<button type="button" class="btn col-xs-12"><b>Join</b></button>
+       			</div>
+       			<div class="info col-xs-8"><table class="table table-striped">
+       					<tr id="odd">
+       						<th><b>Event</b></th>
+       						<td>Movie</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Name</b></th>
+       						<td>Bruce </td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Timing</b></th>
+       						<td>19.00</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Location</b></th>
+       						<td>Patia</td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Description</b></th>
+       						<td>blah blah blah!!!</td>
+       					</tr>
+       					
+       				</table></div>
+       		<hr />
+       		</div>
+       		<div class="event col-xs-offset-1 col-xs-10">
+       			<div class="left col-xs-4">
+       			<img src="images/rajani.jpg" class="col-xs-12 img-circle"  />
+       			<button type="button" class="btn col-xs-12"><b>Chat</b></button>
+       			<button type="button" class="btn col-xs-12"><b>Join</b></button>
+       			</div>
+       			<div class="info col-xs-8"><table class="table table-striped">
+       					<tr id="odd">
+       						<th><b>Event</b></th>
+       						<td>Movie</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Name</b></th>
+       						<td>Bruce </td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Timing</b></th>
+       						<td>19.00</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Location</b></th>
+       						<td>Patia</td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Description</b></th>
+       						<td>blah blah blah!!!</td>
+       					</tr>
+       					
+       				</table></div>
+       		<hr />	
+       		</div>
+       		
+       		<div class="event col-xs-offset-1 col-xs-10">
+       			<div class="left col-xs-4">
+       			<img src="images/joker.jpg" class="col-xs-12 img-circle"  />
+       			<button type="button" class="btn col-xs-12"><b>Chat</b></button>
+       			<button type="button" class="btn col-xs-12"><b>Join</b></button>
+       			</div>
+       			<div class="info col-xs-8"><table class="table table-striped">
+       					<tr id="odd">
+       						<th><b>Event</b></th>
+       						<td>Movie</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Name</b></th>
+       						<td>Bruce </td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Timing</b></th>
+       						<td>19.00</td>
+       					</tr>
+       					<tr id="even">
+       						<th><b>Location</b></th>
+       						<td>Patia</td>
+       					</tr>
+       					<tr id="odd">
+       						<th><b>Description</b></th>
+       						<td>blah blah blah!!!</td>
+       					</tr>
+       					
+       				</table></div>
+       		</div>
+       		</div>
+       	</div>
+       	
+       </div>
+		
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DayLeft17_bootstrape/fun_methods.html&apos; to &apos;call_bind_apply.html&apos;" description="Rename resource &apos;fun_methods.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="fun_methods.html" name="call_bind_apply.html" stamp="1458444940575" updateReferences="true"/>
+</session>

@@ -1,0 +1,27 @@
+#box1{
+	height:100px;
+	margin:auto;
+	width:620px;
+	background-color: blue;
+	
+}
+#box2{
+	padding:20px;
+	border:1px solid  black;
+	height:300px;
+	margin:auto;
+	width:580px;
+	position: relative;
+	
+}
+#vbox1{
+	position: absolute;
+	background-color: gray;
+	width:580px;
+	height:145px;
+}
+#vbox2{
+	position: absolute;
+	background-color: gray;
+	width:
+}

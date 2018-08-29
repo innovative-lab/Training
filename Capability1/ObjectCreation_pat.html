@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>ObjectCreation Pat</title>
+	<script>
+		var Hero=Object.create(null);
+		Hero.lname="pratik";
+		Hero.sirname="senapaty";
+		Object.defineProperty(Hero,"fname",{
+			value:"soumya",
+			enumerable:true,
+			writable:true,
+			configurable:true
+		});
+		for(var prop in Hero){
+			console.log(Hero[prop])
+		}
+		console.log(Hero.fname);
+		Object.defineProperty(Hero,"fname",{
+			value:"papali"
+		});
+		console.log(Hero.fname);
+		var zero=Object.create(Hero);
+		console.log(zero);
+		zero={
+			city:"bangalore"
+		}
+		console.log(zero.city);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script>
+        $(function(){
+            $("img:eq(0)").on("mindtree", function(evt){
+                $("#log").append(evt.target.getAttribute("alt")+"<br/>")
+                $("#log").append(evt.type+"<br/>")
+            });
+            
+            $("img:eq(1)").on("click", function(evt){
+                $("#log").append(evt.target.getAttribute("alt")+"<br/>")
+                $("img:eq(0)").trigger("mindtree");
+                $("img:eq(2)").trigger("kalinga");
+            });
+            
+            $("img:eq(2)").on("kalinga", function(evt){
+                $("#log").append(evt.target.getAttribute("alt")+"<br/>")
+                $("#log").append(evt.type+"<br/>")
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="images/batman.jpg"     alt="Batman"     width="100" />
+    <img src="images/rajani.jpg"     alt="Rajani"     width="100" />
+    <img src="images/superman.jpg"     alt="Superman"     width="100" />
+    <h1 id="log"></h1>
+</body>
+</html>

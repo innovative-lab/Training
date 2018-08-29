@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>New Web Project</title>
+		<script>
+		var pos=null;
+			  if(navigator.geolocation){function successFun(position){
+			  	document.getElementById("lat").innerHTML=position.coords.latitude;
+			  	document.getElementById("long").innerHTML=position.coords.longitude;
+                alert(
+                " longitude is : "
+                +position.coords.longitude
+                +" Latitude is : "
+                + position.coords.latitude
+                );
+                pos=position;
+            };
+            function failFun(error){
+                alert(error.message);
+            };
+                navigator.geolocation.getCurrentPosition(successFun, failFun);
+            };
+            function rendermap(elm){
+            	document.getElementById("map").src="https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=5&size=400x400";
+            }
+			/*
+			 * https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400
+			 * https://maps.googleapis.com/maps/api/staticmap?
+			 */
+		</script>
+	</head>
+	<body>
+		<h1>Latitude<sapn id="lat"></h1>
+		<h1>Longitutde<sapn id="long"></h1>
+			<image id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400">
+            <input oncahnge="rendermap(this)" type="range" min="1" max="20" value="10"  step="1" >
+            <img id="map"/>
+	</body>
+</html>
+

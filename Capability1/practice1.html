@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		function demo1(){
+			this.fname="pratik111"
+			console.log("pratik");
+		}
+		var demo2=function(){
+			this.fname="pratik222"
+			//console.log("soumya");
+		}
+		//demo2();
+		//console.log(demo2());
+		
+		//demo1();
+		var dem=new demo1();
+		console.log("=======")
+		console.log(dem.fname)
+		
+	</script>
+</head>
+<body>
+	<select name="" id="">
+		<option value="">hero1</option>
+		<option value="">hero2</option>
+		<option value="">hero3</option>
+		<option value="">hero4</option>
+		<option value="">hero5</option>
+	</select>
+	
+	<input type="text" list="dl" />
+	<datalist id="dl">
+	<option value="hero1">hero1</option>
+	<option value="hero2">hero2</option>
+	<option value="hero3">hero3</option>
+	<option value="hero4">hero4</option>
+	<option value="hero5">hero5</option>
+	</datalist>
+</body>
+</html>

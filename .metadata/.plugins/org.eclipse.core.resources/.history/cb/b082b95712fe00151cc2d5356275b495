@@ -1,0 +1,78 @@
+<div class="bodySyed1">
+    <div class="container">
+          <div class="row">
+              
+              <!-------------- Start of Header ------------------->
+              <div class="header col-xs-12 col-sm-12 headerSyed">
+                        <div class="setting col-xs-1 ">
+                                                     
+                          <a href="#/menu">   <button class="backbtn">
+                                  <span class="glyphicon glyphicon-menu-left"></span>
+                            </button> </a>
+                        </div>                    
+                  </div>
+                  <!-------------- Event of Header ------------------->
+                  
+
+                  
+          <!-------------------Start of Form ---------------------------->
+          <form class="form-horizontal col-xs-10 col-xs-offset-1 formSyed">
+              
+               <div class="form-group ">
+                  <label class="eventHeaderSyed">Create an event</label>               
+                </div>
+              
+                   
+                <div class="form-group ">
+                  <label>Event</label>
+                  <input type="text" class="form-control" data-ng-model="evt" placeholder="Event Name">
+                </div>
+                <div class="form-group">
+                  <label>MID</label>
+                  <input type="text" class="form-control" data-ng-model="mid" pattern="[mM0-9]{8}" placeholder="M10XXXXX">
+                </div>
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" class="form-control" data-ng-model="name" placeholder="Admin Name">
+                </div>
+                <div class="form-group">
+                  <label>Location</label>
+                  <input type="text" class="form-control" data-ng-model="loc" placeholder="Event Location">
+                </div>
+                <div class="form-group">
+                  <label>Date</label>
+                  <input type="date" class="form-control" data-ng-model="date">
+                </div>
+                <div class="form-group">
+                   
+                  <label>Start Time</label>
+                  <input type="time" class="form-control"  data-ng-model="stime">
+                </div>
+                <div class="form-group">
+                  <label>End Time</label>
+                  <input type="time" class="form-control"  data-ng-model="etime">
+                </div>
+                
+                <!-- <div class="form-group">
+                  <label>Photo</label>
+                  <input type="file" class="form-control" accept="image/*">
+                </div> -->
+                
+                <div class="form-group">
+                  <label>Photo</label>
+                  <input type="text" class="form-control" data-ng-model="photo">
+                </div>
+                
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea class="form-control" rows="3" data-ng-model="desc"></textarea>
+                </div>
+                
+                                                  
+               <a href="#/menu"> <button type="submit" class="btn btn-success active buttonSyed" ng-click="addFun()">Create</button></a>
+              </form>
+              <!---------------- End of Form ---------------------->
+              </div>
+              </div>
+          </div>
+          </div>

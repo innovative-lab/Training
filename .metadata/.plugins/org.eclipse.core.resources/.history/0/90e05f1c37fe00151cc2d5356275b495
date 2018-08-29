@@ -1,0 +1,5 @@
+(function(){
+	angular.module("anotherapp",function($scope){
+		$scope.greet="hello world!!"
+	})
+}())

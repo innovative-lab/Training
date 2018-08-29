@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Wireframe</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="wireframe-css.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+
+  
+	</header>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#"><b>DATA|CENTRIC</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+         <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DataBase
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li> 
+        </ul>
+      </li>
+        <li><a href="#">Page 2</a></li> 
+        <li><a href="#">Page 3</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!--//////////////////////////////////Content block\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    	<div class="container" > 
+    		
+    		<div id="search1">
+    			 <input type="password" class="form-control" id="pwd" placeholder="Search by ID">
+    		</div>
+    		<div id="search2">
+    			 <input type="password" class="form-control" id="pwd" placeholder="Search by Name">
+    		</div>
+    		<div id="search3">
+    			 <input type="password" class="form-control" id="pwd" placeholder="Search by Addr">
+    		</div>
+    		<div id="search4">
+    			 <input type="password" class="form-control" id="pwd" placeholder="Search by City">
+    		</div>
+    		<div id="search5">
+    			 <input type="password" class="form-control" id="pwd" placeholder="Search by Phone">
+    		</div>
+    		<!-- search bar -->
+    		     <div class="search">
+                    <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
+                    <button type="submit" class="btn1 btn-primary btn-sm">Search</button>
+                 </div>
+                 
+           <!-- search bar -->
+    		  	<table>
+	 <thead>
+      <tr>
+        <th>Constituent Master Id</th>
+        <th>Constituent Org Name</th>
+        <th>Constituent Adrress</th>
+        <th>city Name</th>
+        <th>Phone</th>
+        <th>Edit</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>40971094</td>
+        <td>Murphy's Pub Employees & Patrons</td>
+        <td>4618 Fremont Ave N </td>
+        <td>Seattle</td>
+        <td>(206) 632-7113</td>
+     <td>   <button type="button" class="btn btn-info">edit</button> </td>
+        <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+      </tr>
+      <tr>
+         <td>40350608</td>
+        <td>-Richard P. Dulaney Foundation Inc.</td>
+        <td>Po Box 18167 </td>
+        <td>Oklahoma City  </td>
+        <td>(405) 528-7717</td>
+        <td>	 <button type="button" class="btn btn-info">edit</button> </td>
+        	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+      </tr>
+       <tr>
+         <td>40350608</td>
+        <td>-Richard P. Dulaney Foundation Inc.</td>
+        <td>Po Box 18167 </td>
+        <td>Oklahoma City  </td>
+        <td>(405) 528-7717</td>
+        <td>	 <button type="button" class="btn btn-info">edit</button></td>
+        	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+      </tr>
+      <tr>
+         <td>40071137</td>
+        <td>-Subway</td>
+        <td>81 Main St</td>
+        <td>Gorham </td>
+        <td>(207) 839-2693</td>
+        <td>	 <button type="button" class="btn btn-info">edit</button>  </td>
+        	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+      </tr>
+      <tr>
+         <td>40559197</td>
+        <td>-Aslan Enterprises, Inc.</td>
+        <td>Po Box 593</td>
+        <td>Lake Stevens </td>
+        <td>(425) 330-6353</td>
+        	<td> <button type="button" class="btn btn-info">edit</button>  </td>
+        	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+      </tr>
+      
+                    <tr>
+                     <td>40246059</td>
+                     <td>C & C Boring Co.</td>
+                     <td>892 Whitney Ave</td>
+                     <td>Memphis</td>
+                     <td>(901) 357-4481</td>
+                     <td> 	 <button type="button" class="btn btn-info">edit</button> </td>
+                      	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+              </tr>
+              <tr>
+                     <td>40214594</td>
+                     <td>Maple Point Middle School</td>
+                     <td>2250 Langhorne Yardley Rd</td>
+                     <td>Langhorne</td>
+                     <td>(215) 809-6230</td>
+                      <td>	 <button type="button" class="btn btn-info">edit</button> </td>
+                      	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+              </tr>
+              <tr>
+                     <td>40758814</td>
+                     <td>Arizona Prof Land Surveyo</td>
+                     <td>7002 E 1st Ave</td>
+                     <td>Scottsdale</td>
+                     <td>(602) 994-4551</td>
+                     <td> 	 <button type="button" class="btn btn-info">edit</button> </td>
+                      	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+              </tr>
+              <tr>
+                     <td>110662345</td>
+                     <td>Usa For Unhcr</td>
+                     <td>1775 K St NW</td>
+                     <td>Washington</td>
+                     <td>(202) 296-1115</td>
+                      <td>	 <button type="button" class="btn btn-info">edit</button></td>
+                      	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+              </tr>
+              <tr>
+                     <td>40288046</td>
+                     <td>The Derby</td>
+                     <td>2016 Harrison Ave</td>
+                     <td>Butte</td>
+                     <td>(406) 723-9086</td>
+                      	<td> <button type="button" class="btn btn-info">edit</button></td>
+                      	 <td>
+        <button type="button" class="btn btn-info">Details</button></td>
+              </tr>
+
+     
+       </tbody>
+</table>
+ <div id="navbar">
+    		        <button type="button" class="btn btn-info" id="btn1">First Page<td></td></button>
+    	            <button type="button" class="btn btn-info" id="btn2">Previous Page<td></td></button>
+    				<button type="button" class="btn btn-info" id="btn3">Next Page<td></td></button>
+    				<button type="button" class="btn btn-info" id="btn4">Last Page<td></td></button>
+    		</div>
+  <!-- <table class="table">
+    <thead>
+      <tr>
+        <th>Constituent Master Id</th>
+        <th>Constituent Org Name</th>
+        <th>Constituent Adrress</th>
+        <th>city Name</th>
+        <th>Phone</th>
+        <th>Edit<th>
+        <th>Details<th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>40971094</td>
+        <td>Murphy's Pub Employees & Patrons</td>
+        <td>4618 Fremont Ave N </td>
+        <td>Seattle</td>
+        <td>(206) 632-7113<td>
+        <button type="button" class="btn btn-info">edit<td></td></button>
+        <td>
+        <button type="button" class="btn btn-info">edit<td></td></button>
+      </tr>
+      <tr>
+         <td>40350608</td>
+        <td>-Richard P. Dulaney Foundation Inc.</td>
+        <td>Po Box 18167 </td>
+        <td>Oklahoma City  </td>
+        <td>(405) 528-7717<td>
+        	 <button type="button" class="btn btn-info">edit<td></td></button>
+      </tr>
+       <tr>
+         <td>40350608</td>
+        <td>-Richard P. Dulaney Foundation Inc.</td>
+        <td>Po Box 18167 </td>
+        <td>Oklahoma City  </td>
+        <td>(405) 528-7717<td>
+        	 <button type="button" class="btn btn-info">edit<td></td></button>
+      </tr>
+      <tr>
+         <td>40071137</td>
+        <td>-Subway</td>
+        <td>81 Main St</td>
+        <td>Gorham </td>
+        <td>(207) 839-2693<td>
+        	 <button type="button" class="btn btn-info">edit<td></td></button>
+      </tr>
+      <tr>
+         <td>40559197</td>
+        <td>-Aslan Enterprises, Inc.</td>
+        <td>Po Box 593</td>
+        <td>Lake Stevens </td>
+        <td>(425) 330-6353<td>
+        	 <button type="button" class="btn btn-info">edit<td></td></button>
+      </tr>
+      
+                    <tr>
+                     <td>40246059</td>
+                     <td>C & C Boring Co.</td>
+                     <td>892 Whitney Ave</td>
+                     <td>Memphis</td>
+                     <td>(901) 357-4481<td>
+                      	 <button type="button" class="btn btn-info">edit<td></td></button>
+              </tr>
+              <tr>
+                     <td>40214594</td>
+                     <td>Maple Point Middle School</td>
+                     <td>2250 Langhorne Yardley Rd</td>
+                     <td>Langhorne</td>
+                     <td>(215) 809-6230<td>
+                      	 <button type="button" class="btn btn-info">edit<td></td></button>
+              </tr>
+              <tr>
+                     <td>40758814</td>
+                     <td>Arizona Prof Land Surveyo</td>
+                     <td>7002 E 1st Ave</td>
+                     <td>Scottsdale</td>
+                     <td>(602) 994-4551<td>
+                      	 <button type="button" class="btn btn-info">edit<td></td></button>
+              </tr>
+              <tr>
+                     <td>110662345</td>
+                     <td>Usa For Unhcr</td>
+                     <td>1775 K St NW</td>
+                     <td>Washington</td>
+                     <td>(202) 296-1115<td>
+                      	 <button type="button" class="btn btn-info">edit<td></td></button>
+              </tr>
+              <tr>
+                     <td>40288046</td>
+                     <td>The Derby</td>
+                     <td>2016 Harrison Ave</td>
+                     <td>Butte</td>
+                     <td>(406) 723-9086<td>
+                      	 <button type="button" class="btn btn-info">edit<td></td></button>
+              </tr>
+
+     
+       </tbody>
+  </table>
+            <div id="navbar">
+    		        <button type="button" class="btn btn-info" id="btn1">First Page<td></td></button>
+    	            <button type="button" class="btn btn-info" id="btn2">Previous Page<td></td></button>
+    				<button type="button" class="btn btn-info" id="btn3">Next Page<td></td></button>
+    				<button type="button" class="btn btn-info" id="btn4">Last Page<td></td></button>
+    		</div>
+    	
+    	/////////////////////////footer part\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+  
+    	</div>
+ <footer>
+ 	
+ </footer>
+	
+</body>
+</html>

@@ -1,0 +1,16 @@
+$col:gray;
+$bgImg:"../images/rajani.jpg";
+$txtcol: lighten($col,30%);
+body{
+  background-color:$col;
+}
+h1{
+ color: $txtcol;
+ background-color: darken($col,60%)
+}
+div{
+  height:200px;
+  width:200px;
+  background-image: url($bgImg)
+}
+

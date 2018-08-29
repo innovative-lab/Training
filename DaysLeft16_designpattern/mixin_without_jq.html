@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+  <!--	<script src="lib/jquery-1.12.1 (1).js"></script -->
+	<script>
+	   function extendCustom(){
+	   	for(var i=1;i<arguments.length;i++)
+	   	{
+	   		for(prop in arguments[i])
+	   		{
+	   			arguments[0][prop]= arguments[i][prop]
+	   		}
+	   	}
+	   }
+	
+		var Person=function(arg1){
+			this.name=arg1;
+		}
+		var Animal=function(arg1){
+			this.name=arg1;
+		}
+		var move={
+			run:function(){
+				return this.name+" is running"
+			},
+			walking:function(){
+				return this.name+" is walking"
+			}
+		}
+		var talk={
+			talk:function(){
+				return this.name+" is talking"
+			},
+			sing:function(){
+				return this.name+" is singing"
+			}
+		}
+		var code={
+			code:function(){
+				return this.name+" is coding"
+			}
+			
+		}
+		
+	//	$.extend(Person.prototype,talk,move,code);
+	//	$.extend(Animal.prototype,talk,move);
+
+        extendCustom(Animal.prototype,talk,move);
+        extendCustom(Person.prototype,talk,move,code);
+        
+		var ceasar=new Animal("Ceasar");
+		var Junaki=new Person("junaki");
+		
+		console.log(ceasar.talk());
+		console.log(Junaki.talk());
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

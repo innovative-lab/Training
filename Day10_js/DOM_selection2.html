@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			//alert(document.getElementsByName("sp")[0].tagName);
+			//alert(document.querySelector(".item").innerHTML);
+			//alert(document.querySelectorAll(".item").innerHTML);
+			//alert(document.querySelector("[onclick]").innerHTML);
+			//alert(document.querySelector("[onclick ^='callFun']").innerHTML);
+			alert(document.querySelectorAll("[onclick ^= 'callfun']").innerHTML);
+		};
+		function morefun(){
+			alert("hello i m here");
+		}
+	</script>
+</head>
+<body>
+	<ul name="sp">
+		<li class="item">l1</li>
+		<li onclick="morefun">l2</li>
+		<li class="item">l3</li>
+		<li>l4</li>
+		<li>l5</li>
+	</ul>
+	
+</body>
+</html>

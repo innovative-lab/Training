@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var can=null;
+		var ctx=null;
+		var i=50;
+		var flag=0;
+		var j=300;
+		var flag1=0;
+		setInterval(window.onload=function(){
+			
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			ctx.beginPath();
+		
+			if ((i+30) == (j-30) )
+			{
+				alert("bang! game over");
+			}
+			
+			ctx.beginPath();
+			ctx.lineWidth=100;
+			ctx.strokeStyle="black";
+			ctx.moveTo(500,0);
+			ctx.lineTo(500,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=40;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(475,0);
+			ctx.lineTo(475,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=40;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(525,0);
+			ctx.lineTo(525,1100);
+			ctx.closePath();			
+			ctx.stroke();
+			
+			
+			
+			},10);
+	</script>
+</head>
+<body>
+
+	<canvas id="can" width="1000" height="600"></canvas>
+</body>
+</html>

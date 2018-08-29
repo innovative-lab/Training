@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var boxX=-50;
+		var boxY=100;
+		var ctx=null;
+		window.onload=function(){
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			
+			setInterval(anim,10);
+			setInterval(anim2,10);
+		};
+		function anim(){
+			ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+			ctx.fillStyle="red";
+			ctx.fillRect(boxX,50,50,50);
+			boxX+=1;
+			if(boxX>1000)
+			{
+				boxX=-50;
+			}
+		};
+		
+	</script>>
+</head>
+<body>
+		<canvas id="can" width="1000" height="600"></canvas>
+</body>
+</html>

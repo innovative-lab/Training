@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Geolocation</title>
+	<script>
+	
+		window.onload = function(){
+			if(navigator.geolocation){
+			
+			document.getElementById("log").innerHTML = "Geolocation is supported";
+			navigator.geolocation.getCurrentPosition(errorFun,successFun)
+			
+			}else{
+			
+			document.getElementById("log").innerHTML = "Geolocation is not supported";
+			
+			}
+		};
+		function successFun(){
+			alert("Hurray.... we have geolocation")
+		};
+		function errorFun(){
+			alert("update your browser")
+		};
+	
+	</script>
+</head>
+<body>
+	<h1 id="log"></h1>
+</body>
+</html>

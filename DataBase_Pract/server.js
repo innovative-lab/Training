@@ -1,0 +1,25 @@
+var express = require("express");
+var bp = require("body-parser");
+var app = express();
+var mongo= require("mongojs");
+
+var db=mongo("gapp",["userdb"])
+
+	app.use(express.static(__dirname));
+	app.use(bp.json());
+	
+	app.post("/add",function(req,res){
+		db.userdb.insert(req.body,function(error,document){
+			console.log(document);
+			res.json(document);
+		})
+	})
+	app.get("/add",function(req,res){
+		db.userdb.find(function(error,doc){
+			console.log(doc);
+			res.json(doc);
+		})
+	})
+	
+	app.listen(1212);
+	console.log("your server is running on 1212");

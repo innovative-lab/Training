@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Mixin Assignment</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		var product= function(){
+			this.title = null; 
+            this.photo = null;
+            this.unitprice = null;
+            this.margin = null;
+            this.sku = null;
+            this.category = null;
+            this.instock = null;
+            this.supplier = {
+            	name:null,
+            	phone:null,
+            	city:null
+            };
+            this.giveVendorData=function(){
+            	return supplier;
+            }
+             this.currencyPrice=function(arg){
+            	return "arg"+unitprice+margin;
+            }
+            
+		};
+		/*--------------- furniture Object --------------------------*/
+		var furniture= function(dim,mat){
+			this.dimensions=dim;
+			this.material=mat;
+		}
+		$.extend(furniture.prototype,product);
+		var furn= new furniture(10,"plastic");
+		console.log(furn.sku);
+		console.log(furn);
+		
+		/*--------------- Cosmetic Object --------------------------*/
+		
+		var Cosmetic= function(fragrence,color){
+			this.fragrence=fragrence;
+			this.color=color;
+		}
+		$.extend(Cosmetic.prototype,product);
+		var cos=new Cosmetic("lily","red");
+		console.log(cos);
+			
+		/*--------------- Gift Object --------------------------*/
+		
+		var Gift= function(gender,occasion){
+			this.gender=gender;
+			this.occasion=occasion;
+		}
+		$.extend(Gift.prototype,product);
+		var gift=new Gift("lily","red");
+		console.log(gift);
+		
+		/*--------------- Apearel Object --------------------------*/
+		
+		var Apearel= function(size,texture){
+			this.texture=texture;
+			this.size=size;
+		}
+		$.extend(Apearel.prototype,product);
+		var app=new Apearel("11","metallic");
+		console.log(app);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

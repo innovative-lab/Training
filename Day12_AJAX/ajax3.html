@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        select{
+            width: 200px;
+            display: block;
+            padding : 5px;
+            margin: 10px auto;
+        }
+        .box{
+            width: 200px;
+            padding : 5px;
+            margin: auto;
+            background-color: #333333;
+        }
+        .box h1, h2{
+            color: #333333;
+            background-color: #999999;
+            margin: 0px;
+            text-align: center;
+            font-family: arial;
+            font-variant: small-caps;
+        }
+        .box h2{
+            color: #333333;
+            background-color: #999999;
+            margin: 0px;
+            text-align: center;
+            font-family: arial;
+            font-size: 16px;
+        }
+        .box img{
+            width: 200px;
+            display: block;
+        }
+        .box textarea{
+            width: 195px;
+            height: 60px;
+        }
+    </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+        var data = null;
+            window.onload = function(){
+                xhr.open("get","data/heros.xml",true);
+                xhr.send();
+                xhr.onreadystatechange = ajaxHandler;
+                
+                document.getElementsByTagName("select")[0].onchange = changeFun;
+
+            }
+            function ajaxHandler(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    data = xhr.responseXML;
+                    for(var i = 0 ; i < data.getElementsByTagName('hName').length; i++){
+                        document.getElementsByTagName("select")[0].innerHTML += "<option value='"+i+"'>"+data.getElementsByTagName("hName")[i].innerHTML+"</option>";
+                    };
+                 //   document.getElementsByTagName("select")[0].selectedIndex = 0;
+                 //   document.getElementsByTagName("h1")[0].innerHTML = data.getElementsByTagName('hName')[0].innerHTML;
+                 //   document.getElementsByTagName("img")[0].src = data.getElementsByTagName('hPhoto')[0].innerHTML;
+                 //   document.getElementsByTagName("h2")[0].innerHTML = data.getElementsByTagName('hPhone')[0].innerHTML;
+                 //   document.getElementsByTagName("textarea")[0].value = data.getElementsByTagName('hDetails')[0].innerHTML;
+                    
+                };
+                
+            }
+            function changeFun(){
+                // alert(document.getElementsByTagName("select")[0].selectedIndex)
+                // alert(document.getElementsByTagName("select")[0].value);
+                // var sh = document.getElementsByTagName("select")[0].selectedIndex-1;
+                var sh = document.getElementsByTagName("select")[0].selectedIndex;
+                document.getElementsByTagName("h1")[0].innerHTML = data.getElementsByTagName('hName')[sh].innerHTML;
+                document.getElementsByTagName("img")[0].src = data.getElementsByTagName('hPhoto')[sh].innerHTML;
+                document.getElementsByTagName("h2")[0].innerHTML = data.getElementsByTagName('hPhone')[sh].innerHTML;
+                document.getElementsByTagName("textarea")[0].value = data.getElementsByTagName('hDetails')[sh].innerHTML;
+            }
+    </script>
+</head>
+<body>
+    <select></select>
+    
+    <div class="box">
+        <h1></h1>
+        <img/>
+        <h2></h2>
+        <textarea></textarea>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+	margin:0px;
+}
+main{
+	height:1000px;
+	
+	padding:30px 50px;
+}
+#box1,#box2,#box3{
+	background-color: gray;
+	margin:20px auto;
+	width:80%;
+}
+#box1{
+	height:80px;
+	
+	
+}
+#box2{
+	height:130px;
+	
+}
+#box3{
+	height:80px;
+	
+}
+
+
+
+#vbox1,#vbox2,#vbox3{
+	float:left;
+	margin-left:30px;
+	width:374px;
+	height:400px;
+	background-color: gray;
+}
+#vertical{
+	margin-left:120px;
+}
+#niche{
+	background-color: gray;
+	margin-top:450px;
+	margin-left:150px;
+	width:80%;
+	border:1px solid black;
+	height: 100px;
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		$(function(){
+		// alert($("p").size());
+		// alert($("p").length);
+		// alert($("p").get().length);
+		 alert($("p").get(0).innerHTML);
+		// alert($("p")[0].innerHTML);
+		// $("ul").has(".x").css("border","2px solid red");
+		// $("ul").find(".x").css("border","2px solid red");
+		// $(".x","#list1").css("border","2px solid red");
+		
+		//	$("li").each(function(i,elm){
+				// console.log(i+" | "+elm);
+				// alert("i found a li tag");
+				// alert(elm.innerHTML);
+				// elm.innerHTML += " hello there";
+				// elm.style = "border: 2px solid red";
+				// $(elm).css("border","2px solid red");
+		//	})
+		// $("#list1").children().css("border","2px solid red");
+		// $("#list1 > * ").css("border","2px solid red");
+		// $("ul").filter("#list1").css("border","2px solid red")
+		
+		// $("li").first().css("border","2px solid red")
+		// $("li:first").css("border","2px solid red")
+		// $("li:eq(-3)").css("border","2px solid red")
+		// $("li").eq(-1).css("border","2px solid red")
+		// $(".x","#list1").css("border","2px solid red");
+		/*
+		$(".x","#list1")
+			.next()
+			.next()
+			.next()
+			.prev()
+			.css("border","2px solid red")
+			.css("border","2px solid red")
+		 */
+		
+		/*
+		$(".x","#list1")
+			.nextAll()
+			.css("border","2px solid red")
+		 */
+		
+		/*
+		$(".x","#list1")
+			.nextUntil(".a")
+			.css("border","2px solid red");
+		 */
+		console.log(
+			$("#list1 li")
+			.css("border","2px solid red")
+			.text("i am changed")
+			.filter(".x")
+			.css("background-color","yellow")
+			.text("hello mindtree")
+			.end()
+			.parent()
+			.next()
+			.find(".x")
+			.css("background-color","green")
+			.get(0).tagName)
+	    });
+	</script>
+</head>
+<body>
+	<ul id="list1">
+		<li class="item1"> List Item 1</li>
+		<li class="item5"> List Item 5</li>
+		<li class="item5 b"> List Item 5</li>
+		<li class="item2"> List Item 2</li>
+		<li class="item5"> List Item 5</li>
+		<li class="item3 x"> List Item 3</li>
+		<li class="item5"> List Item 5</li>
+		<li class="item5"> List Item 5</li>
+		<li class="item5"> List Item 5</li>
+		<li class="item5 a"> List Item 5</li>
+		<li class="item4"> List Item 4</li>
+		<li class="item5"> List Item 5</li>
+		<li class="item5"> List Item 5</li>
+		<li class="item5"> List Item 5</li>
+	</ul>
+	
+	<ul id="list2">
+		<li class="item1"> List Item 1</li>
+		<li class="item2"> List Item 2</li>
+		<li class="item3"> List Item 3</li>
+		<li class="item4 a"> List Item 4</li>
+		<li class="item5 x"> List Item 5</li>
+	</ul>
+	<p class="para x">Paragraph 1</p>
+	<p class="para">Paragraph 2</p>
+	<p class="para">Paragraph 3</p>
+	<p class="para">Paragraph 4</p>
+	<p class="para">Paragraph 5</p>
+</body>
+</html>

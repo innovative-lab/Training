@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		var arr=[27,3,76,8,5,0,99];
+		
+		/*
+		for(var i=0;i<arr.length;i++)
+		{
+			console.log(arr[i]);
+		}
+		 * 
+		arr.forEach(function(a,i){
+			console.log(a);
+		});
+		var inrarr=arr.map(function(v,i,a){
+			return "INR : "+v;
+		});
+		var bornafter15=arr.filter(function(v,i,a){
+			return v>15;
+		});
+		var bornafter15=arr.every(function(v,i,a){
+			return v>15;
+		});
+		var bornafter15=arr.some(function(v,i,a){
+			return v>15;
+		});
+		
+		var bornafter15=arr.reduce(function(initVal,val){
+			return initVal+=val;
+		},0);
+		 */
+		var bornafter15=arr.reduceRight(function(initVal,val){
+			return initVal+=val;
+		},0);
+		console.log(bornafter15);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

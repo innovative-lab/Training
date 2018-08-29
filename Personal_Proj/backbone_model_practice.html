@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script>
+		var Hero=Backbone.Model.extend({
+			defaults:{
+				fname:"soumya",
+				lname:"pratik"
+			},
+			validate:function(arg){
+				if(arg.power>10||arg.power<5)
+				{
+					return "noob u r"
+				}
+			}
+		})
+		var hero=new Hero({
+			power:7
+		})
+		hero.set("power",11,{
+			validate:true
+		})
+		console.log(hero.get("power"))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

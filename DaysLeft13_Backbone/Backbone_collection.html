@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Collections</title>
+    <style>
+        .boxer{
+            width: 200px;
+            height: 275px;
+            background-color: #333;
+            padding: 5px;
+            box-sizing: border-box;
+            float: left;
+            margin: 10px;
+        }
+        .boxer h1{
+            background-color: #E9EACC;
+            color: #333;
+            margin: 0px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            vertical-align: middle;
+            font-family: Arial;
+        }
+        .boxer h2{
+            background-color: #575934;
+            color: #E9EACC;
+            margin: 0px;
+            height: 30px;
+            font-size : 16px;
+            text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+            font-family: Arial;
+        }
+        .boxer img{
+            display: block;
+            max-width: 100%;
+        }
+    </style>
+    <script src="lib/jquery-1.12.1 (1).js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script>
+        var Hero = Backbone.Model.extend({});
+        var Heros = Backbone.Collection.extend({
+            model : Hero
+        });
+        var HeroView = Backbone.View.extend({
+            render : function(){
+                this.$el.html(this.template(this.model.toJSON()))
+                return this
+            },
+            template : _.template("<div class='boxer'><h1> <%= title %> </h1><h2><span><%= fName %></span> <span><%= lName %></span></h2><img src='<%= photo %>' /></div>")
+        });
+        // id ,  cid ,  model name
+        var hero1 = new Hero({
+            id      : 1,
+            title : "Batman",
+            fName : "Bruce",
+            lName : "Wayne",
+            photo : "images/batman.jpg"
+        });
+        var hero2 =  new Hero({
+            id      : 2,
+            title : "Superman",
+            fName : "clark",
+            lName : "kent",
+            photo : "images/superman.jpg"
+        });
+        var hero3 = new Hero({
+            id      : 3,
+            title : "Spiderman",
+            fName : "peter",
+            lName : "parker",
+            photo : "images/spiderman.jpg"
+        });
+        var hero4 = new Hero({
+            id      : 4,
+            title : "Ironman",
+            fName : "tony",
+            lName : "stark",
+            photo : "images/ironman.jpg"
+        });
+        var heros = new Heros();
+        heros.add(hero1);
+        heros.add(hero2);
+        heros.add(hero3);
+        heros.add(hero4);
+        console.log("+++++++++++++++++++++++++++++++++++");
+        console.log(heros.length);
+        console.log(heros.get(1).get("title"));
+        // heros.get(1).set("title", "Joker");
+        console.log(heros.get(1).get("title"));
+        
+        //heros.remove(1);
+        //console.log(heros.length);
+        //console.log(heros.get(2).get("title"));
+        //heros.reset();
+        //console.log(heros.length);
+        
+        // console.log(heros.where({"title" : "Batman"})[0].get("title"));
+        // console.log(heros.where({"title" : "Batman"})[0].toJSON());
+        // console.log(heros.findWhere({"title" : "Batman"}).toJSON());
+        
+        // console.log(heros.at(2).get("title"));
+        
+        /*
+         * add
+         * save()
+         * create() // add + save
+         * remove();
+         * reset();
+         */
+        
+        console.log("++++++++++++++++++++++++")
+        console.log(heros.at(0))
+        console.log("++++++++++++++++++++++++")
+        $(function(){
+            $("#btn1").on("click", function(){
+                $("body").append(new HeroView({model : heros.at(0)}).render().el);
+  //               $("body").append(new HeroView({model : heros.get(1)}).render().el);
+            });
+            $("#btn2").on("click", function(){
+                $("body").append(new HeroView({model : hero2}).render().el);
+            });
+            $("#btn3").on("click", function(){
+                $("body").append(new HeroView({model : hero3}).render().el);
+            });
+            $("#btn4").on("click", function(){
+                $("body").append(new HeroView({model : hero4}).render().el);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn1">Hero 1</button>
+    <button id="btn2">Hero 2</button>
+    <button id="btn3">Hero 3</button>
+    <button id="btn4">Hero 4</button>
+</body>
+</html>

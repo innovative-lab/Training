@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Prototype Assignment</title>
+	<script>
+		var product= function(){
+			this.title = null; 
+            this.photo = null;
+            this.unitprice = null;
+            this.margin = null;
+            this.sku = null;
+            this.category = null;
+            this.instock = null;
+            this.supplier = {
+            	name:null,
+            	phone:null,
+            	city:null
+            };
+            this.giveVendorData=function(){
+            	return supplier;
+            }
+             this.currencyPrice=function(arg){
+            	return "arg"+unitprice+margin;
+            }
+            
+		};
+		/*--------------- furniture Object --------------------------*/
+		var furniture= function(dim,mat,title){
+			this.dimensions=dim;
+			this.material=mat;
+			furniture.prototype.title=title;
+		}
+		furniture.prototype=new product();
+		var furn= new furniture(10,"plastic","pratik");
+//		console.log(furn.material);
+		console.log(furn);
+		console.log(furniture.prototype.title);
+		var furn= new furniture(10,"plastic","rohini");
+		console.log(furniture.prototype.title);
+		
+		/*--------------- Cosmetic Object --------------------------*/
+		
+		var Cosmetic= function(fragrence,color){
+			this.fragrence=fragrence;
+			this.color=color;
+		}
+		Cosmetic.prototype=new product();
+		var cos=new Cosmetic("lily","red");
+		console.log(cos);
+			
+		/*--------------- Gift Object --------------------------*/
+		
+		var Gift= function(gender,occasion){
+			this.gender=gender;
+			this.occasion=occasion;
+		}
+		Gift.prototype=new product();
+		var gift=new Gift("lily","red");
+		console.log(gift);
+		
+		/*--------------- Apearel Object --------------------------*/
+		
+		var Apearel= function(size,texture){
+			this.texture=texture;
+			this.size=size;
+		}
+		Apearel.prototype=new product();
+		var app=new Apearel("11","metallic");
+		console.log(app);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

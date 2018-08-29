@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>New Web Project</title>
+		<script>
+		     function vidPlay(){
+            document.getElementById("vid").play();
+            setInterval(checkVid, 10);
+        }
+        function vidPause(){
+            document.getElementById("vid").pause();
+        }
+        function checkVid(){
+            document.getElementById("log").innerHTML = document.getElementById("vid").currentTime;
+        }
+        function vidStop(){
+            document.getElementById("vid").currentTime=0;
+            document.getElementById("vid").pause();
+        }
+		</script>
+	</head>
+	<body>
+		 <h1 id="log"></h1>
+		<video id="vid">
+			<source src="myassets/html5.ogv.ogv"></source>
+			<source src="myassets/html5.mp4.mp4"></source>
+			<source src="myassets/html5.webm.webm"></source>
+			<track default src="myassets/mindtree.vtt"/>
+			<object type="application/x-shockwave-flash" width="640" height="480">
+				<param name="movie" value="myassets/hatml5.flash.swf">
+		</object>  
+		</video>
+		   <button onclick="vidPlay()">Play</button>
+    <button onclick="vidPause()">Pause</button>
+    <button id="stopme" onclick="vidStop()">Stop</button>
+    <button onclick="checkVid()">Check</button>
+	</body>
+</html>
+

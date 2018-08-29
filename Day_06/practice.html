@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		var win = null;
+		addEventListener("load", init);
+		function init(){
+			document.getElementById('ow')
+			.addEventListener("click", openFun);
+			
+			document.getElementById('cw')
+			.addEventListener("click", closeFun);
+		}
+		function openFun(){
+			win = window.open("target.html","","width=200,height=200")
+		}
+		function closeFun(){
+			win.close();
+		}
+	</script>
+</head>
+<body>
+	<button id="ow">open window</button>
+	<button id="cw">close window</button>
+</body>
+</html>

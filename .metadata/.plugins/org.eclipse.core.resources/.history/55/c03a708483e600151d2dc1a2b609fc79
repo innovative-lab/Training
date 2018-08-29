@@ -1,0 +1,22 @@
+header{
+	height:50px;
+	background-color: #97DFF7;
+	position: absolute;
+	
+}
+.navbar{
+	background-color: #97DFF7;
+	border:0px solid black;
+	
+	position: absolute;
+}
+.container{
+	height:700px;
+	border:2px solid black;
+	margin-top:0px;
+	width:100%;
+	position: absolute;
+}
+body{
+	position:relative;
+}

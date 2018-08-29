@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	 <style>
+                canvas{
+                        border: 1px solid red;
+                }
+        </style>
+	<script>
+		var can=null;
+		var ctx=null;
+		window.onload=function(){
+			can=document.getElementById("can");
+			ctx=can.getContext("2d");
+			ctx.beginPath();
+			
+			ctx.lineWidth=50;
+			ctx.moveTo(50,50);
+			ctx.lineTo(300,300);
+			ctx.closePath();			
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth=45;
+			ctx.strokeStyle="gray";
+			ctx.moveTo(50,50);
+			ctx.lineTo(300,300);
+			ctx.closePath();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(50,50);
+			ctx.lineTo(100,100);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(120,120);
+			ctx.lineTo(170,170);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(190,190);
+			ctx.lineTo(240,240);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle="white";
+			ctx.moveTo(260,260);
+			ctx.lineTo(300,300);
+		    ctx.closePath();		
+			ctx.stroke();
+			
+			
+			
+		};
+	</script>
+</head>
+<body>
+
+	<canvas id="can" width="1000" height="600"></canvas>
+</body>
+</html>

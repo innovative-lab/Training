@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Storage</title>
+	<script>
+	var message = "Good morning";
+		function storeFun(){
+			sessionStorage.un = document.getElementById("un").value;
+			sessionStorage.ue = document.getElementById("ue").value;
+		};
+		function readFun(){
+			alert(sessionStorage.un+" | " +sessionStorage.ue);
+		};
+		function countFun(){
+			alert(sessionStorage.length);
+		};
+		function nameFun(){
+			alert(sessionStorage.getItem("un"));
+		};
+		function writeFun(){
+			sessionStorage.setItem("un","Batman");
+			alert("username updated");
+		};
+		function removeNameFun(){
+			sessionStorage.removeItem("un");
+			alert("remove username");
+		};
+		function removeAllFun(){
+			sessionStorage.clear();
+			alert("all clear");
+		};
+		function getKeyFun(){
+			alert(sessionStorage.key(0));
+		};
+	</script>
+</head>
+<body>
+	
+		<table border="0" cellspacing="5" cellpadding="5">
+		<tr>
+			<td>User Name</td>
+			<td>
+				<input type="text" name="username" id="un" />
+			</td>
+		</tr>
+		<tr>
+			<td>User eMail</td>
+			<td>
+				<input type="email"  name="useremail" id="ue" />
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<!--button>
+					<h1>Mindtree</h1>
+					<h3>Welcome to Odisha</h3>
+					<hr/>
+					<img src="images/rajani.jpg" width="100" />
+				</button-->
+				<button onclick="storeFun()">submit</button>
+			</td>
+		</tr>
+	</table>
+
+	<hr/>
+	<button onclick="readFun()">Read Values</button>
+	<hr/>
+	<button onclick="countFun()"> Get Count </button>
+	<button onclick="nameFun()"> Get Name </button>
+	<button onclick="writeFun()"> Write Name </button>
+	<button onclick="removeNameFun()"> Remove Name </button>
+	<button onclick="removeAllFun()"> Remove All </button>
+	<button onclick="getKeyFun()"> Get Key @ 0 </button>
+</body>
+</html>

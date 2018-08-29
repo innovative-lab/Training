@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Define Properties</title>
+    <script>
+        var Person = Object.create(null);
+            Object.defineProperties(Person,{
+                fname : {
+                    value : "Bruce",
+                    writable : true,
+                    enumerable : true
+                },
+                lname : {
+                    value : "Wayne",
+                    writable : true,
+                    enumerable : true
+                },
+                city : {
+                    value : "Gotham",
+                    enumerable : true
+                },
+                secret : {
+                    value : "My Secret",
+                    writable : true
+                }
+            });
+            Object.defineProperty(Person,"secretaccess",{
+                get : function(){
+                    return this.secret;
+                },
+                set : function(args){
+                    this.secret = args;
+                }
+            });
+            
+            // console.log(Person.secret)
+            /*
+            for(prop in Person){
+                console.log(prop);
+            };
+             */
+            // Person.secret = "Top Secret";
+            // console.log(Person)
+            // console.log(Person.secret);
+            console.log(Person.secretaccess);
+            Person.secretaccess = "Senapathy's Secret'";
+            console.log(Person.secretaccess);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

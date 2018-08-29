@@ -1,0 +1,29 @@
+$boxW : 400px;
+$boxH : 200px;
+$boxC : #666;
+$boxMar : 50px auto;
+
+.outerBox{
+  width: $boxW;
+  height: $boxH ;
+  background-color: $boxC;
+  margin: $boxMar;
+  border : 1px solid transparent;
+  
+  .innerBox{
+    width: $boxW/2;
+    height: $boxH/2 ;
+    background-color: $boxC/2;
+    margin: $boxMar;
+    
+    &:hover{
+      width: $boxW/2;
+      height: $boxH/2 ;
+      background-color: yellow*pink;
+      margin: $boxMar;
+    }
+  
+  }
+  
+  
+}

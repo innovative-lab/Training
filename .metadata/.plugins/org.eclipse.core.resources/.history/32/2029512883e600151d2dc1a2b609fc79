@@ -1,0 +1,17 @@
+header{
+	height:50px;
+	background-color: #97DFF7;
+	
+}
+.navbar{
+	background-color: #97DFF7;
+	border:0px solid black;
+	
+	
+}
+.container{
+	height:600px;
+	border:2px solid black;
+	margin-top:0px;
+	width:100%;
+}

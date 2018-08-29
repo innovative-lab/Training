@@ -1,0 +1,21 @@
+.outerBox {
+  width: 400px;
+  height: 200px;
+  background-color: #666;
+  margin: 50px auto;
+  border: 1px solid transparent;
+}
+
+.outerBox .innerBox {
+  width: 200px;
+  height: 100px;
+  background-color: #333333;
+  margin: 50px auto;
+}
+
+.outerBox .innerBox:hover {
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  margin: 50px auto;
+}

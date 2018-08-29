@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular
+		.module("app",[])
+		.controller("empcontroller",function($scope,$http){
+			$scope.emplist=null;
+			$scope.fn="";
+			$scope.display=false;
+			$scope.eid=null;
+			
+			var refresh= function(){
+				$http.get("/emplist")
+				.success(successHandler)
+				.error(errorHandler)
+			}
+			refresh();
+			function successHandler(r,s,x){
+				$scope.emplist=r;
+			}
+			function errorHandler(e,s,x){
+				alert("something went wrong..")
+				
+			}
+			
+		$scope.addEmp= function(){
+			var data={
+				fname: $scope.fn
+			}
+			
+			console.log(data);
+			
+			$http.post("/emplist",data)
+			.success(function(r,s,x){
+				console.log("data updated on server")
+				refresh();
+			})
+			.error(errorHandler);
+		}
+		
+		$scope.deleteEmp= function(eid){
+			
+			
+			$http.delete("/emplist/"+eid)
+			.success(function(r,s,x){
+				console.log("emp deleted")
+				refresh();
+			})
+			.error(errorHandler);
+		}
+		
+		$scope.editEmp=function(eid){
+			$http.get("/emplist/"+eid).success(function(r,s,x){
+				$scope.eid=eid;
+				$scope.fn=r.fname;
+		    })
+		    .error(errorHandler)
+		    $scope.display = !$scope.display;
+		    
+		}
+		
+		$scope.updateEmp=function(){
+				var data = {
+					fname: $scope.fn,
+					
+				};
+			$http.put("/emplist/"+$scope.eid,data)
+			.success(function(r,s,x){
+				console.log("update request called..")
+				refresh();
+		    })
+		    .error(errorHandler)
+		    
+		    
+		}
+		
+	})
+		
+	</script>
+</head>
+<body ng-app="app" ng-controller="empcontroller">
+	<h5>fname</h5>
+	<input type="text" ng-model="fn"/>
+	<button ng-click="addEmp()" ng-hide="display">Add emp</button>
+	<button ng-show="display" ng-click="updateEmp()">update emp</button>
+	<hr />
+	
+	<table>
+		<tr>
+			<th>Fname</th>
+		</tr>
+		<tr ng-repeat="emp in emplist">
+			<td>{{ emp.fname }}
+		<button ng-click="deleteEmp(emp._id)">Delete Me</button>
+		<button ng-click="editEmp(emp._id)">Edit Me</button></td>
+		</tr>
+	</table>
+</body>
+</html>

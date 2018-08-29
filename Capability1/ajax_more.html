@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/jquery-1.12.1 (1).js"></script>
+	<script>
+		window.onload=function(){
+			$.getJSON("data/heroes.json").done(changeHandler)
+		}
+		function changeHandler(r,s,xhr){
+			var data=r.hero[0].hTitle;
+			$("#box").html(data);
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>

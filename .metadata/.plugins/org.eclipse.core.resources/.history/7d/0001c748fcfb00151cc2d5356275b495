@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <title>Document</title>
+     <script src="lib/angular.js"></script>
+     <script>
+          angular.module("app",[])
+          .controller("empcontroller",function($scope,$http){
+              $scope.emplist=null;
+              $scope.my_id="M1036017";
+              $scope.mid="";
+              $scope.name="";
+              $scope.photo="";
+              $scope.date="";
+              $scope.sttime="";
+              $scope.etime="";
+              $scope.loc="";
+              $scope.details="";
+              $scope.join="";
+              var refresh=function(){
+                   $http.get("/emplist")
+                   .success(successHandler)
+                   .error(errorHandler)
+              };
+              refresh();
+              function successHandler(r,s,x){
+             $scope.emplist=r;             
+     };
+              function errorHandler(e,s,x){
+            alert("Something wrong");           
+     };
+          $scope.addEmp=function(){
+               
+               var data={
+                   mid : $scope.mid,
+                   name : $scope.name,
+                   photo : $scope.photo,
+                   date :$scope.date,
+                   starttime :$scope.sttime,
+                   endtime:$scope.etime,
+                   location:$scope.loc,
+                   Details:$scope.details,
+                   Joined:[],
+               };
+               $http.post("/emplist",data)
+               .success(function(r,s,x){
+                   console.log("data uploaded on server")
+                   refresh();
+               })
+               .error(errorHandler)
+          }
+         
+          $scope.get_mid=function(mid,my_id){
+                console.log($scope.join_id);
+                $scope.join_id=my_id;
+                console.log($scope.join_id)
+                $scope.eid=mid;
+                console.log($scope.eid);
+                console.log("===================")
+                /*
+                $scope.join=Join;
+                 * //////////////////////////////////////////////
+                 */
+                	$http.put("/emplist/"+$scope.eid,$scope.join_id)
+			.success(function(r,s,x){
+				console.log("update request called..")
+				refresh();
+		    })
+		    .error(errorHandler)
+          }
+         $scope.pushEmp=function(arg){
+         }
+     });
+     </script>
+</head>
+<body ng-app="app" ng-controller="empcontroller">
+     <table>
+          
+          <tr>
+          <th>MID</th>
+          <td><input type="text" ng-model="mid"/></td>
+          </tr>
+          <tr>
+          <th>Name</th>
+          <td><input type="text" ng-model="name"/></td>
+          </tr>
+          <tr>
+          <th>Photo</th>
+          <td><input type="text" ng-model="photo"/></td>
+          </tr>
+          <tr>
+          <th>Date</th>
+          <td><input type="date" ng-model="date" /></td>
+          </tr>
+          <tr>
+          <th>Start Time</th>
+          <td><input type="time" ng-model="sttime"/></td>
+          </tr>
+          <tr>
+          <th>End Time</th>
+          <td><input type="time" ng-model="etime"/></td>
+          </tr>
+          <tr>
+          <th>Location</th>
+          <td><input type="text" ng-model="loc"/></td>
+          </tr>
+          <tr>
+          <th>Details</th>
+          <td><input type="text" ng-model="details"/></td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td><button ng-click="addEmp()"> Add data</button></td>
+          </tr>
+          <tr>
+              <th>push to join</th>
+              <td><input type="text" ng-model="push_mid" /></td>
+          </tr>
+          <tr> 
+              <td><td><button ng-click="pushEmp(push_mid)"> push data</button></td></td>
+          </tr>
+     </table>
+</hr>
+     <table  cellspacing="10px" cellpadding="10px">
+<tr>
+     <th>MID</th>
+     <th>Name</th>
+     <th>Photo</th>
+     <th >Date</th>
+     <th >Start Time</th>
+     <th >End Time</th>
+     <th >Location</th>
+     <th >Details</th>
+     <th>members</th>
+     <th>button</th>
+     
+     
+     
+     </tr>
+     <tr ng-repeat="emp in emplist">
+          <td>{{ emp.mid }}</td>
+          <td>{{ emp.name }}</td>
+          <td><img ng-src='{{emp.photo}}'width="40" align="absmiddle"/></td>
+          <td>{{ emp.date | date:'dd/MM/yyyy'}}</td>
+          <td>{{ emp.starttime | date :'HH:mm:ss'}}</td>
+          <td>{{ emp.endtime | date :'HH:mm:ss'}}</td>
+          <td>{{ emp.location}}</td>
+          <td>{{ emp.Details}}</td>
+          <td>{{ emp.Joined.length}}</td>
+          <td><button  ng-click="get_mid(emp.mid,my_id)"> Get the mid</button></td>
+          
+     </tr>
+     <h1>{{ join }}</h1>
+</table>
+</body>
+</html>

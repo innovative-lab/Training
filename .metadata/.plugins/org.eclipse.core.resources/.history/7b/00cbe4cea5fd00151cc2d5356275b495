@@ -1,0 +1,41 @@
+(function(){
+	
+angular
+     	.module("app")
+     	.controller("currentEventcontroller",function($scope,$http,$routeParams){
+     		
+     		$scope.param=$routeParams.id;
+     		 $scope.emplist=null;
+              $scope.eventName=""
+              $scope.mid="";
+              $scope.name="";
+              $scope.photo="";
+              $scope.date="";
+              $scope.sttime="";
+              $scope.etime="";
+              $scope.loc="";
+              $scope.details="";
+              $scope.join="";
+              
+              
+              var refresh= function(){
+              	var data = {
+              		"_id":$scope.param.toString()
+              	}
+				$http.post("/emplist/"+$scope.param)
+				.success(successHandler)
+				.error(errorHandler)
+			}
+			refresh();
+			function successHandler(r,s,x){
+				$scope.emplist=r;
+			}
+			function errorHandler(e,s,x){
+				alert("something went wrong..")
+				
+			}
+              function someFun(){
+		  		$scope.selectedObject=$scope.emplist[$scope.param];
+		  	}
+     	})
+}())

@@ -1,0 +1,28 @@
+var express = require("express");
+var app = express();
+//    app.set("view engine","jade")
+
+/*
+ * 
+app.get("/",function(req,res){
+	res.render("home.jade")
+})
+ * 
+ */
+
+var title="soumya"
+var heros=["batman","superman","spiderman","shaktiman"]
+var message="welcome to my home"
+app.get("/",function(req,res){
+	res.render("home.jade",{
+		msg:message,
+		title:title,
+		hlist:heros
+		
+	})
+})
+
+
+app.listen(5678);
+console.log("serve ris running on localhost:5678");
+

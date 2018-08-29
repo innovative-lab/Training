@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>History API</title>
+    <style>
+        
+    </style>
+    <script>
+        addEventListener("popstate", stateChangeHandler);
+        onload = function(){
+            document
+            .getElementById("batman")
+            .addEventListener("click", clickHandler)
+            document
+            .getElementById("ironman")
+            .addEventListener("click", clickHandler)
+            document
+            .getElementById("superman")
+            .addEventListener("click", clickHandler)
+            document
+            .getElementById("joker")
+            .addEventListener("click", clickHandler)
+        };
+        function clickHandler(evt){
+            evt.preventDefault();
+            var data = {
+                htitle : evt.target.id,
+                hphoto : evt.target.getAttribute("href")
+            };
+            // state object, title, url
+            history.pushState(data, data.htitle, data.htitle);//
+            document.getElementById("title").innerHTML = evt.target.id;
+            document.getElementById("photo").src = evt.target.getAttribute("href");
+        }
+        function stateChangeHandler(evt){
+            console.log(evt.state);
+            document.getElementById("title").innerHTML = evt.state.htitle;
+            document.getElementById("photo").src = evt.state.hphoto;
+            document.title = evt.state.htitle;
+        }
+    </script>
+</head>
+<body>
+    <a href="images/batman.jpg"     id="batman">Batman</a>
+    <a href="images/ironman.jpg"     id="ironman">Ironman</a>
+    <a href="images/superman.jpg"     id="superman">Superman</a>
+    <a href="images/joker.jpg"         id="joker">Joker</a>
+    <hr/>
+    <h1 id="title"></h1>
+    <img id="photo" />
+</body>
+</html>
